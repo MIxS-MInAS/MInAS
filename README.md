@@ -31,8 +31,8 @@ EXTANCIENT_VERSION=0.2.1
 EXTRADIOCARBON_VERSION=0.1.0
 
 curl -o src/mixs/schema/mixs-v$MIXS_VERSION.yaml "https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/v$MIXS_VERSION/src/mixs/schema/mixs.yaml" ## Base MIxS schema
-curl -o src/mixs/schema/ancient-v$MIXS_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-ancient/v$EXTANCIENT_VERSION/src/mixs/schema/ancient.yml" ## Ancient DNA extension
-curl -o src/mixs/schema/radiocarbon-dating-v$MIXS_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-radiocarbon-dating/v$EXTRADIOCARBON_VERSION/src/mixs/schema/radiocarbon-dating.yml" ## Radiocarbon extension
+curl -o src/mixs/schema/ancient-v$EXTANCIENT_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-ancient/v$EXTANCIENT_VERSION/src/mixs/schema/ancient.yml" ## Ancient DNA extension
+curl -o src/mixs/schema/radiocarbon-dating-v$EXTRADIOCARBON_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-radiocarbon-dating/v$EXTRADIOCARBON_VERSION/src/mixs/schema/radiocarbon-dating.yml" ## Radiocarbon extension
 
 yq eval-all 'select(fileIndex == 0) *+ select(fileIndex == 1) *+ select(fileIndex == 2)' \
   src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
