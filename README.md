@@ -27,7 +27,7 @@ For example, updating the versions in the variables
 
 ```bash
 MIXS_VERSION=6.2.0
-EXTANCIENT_VERSION=0.2.1
+EXTANCIENT_VERSION=0.3.0
 EXTRADIOCARBON_VERSION=0.1.0
 
 curl -o src/mixs/schema/mixs-v$MIXS_VERSION.yaml "https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/v$MIXS_VERSION/src/mixs/schema/mixs.yaml" ## Base MIxS schema
@@ -36,8 +36,8 @@ curl -o src/mixs/schema/radiocarbon-dating-v$EXTRADIOCARBON_VERSION.yaml "https:
 
 yq eval-all 'select(fileIndex == 0) *+ select(fileIndex == 1) *+ select(fileIndex == 2)' \
   src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
-  src/mixs/schema/ancient-v$MIXS_VERSION.yaml \
-  src/mixs/schema/radiocarbon-dating-v$MIXS_VERSION.yaml \
+  src/mixs/schema/ancient-v$EXTANCIENT_VERSION.yaml \
+  src/mixs/schema/radiocarbon-dating-v$EXTRADIOCARBON_VERSION.yaml \
   > src/mixs/schema/mixs-minas.yaml
 ```
 
