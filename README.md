@@ -49,7 +49,13 @@ yq eval-all 'select(fileIndex == 0) *+ select(fileIndex == 1) *+ select(fileInde
   > src/mixs/schema/mixs-minas.yaml
 
 ## Fix some metadata
-sed -i 's#source: https://github.com/MIxS-MInAS/extension-radiocarbon-dating/raw/main/proposals/0.1.0/extension-radiocarbon-dating-v0_1_0.csv#https://github.com/MIxS-MInAS/MInAS/#g'  src/mixs/schema/mixs-minas.yaml
+sed -i 's#source: https://github.com/MIxS-MInAS/extension-radiocarbon-dating/raw/main/proposals/0.1.0/extension-radiocarbon-dating-v0_1_0.csv#source: https://github.com/MIxS-MInAS/MInAS/#g' src/mixs/schema/mixs-minas.yaml
+```
+
+Next we lint and validate the newly extended MIxS schema
+
+```bash
+linkml lint --validate src/mixs/schema/mixs-minas.yaml
 ```
 
 We can then use the LinkML package's `gen-json-schema` to generate the JSON schema:
