@@ -23,7 +23,36 @@ The following tools are required to generate the schema files:
 
 To generate the combined YAML file, we can use a combination of `yq` and `curl` to download specific tagged releases from the MIxS and various MInAS repositories.
 
-For example, updating the versions in the variables
+For updating during development:
+
+```bash
+MIXS_VERSION=6.2.0
+# EXTANCIENT_VERSION=0.3.2 ## Only used ofr releases
+# EXTRADIOCARBONDATING_VERSION=0.1.2 ## Only used ofr releases
+
+## Core MIxS Schema
+curl -o src/mixs/schema/mixs-v$MIXS_VERSION.yaml "https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/v$MIXS_VERSION/src/mixs/schema/mixs.yaml" ## Base MIxS schema
+
+## MInAS Extensions
+curl -o src/mixs/schema/ancient-main.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-ancient/refs/heads/main/src/mixs/schema/ancient.yml" ## Ancient DNA extension
+curl -o src/mixs/schema/radiocarbon-dating-main.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-radiocarbon-dating/refs/heads/main/src/mixs/schema/radiocarbon-dating.yml" ## Radiocarbon extension
+
+## MInAS Combinations
+curl -o src/mixs/schema/minas-combinations-main.yaml "https://raw.githubusercontent.com/MIxS-MInAS/minas-combinations/main/src/mixs/schema/minas-combinations.yaml" ## Combinations
+
+## Merge together. Note you need a select(fileIndex == X) for each yaml file!
+yq eval-all 'select(fileIndex == 0) *+ select(fileIndex == 1) *+ select(fileIndex == 2) *+ select(fileIndex == 3)' \
+  src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
+  src/mixs/schema/ancient-main.yaml \
+  src/mixs/schema/radiocarbon-dating-main.yaml \
+  src/mixs/schema/minas-combinations-main.yaml \
+  > src/mixs/schema/mixs-minas.yaml
+
+## Fix some metadata
+sed -i 's#source: https://github.com/MIxS-MInAS/extension-radiocarbon-dating/raw/main/proposals/0.1.0/extension-radiocarbon-dating-v0_1_0.csv#source: https://github.com/MIxS-MInAS/MInAS/#g' src/mixs/schema/mixs-minas.yaml
+```
+
+And then, for a release, (making sure updating the versions in the variables):
 
 ```bash
 MIXS_VERSION=6.2.0
@@ -52,7 +81,7 @@ yq eval-all 'select(fileIndex == 0) *+ select(fileIndex == 1) *+ select(fileInde
 sed -i 's#source: https://github.com/MIxS-MInAS/extension-radiocarbon-dating/raw/main/proposals/0.1.0/extension-radiocarbon-dating-v0_1_0.csv#source: https://github.com/MIxS-MInAS/MInAS/#g' src/mixs/schema/mixs-minas.yaml
 ```
 
-Next we lint and validate the newly extended MIxS schema
+In both cases, we lint and validate the newly extended MIxS schema
 
 ```bash
 linkml lint --validate src/mixs/schema/mixs-minas.yaml
@@ -67,7 +96,7 @@ gen-json-schema src/mixs/schema/mixs-minas.yaml > src/mixs/schema/mixs-minas.jso
 And the python3 script in the `scripts/` directory to generate the TSV files:
 
 ```bash
-./scripts/linkml2class_tsvs.py --schema-file src/mixs/schema/mixs-minas.yaml --output-dir project/class-model-tsvs/
+python3 ./scripts/linkml2class_tsvs.py --schema-file src/mixs/schema/mixs-minas.yaml --output-dir project/class-model-tsvs/
 ```
 
 > [!Note]

@@ -13802,8 +13802,8 @@ slots:
       Concentration of library in ng per µl, as inferred by qPCR/Qubit/etc.
     title: library concentration
     examples:
-      - value: 2
-      - value: 0.5
+      - value: "2"
+      - value: "0.5"
     in_subset:
       - sequencing
     slot_uri: MIXS:999999908
@@ -13882,7 +13882,7 @@ slots:
       Specify whether the sample is a negative control or not.
     title: negative control status
     examples:
-      - value: true
+      - value: "true"
     keywords:
       - control
     in_subset:
@@ -13894,7 +13894,7 @@ slots:
       Number of amplification cycles after capture enrichment
     title: number of reamplification cycles after capture
     examples:
-      - value: 12
+      - value: "12"
     in_subset:
       - sequencing
     slot_uri: MIXS:999999912
@@ -13905,7 +13905,7 @@ slots:
       Number of amplification cycles after library indexing PCR. If capture data, this refers to amplifications prior to the capture experiments.
     title: number of reamplification cycles
     examples:
-      - value: 12
+      - value: "12"
     in_subset:
       - sequencing
     slot_uri: MIXS:999999913
@@ -14162,6 +14162,17 @@ slots:
     string_serialization: "{text}"
     required: false
     recommended: true
+  radiocarbondating_data:
+    name: radiocarbondating_data
+    description: Data that comply with Extension RadiocarbonDating
+    title: Radiocarbon dating data
+    from_schema: https://w3id.org/mixs
+    domain: MixsCompliantData
+    slot_uri: MIXS:radiocarbondating_data
+    range: RadiocarbonDating
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
   c14_date:
     annotations:
       Expected_value: measurement
@@ -14194,7 +14205,7 @@ slots:
       The one standard deviation around the 'raw' C14 Date measurement, normally indicated as a ± after the main date. Must be in the same format (i.e., y BP).
     title: Radiocarbon date standard deviation
     examples:
-      - value: 120
+      - value: "120"
     in_subset:
       - investigation
     keywords:
@@ -14277,8 +14288,8 @@ slots:
       The delta carbon-13 value of the sample (δ13C), which is the ratio of the stable isotope 13C to 12C, expressed in per mil (‰) notation. Used as a quality control measurement.
     title: Delta 13C value
     examples:
-      - value: -25.3
-      - value: -20.1
+      - value: "-25.3"
+      - value: "-20.1"
     in_subset:
       - investigation
     keywords:
@@ -14316,8 +14327,8 @@ slots:
       The percentage of carbon in a non-proteinaceous sample used for dating (such as charcoal), expressed as a percentage (%). Used as a quality control measurement.
     title: Carbon percentage
     examples:
-      - value: 50.3
-      - value: 45.1
+      - value: "50.3"
+      - value: "45.1"
     in_subset:
       - investigation
     keywords:
@@ -14339,9 +14350,9 @@ slots:
       Upper (youngest) date in the range of a calibrated age. Calendar timescale to be specified: AD/BC, CE/BCE, cal BP. The abbreviation BP is to be used for uncalibrated 14C determinations, cal BP must be used here.
     title: Radiocarbon calibration age upper limit
     examples:
-      - value: 1449
-      - value: 12560
-      - value: 1500
+      - value: "1449"
+      - value: "12560"
+      - value: "1500"
     in_subset:
       - investigation
     keywords:
@@ -14362,9 +14373,9 @@ slots:
       Median date in the range of a calibrated age. Calendar timescale to be specified: AD/BC, CE/BCE, cal BP. The abbreviation BP is to be used for uncalibrated 14C determinations, cal BP must be used here.
     title: Radiocarbon calibration age upper limit
     examples:
-      - value: 1450
-      - value: 15700
-      - value: 1473
+      - value: "1450"
+      - value: "15700"
+      - value: "1473"
     in_subset:
       - investigation
     keywords:
@@ -14385,9 +14396,9 @@ slots:
       Lower (oldest) date in the range of a calibrated age. Calendar timescale to be specified: AD/BC, CE/BCE, cal BP. Note: the abbreviation 'BP' is to be used for uncalibrated 14C determinations, cal BP must be used here.
     title: Radiocarbon calibration age lower limit
     examples:
-      - value: 1451
-      - value: 18560
-      - value: 1453
+      - value: "1451"
+      - value: "18560"
+      - value: "1453"
     in_subset:
       - investigation
     keywords:
@@ -14425,8 +14436,8 @@ slots:
       Confidence level of the reported calibrated age range, typically in 2 (95.4%) or 1 (68.2%) levels of significance (sigma).
     title: Radiocarbon calibration age confidence level
     examples:
-      - value: 1
-      - value: 2
+      - value: "1"
+      - value: "2"
     in_subset:
       - investigation
     keywords:
@@ -14483,8 +14494,8 @@ slots:
       Version of the calibration software used for calibration.
     title: Radiocarbon calibration software version
     examples:
-      - value: 1.0.3
-      - value: 4.4
+      - value: "1.0.3"
+      - value: "4.4"
     in_subset:
       - investigation
     keywords:
