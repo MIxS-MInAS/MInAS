@@ -1286,6 +1286,7 @@ enums:
   LibTypeEnum:
     permissible_values:
       amplicon:
+      enriched:
       shotgun:
   BioCulturalLabel:
     permissible_values:
@@ -1303,6 +1304,27 @@ enums:
     permissible_values:
       single:
       double:
+  SampAgeUnit:
+    permissible_values:
+      BCE:
+      CE:
+      BP:
+      cal BP:
+      cal BCE:
+      cal CE:
+      ka:
+      Ma:
+  SampAgeInferMethod:
+    permissible_values:
+      radiocarbon dating:
+      optically stimulated infrared luminescence:
+      amino acid racemisation:
+      electron spin resonance:
+      uranium thorium:
+      stratigraphic inference:
+      relative dating:
+      historical records:
+      other:
   MsMethod:
     permissible_values:
       IMRS:
@@ -13673,7 +13695,7 @@ slots:
     description: Name of where sample originated and is typically stored. Typically will be 'owning institution'.
     title: context name where location was collected
     examples:
-      - value: Natural History London
+      - value: Natural History Museum London
     in_subset:
       - nucleic acid sequence source
     keywords:
@@ -13687,7 +13709,7 @@ slots:
     annotations:
       Expected_value: chronotology or PeriodO term; text
     description: >-
-      The cultural era approximating the period in which the individual lived from https://chronontology.dainst.org/ or PeriodO if possible. Specify when no value for 'sample_age' is present, or additionally to it. If not available, follow INSDC standard for reporting missing data (https://www.insdc.org/submitting-standards/missing-value-reporting/).
+      The cultural era approximating the period in which the individual lived from https://chronontology.dainst.org/ or PeriodO if possible. If not available, follow INSDC standard for reporting missing data (https://www.insdc.org/submitting-standards/missing-value-reporting/).
     title: cultural era or period
     examples:
       - value: "Copper Age [Chronotology: NW6hofAScJSE]"
@@ -13707,7 +13729,7 @@ slots:
     annotations:
       Expected_value: enumeration
     description: >-
-      Indication of whether characteristic ancient DNA damage has been  enzymatically or chemically removed in a laboratory
+      Indication of whether characteristic ancient DNA damage has been  altered or removed from a DNA extract in a laboratory
     title: Damage treatment type
     examples:
       - value: none
@@ -13716,7 +13738,6 @@ slots:
       - sequencing
     keywords:
       - ancient
-    string_serialization: "{float}-{float} {unit}"
     slot_uri: MIXS:999999903
     multivalued: true
     range: DamageTreatmentEnum ## or name of defined enum as above
@@ -13737,7 +13758,7 @@ slots:
     annotations:
       Expected_value: name of authority providing ethical approval
     description: >-
-      Name of the authority or institution that awarded sampling and  analysis (e.g. human remains) and/or export permission  (e.g. animal remains)
+      Name of the authorit(ies) or institution(s) that awarded sampling and  analysis (e.g. human remains) and/or export permission  (e.g. animal remains)
     title: ethical authority
     examples:
       - value: "University of Copenhagen"
@@ -13799,7 +13820,7 @@ slots:
     annotations:
       Expected_value: measurement value in number of ng per µl
     description: >-
-      Concentration of library in ng per µl, as inferred by qPCR/Qubit/etc.
+      Concentration of library in ng per µl, as inferred by qPCR, digital PCR, Qubit etc.
     title: library concentration
     examples:
       - value: "2"
@@ -13813,7 +13834,7 @@ slots:
     annotations:
       Expected_value: name of polymerase used during library indexing
     description: >-
-      The of DNA polymerase enzyme used for indexing DNA libraries
+      The DNA polymerase enzyme used for indexing DNA libraries
     title: library index polymerase
     examples:
       - value: "Agilent PfuTurbo Cx HotStart"
@@ -13848,7 +13869,7 @@ slots:
     annotations:
       Expected_value: name of polymerase used during library indexing
     description: >-
-      The name of polymerase enzyme used for reamplifying DNA libraries post-indexing.
+      The name of the DNA polymerase enzyme used for reamplifying DNA libraries post-indexing.
     title: library reamplification polymerase
     examples:
       - value: "KAPA HiFi HotStart Uracil+"
@@ -13865,7 +13886,7 @@ slots:
     recommended: true
   lib_type:
     description: >-
-      The type of library created, i.e., amplicon based or shotgun.  Amplicon based, is a library targets a specific region or regions of a genome (e.g. microbial genome capture based on baits of a reference genome), while shotgun refers to non targeted approach.
+      The type of library created, i.e., amplicon, enriched, or shotgun.  Amplicon based is a library that has been amplified to target a specific single region of a genome (e.g. a specific gene).  An enriched library is a library has had a particular genome or genome regions 'captured' or enriched typically via baits or probes. A shotgun library has had no type of targeted enrichment for a particular gene or genome.
     title: library type
     examples:
       - value: amplicon
@@ -13970,45 +13991,105 @@ slots:
       syntax: ^{PMID}|{DOI}|{URL}$
       interpolated: true
       partial_match: true
-  sample_age:
+  samp_age_range_youngest_limit:
     annotations:
-      Expected_value: value or range starting from from BP (1950)
-      Preferred_unit: in years before present (BP) or (BCE/CE)
+      Expected_value: age value corresponding to unit
     description: >-
-      The approximate date or date range that individual or organism was living and then died, or the  sample was exposed to the  surface. Typically inferred from archaeological  material, or biological material associated with a sediment, with  radiocarbon dating and other chronometric methods. Should be midpoint of  calibrated radiocarbon age.
-    title: sample age
+      The youngest possible age of the sample. Youngest refers to the time closest to present day. If a sample has only a single age value, the value from samp_age_range_oldest_limit can be repeated. Sample age refers to a period of time in the past, such as when an organism was living and then died, not the biological age.
+    title: sample age range youngest limit
     examples:
       - value: "100000"
       - value: "1700"
     in_subset:
       - nucleic acid sequence source
-    slot_uri: MIXS:9999999918
-    string_serialization: "{integer}|{integer}-{integer}"
+    slot_uri: MIXS:999999918
+    range: integer
     required: true
     recommended: true
-  sample_age_inference_methods:
+  samp_age_range_youngest_unit:
     description: >-
-      The method used to infer the sample age. Method (14C, OLS, stratigraphic inference etc.)  and associated information (lab code, etc).
+      The unit of the youngest age in the sample age range.
+    title: sample age range youngest unit
+    examples:
+      - value: "cal BP"
+      - value: "CE"
+      - value: "Ma"
+    in_subset:
+      - investigation
+    slot_uri: MIXS:999999919
+    multivalued: true
+    range: SampAgeUnit
+    required: true
+    recommended: true
+  samp_age_range_oldest_limit:
+    annotations:
+      Expected_value: age value corresponding to unit
+    description: >-
+      The oldest possible age of the sample. Oldest refers to the time furthest from present day. If a sample has only a single age value, the value from samp_age_range_youngest_limit can be repeated. Sample age refers to a period of time in the past, such as when an organism was living and then died, not the biological age.
+    title: sample age range oldest limit
+    examples:
+      - value: "120000"
+      - value: "1900"
+    in_subset:
+      - nucleic acid sequence source
+    slot_uri: MIXS:999999920
+    range: integer
+    required: true
+    recommended: true
+  samp_age_range_oldest_unit:
+    description: >-
+      The unit of the oldest age in sample age range.
+    title: sample age range oldest unit
+    examples:
+      - value: "cal BP"
+      - value: "CE"
+      - value: "Ma"
+    in_subset:
+      - investigation
+    slot_uri: MIXS:999999921
+    multivalued: true
+    range: SampAgeUnit
+    required: true
+    recommended: true
+  samp_age_range_inference_methods:
+    description: >-
+      The method used to infer the sample age. This corresponds to a fixed list of most commonly used dating methods, such as 14C, OSL, stratigraphic inference, historical records, other etc. If the method is not in the list, please provide a description in samp_age_range_inference_description.
     title: sample age inference methods
     examples:
       - value: "radiocarbon dating, calibrated with OxCal v4.3"
     in_subset:
       - investigation
-    slot_uri: MIXS:999999919
+    slot_uri: MIXS:999999922
     multivalued: true
-    range: string
-    string_serialization: "{text}"
-    required: false
+    range: SampAgeInferMethod
+    required: true
     recommended: true
-  sample_alt_lab_ids:
+  samp_age_range_inference_description:
     description: >-
-      Any alternative sample or material IDs related to the sample not already covered by terms samp_name and source_mat_id, including from associated other non-genetic analyses of the same sample.
+      Additional general information about the inference method used to infer the sample age that can be useful for  understanding how the sample age was estimated. This can be things such as whether radiocarbon age estimated on AMS or conventional radiocarbon dating, or which calibration confidence interval was used.  It can also be used to describe what artefacts were used to age the stratigraphic layer of historical contexts.
+    title: sample age inference description
+    examples:
+      - value: "radiocarbon dating, calibrated with OxCal v4.3 with 95% confidence interval"
+      - value: "based on proxy dating from other bone samples of stratigraphic layer"
+      - value: "a coin found in the burial was from the 3rd century"
+      - value: "age taken from previous publication Doe et al. 2019"
+      - value: "radiocarbon age ID: OxA-12345"
+    in_subset:
+      - investigation
+    slot_uri: MIXS:999999923
+    multivalued: false
+    range: string
+    required: false
+    recommended: false
+  samp_alt_lab_ids:
+    description: >-
+      An alternative sample or material ID related to the sample not already covered by terms samp_name and source_mat_id, including from associated other non-genetic analyses of the same sample (e.g. museum IDs, internal lab sample ID from sampling such a bone drilling). Can be specified multiple times for different ID contexts.
     title: alternative sample IDs
     examples:
       - value: "ABC_24"
     in_subset:
       - investigation
-    slot_uri: MIXS:999999920
+    slot_uri: MIXS:999999924
     multivalued: true
     range: string
     string_serialization: "{text}"
@@ -14022,7 +14103,7 @@ slots:
       - value: "Stored at -20oC until dna_extraction_date"
     in_subset:
       - nucleic acid sequence source
-    slot_uri: MIXS:999999922
+    slot_uri: MIXS:999999925
     range: string
     string_serialization: "{text}"
   palaeopath_status:
@@ -14041,7 +14122,7 @@ slots:
       - palaeopathology
       - host health
       - ancient
-    slot_uri: MIXS:999999905 #Not assigned
+    slot_uri: MIXS:999999926 #Not assigned
     multivalued: false
     range: string
     string_serialization: "{text}"
@@ -14060,7 +14141,7 @@ slots:
       - ethics
     keywords:
       - ethics
-    slot_uri: MIXS:999999905 #Not assigned
+    slot_uri: MIXS:999999927 #Not assigned
     multivalued: true
     range: BioCulturalLabel #enum value
     required: false
@@ -14077,7 +14158,7 @@ slots:
       - ethics
     keywords:
       - ethics
-    slot_uri: MIXS:999999905 #Not assigned
+    slot_uri: MIXS:999999928 #Not assigned
     multivalued: true
     range: string
     string_serialization: "{text}"
@@ -14097,7 +14178,7 @@ slots:
       - nucleic acid sequence source
     keywords:
       - ancient
-    slot_uri: MIXS:999999905 #Not assigned
+    slot_uri: MIXS:999999929 #Not assigned
     multivalued: false
     range: string
     string_serialization: "{text}"
@@ -14117,16 +14198,16 @@ slots:
     keywords:
       - library
       - preparation
-    slot_uri: MIXS:999999905 #Not assigned
+    slot_uri: MIXS:999999930 #Not assigned
     multivalued: true
     range: LibStrand #enum value
     required: false
     recommended: true
-  probe_set:
+  enrichment_probe_set:
     annotations:
       Expected_value: Description of probe set used for target enrichment/library selection
     description: >-
-      Description of target enrichment probe designs used (e.g. sequences, type, company). This can include custom kits (please provide a general description and DOI if available) or commercially available kit (provide ID and company).
+      Description of target enrichment probe designs used (e.g., species included, sequences, type, company). This can include custom kits (please provide a general description and DOI if available) or commercially available kit (provide ID and company).
     title: enrichment probe design description
     examples:
       - value: "Custom probe design (70 bp biotinylated RNA probes) covering 500 full E. Coli genomes; company TE-Science"
@@ -14136,7 +14217,7 @@ slots:
     keywords:
       - library
       - enrichment
-    slot_uri: MIXS:999999905 #Not assigned
+    slot_uri: MIXS:999999931 #Not assigned
     multivalued: true
     range: string
     string_serialization: "{text}"
@@ -14156,23 +14237,12 @@ slots:
     keywords:
       - library
       - preparation
-    slot_uri: MIXS:999999905 #Not assigned
+    slot_uri: MIXS:999999932 #Not assigned
     multivalued: true
     range: string
     string_serialization: "{text}"
     required: false
     recommended: true
-  radiocarbondating_data:
-    name: radiocarbondating_data
-    description: Data that comply with Extension RadiocarbonDating
-    title: Radiocarbon dating data
-    from_schema: https://w3id.org/mixs
-    domain: MixsCompliantData
-    slot_uri: MIXS:radiocarbondating_data
-    range: RadiocarbonDating
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
   c14_date:
     annotations:
       Expected_value: measurement
@@ -14205,7 +14275,7 @@ slots:
       The one standard deviation around the 'raw' C14 Date measurement, normally indicated as a ± after the main date. Must be in the same format (i.e., y BP).
     title: Radiocarbon date standard deviation
     examples:
-      - value: "120"
+      - value: 120
     in_subset:
       - investigation
     keywords:
@@ -14288,8 +14358,8 @@ slots:
       The delta carbon-13 value of the sample (δ13C), which is the ratio of the stable isotope 13C to 12C, expressed in per mil (‰) notation. Used as a quality control measurement.
     title: Delta 13C value
     examples:
-      - value: "-25.3"
-      - value: "-20.1"
+      - value: -25.3
+      - value: -20.1
     in_subset:
       - investigation
     keywords:
@@ -14327,8 +14397,8 @@ slots:
       The percentage of carbon in a non-proteinaceous sample used for dating (such as charcoal), expressed as a percentage (%). Used as a quality control measurement.
     title: Carbon percentage
     examples:
-      - value: "50.3"
-      - value: "45.1"
+      - value: 50.3
+      - value: 45.1
     in_subset:
       - investigation
     keywords:
@@ -14350,9 +14420,9 @@ slots:
       Upper (youngest) date in the range of a calibrated age. Calendar timescale to be specified: AD/BC, CE/BCE, cal BP. The abbreviation BP is to be used for uncalibrated 14C determinations, cal BP must be used here.
     title: Radiocarbon calibration age upper limit
     examples:
-      - value: "1449"
-      - value: "12560"
-      - value: "1500"
+      - value: 1449
+      - value: 12560
+      - value: 1500
     in_subset:
       - investigation
     keywords:
@@ -14373,9 +14443,9 @@ slots:
       Median date in the range of a calibrated age. Calendar timescale to be specified: AD/BC, CE/BCE, cal BP. The abbreviation BP is to be used for uncalibrated 14C determinations, cal BP must be used here.
     title: Radiocarbon calibration age upper limit
     examples:
-      - value: "1450"
-      - value: "15700"
-      - value: "1473"
+      - value: 1450
+      - value: 15700
+      - value: 1473
     in_subset:
       - investigation
     keywords:
@@ -14396,9 +14466,9 @@ slots:
       Lower (oldest) date in the range of a calibrated age. Calendar timescale to be specified: AD/BC, CE/BCE, cal BP. Note: the abbreviation 'BP' is to be used for uncalibrated 14C determinations, cal BP must be used here.
     title: Radiocarbon calibration age lower limit
     examples:
-      - value: "1451"
-      - value: "18560"
-      - value: "1453"
+      - value: 1451
+      - value: 18560
+      - value: 1453
     in_subset:
       - investigation
     keywords:
@@ -14436,8 +14506,8 @@ slots:
       Confidence level of the reported calibrated age range, typically in 2 (95.4%) or 1 (68.2%) levels of significance (sigma).
     title: Radiocarbon calibration age confidence level
     examples:
-      - value: "1"
-      - value: "2"
+      - value: 1
+      - value: 2
     in_subset:
       - investigation
     keywords:
@@ -14494,8 +14564,8 @@ slots:
       Version of the calibration software used for calibration.
     title: Radiocarbon calibration software version
     examples:
-      - value: "1.0.3"
-      - value: "4.4"
+      - value: 1.0.3
+      - value: 4.4
     in_subset:
       - investigation
     keywords:
@@ -19636,6 +19706,7 @@ classes:
       - miuvig_symbiont_associated_data
       - miuvig_wastewater_sludge_data
       - miuvig_water_data
+      - ancient_data
       - mims_host_associated_ancient_data
       - mims_sediment_ancient_data
     tree_root: true
@@ -21944,19 +22015,25 @@ classes:
       - prev_pubs
       - recovery_date
       - samp_decontam_pretreat
-      - sample_age
-      - sample_age_inference_methods
-      - sample_alt_lab_ids
+      - samp_age_range_youngest_limit
+      - samp_age_range_youngest_unit
+      - samp_age_range_oldest_limit
+      - samp_age_range_oldest_unit
+      - samp_age_range_inference_methods
+      - samp_age_range_inference_description
+      - samp_alt_lab_ids
       - storage_conditions
       - palaeopath_status
       - biocultural_label
       - ethics_perm_scope
       - host_body_preservation_state
       - lib_strandedness
-      - probe_set
+      - enrichment_probe_set
       - mid_config
     slot_usage:
-      sample_age:
+      samp_age_range_youngest_limit:
+        recommended: true
+      samp_age_range_oldest_limit:
         recommended: true
     class_uri: MIXS:9999903
     annotations:
