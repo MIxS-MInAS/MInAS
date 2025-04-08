@@ -14,10 +14,15 @@ The resulting output files are stored in the `src/` directory in file format spe
 
 The following tools are required to generate the schema files:
 
-- [`yq`](https://github.com/mikefarah/yq/?tab=readme-ov-file#install) (version 4.44.2)
-  - Note: version not on `conda` or `pip` requires binary or OS distribution installation
+- [linkml-toolkit](https://github.com/genomewalker/linkml-toolkit)
+  - Not yet on pip/conda etc! Will need to manually install
 - [`linkml`](https://github.com/linkml/linkml) (Version 1.8.1)
   - Available on pip: `pip install linkml==1.8.1`
+
+Deprecated
+
+- [`yq`](https://github.com/mikefarah/yq/?tab=readme-ov-file#install) (version 4.44.2)
+  - Note: version not on `conda` or `pip` requires binary or OS distribution installation
 
 ### Merging the YAML files
 
@@ -27,7 +32,7 @@ For updating during development:
 
 ```bash
 MIXS_VERSION=6.2.0
-EXTANCIENT_VERSION=0.4.0 ## Only used ofr releases
+EXTANCIENT_VERSION=0.5.0 ## Only used ofr releases
 EXTRADIOCARBONDATING_VERSION=0.1.2 ## Only used for releases
 
 ## Core MIxS Schema
@@ -40,13 +45,21 @@ curl -o src/mixs/schema/radiocarbon-dating-main.yaml "https://raw.githubusercont
 ## MInAS Combinations
 curl -o src/mixs/schema/minas-combinations-main.yaml "https://raw.githubusercontent.com/MIxS-MInAS/minas-combinations/main/src/mixs/schema/minas-combinations.yaml" ## Combinations
 
-## Merge together. Note you need a select(fileIndex == X) for each yaml file!
-yq eval-all 'select(fileIndex == 0) *+ select(fileIndex == 1) *+ select(fileIndex == 2) *+ select(fileIndex == 3)' \
-  src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
-  src/mixs/schema/ancient-main.yaml \
-  src/mixs/schema/radiocarbon-dating-main.yaml \
-  src/mixs/schema/minas-combinations-main.yaml \
-  > src/mixs/schema/mixs-minas.yaml
+## Merge together
+lmtk combine --mode merge --schema src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
+  -a src/mixs/schema/ancient-main.yaml \
+  -a src/mixs/schema/radiocarbon-dating-main.yaml \
+  -a src/mixs/schema/minas-combinations-main.yaml \
+  --output src/mixs/schema/mixs-minas.yaml
+
+## OLD METHOD Merge together. Note you need a select(fileIndex == X) for each yaml file!
+## yq eval-all 'select(fileIndex == 0) *+ select(fileIndex == 1) *+ select(fileIndex == 2) *+ select(fileIndex == 3)' \
+## src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
+## src/mixs/schema/ancient-main.yaml \
+##  src/mixs/schema/radiocarbon-dating-main.yaml \
+##  src/mixs/schema/minas-combinations-main.yaml \
+##  > src/mixs/schema/mixs-minas.yaml
+##
 
 ## Fix some metadata
 sed -i 's#source: https://github.com/MIxS-MInAS/extension-radiocarbon-dating/raw/main/proposals/0.1.0/extension-radiocarbon-dating-v0_1_0.csv#source: https://github.com/MIxS-MInAS/MInAS/#g' src/mixs/schema/mixs-minas.yaml
@@ -56,8 +69,9 @@ And then, for a release, (making sure updating the versions in the variables):
 
 ```bash
 MIXS_VERSION=6.2.0
-EXTANCIENT_VERSION=0.4.0
+EXTANCIENT_VERSION=0.5.0
 EXTRADIOCARBONDATING_VERSION=0.1.2
+COMBINATIONS_VERSION=0.1.0
 
 ## Core MIxS Schema
 curl -o src/mixs/schema/mixs-v$MIXS_VERSION.yaml "https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/v$MIXS_VERSION/src/mixs/schema/mixs.yaml" ## Base MIxS schema
@@ -65,17 +79,23 @@ curl -o src/mixs/schema/mixs-v$MIXS_VERSION.yaml "https://raw.githubusercontent.
 ## MInAS Extensions
 curl -o src/mixs/schema/ancient-v$EXTANCIENT_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-ancient/v$EXTANCIENT_VERSION/src/mixs/schema/ancient.yml" ## Ancient DNA extension
 curl -o src/mixs/schema/radiocarbon-dating-v$EXTRADIOCARBONDATING_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-radiocarbon-dating/v$EXTRADIOCARBONDATING_VERSION/src/mixs/schema/radiocarbon-dating.yml" ## Radiocarbon extension
+curl -o src/mixs/schema/minas-combinations-v$COMBINATIONS_VERSION.yaml "https://github.com/MIxS-MInAS/minas-combinations/raw/refs/tags/v$COMBINATIONS_VERSION/src/mixs/schema/minas-combinations.yml" ## Combinations
 
-## MInAS Combinations
-curl -o src/mixs/schema/minas-combinations-vmain.yaml "https://raw.githubusercontent.com/MIxS-MInAS/minas-combinations/main/src/mixs/schema/minas-combinations.yaml" ## Combinations
+## Merge together
+lmtk combine --mode merge --schema src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
+  -a src/mixs/schema/ancient-v$EXTANCIENT_VERSION.yaml \
+  -a src/mixs/schema/radiocarbon-dating-v$EXTRADIOCARBONDATING_VERSION.yaml \
+  -a src/mixs/schema/minas-combinations-v$COMBINATIONS_VERSION.yaml \
+  --output src/mixs/schema/mixs-minas.yaml
 
-## Merge together. Note you need a select(fileIndex == X) for each yaml file!
-yq eval-all 'select(fileIndex == 0) *+ select(fileIndex == 1) *+ select(fileIndex == 2) *+ select(fileIndex == 3)' \
-  src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
-  src/mixs/schema/ancient-v$EXTANCIENT_VERSION.yaml \
-  src/mixs/schema/radiocarbon-dating-v$EXTRADIOCARBONDATING_VERSION.yaml \
-  src/mixs/schema/minas-combinations-vmain.yaml \
-  > src/mixs/schema/mixs-minas.yaml
+## OLD METHOD Merge together. Note you need a select(fileIndex == X) for each yaml file!
+## yq eval-all 'select(fileIndex == 0) *+ select(fileIndex == 1) *+ select(fileIndex == 2) *+ select(fileIndex == 3)' \
+## src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
+## src/mixs/schema/ancient-main.yaml \
+##  src/mixs/schema/radiocarbon-dating-main.yaml \
+##  src/mixs/schema/minas-combinations-main.yaml \
+##  > src/mixs/schema/mixs-minas.yaml
+##
 
 ## Fix some metadata
 sed -i 's#source: https://github.com/MIxS-MInAS/extension-radiocarbon-dating/raw/main/proposals/0.1.0/extension-radiocarbon-dating-v0_1_0.csv#source: https://github.com/MIxS-MInAS/MInAS/#g' src/mixs/schema/mixs-minas.yaml
