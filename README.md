@@ -79,7 +79,7 @@ curl -o src/mixs/schema/mixs-v$MIXS_VERSION.yaml "https://raw.githubusercontent.
 ## MInAS Extensions
 curl -o src/mixs/schema/ancient-v$EXTANCIENT_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-ancient/v$EXTANCIENT_VERSION/src/mixs/schema/ancient.yml" ## Ancient DNA extension
 curl -o src/mixs/schema/radiocarbon-dating-v$EXTRADIOCARBONDATING_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-radiocarbon-dating/v$EXTRADIOCARBONDATING_VERSION/src/mixs/schema/radiocarbon-dating.yml" ## Radiocarbon extension
-curl -o src/mixs/schema/minas-combinations-v$COMBINATIONS_VERSION.yaml "https://github.com/MIxS-MInAS/minas-combinations/raw/refs/tags/v$COMBINATIONS_VERSION/src/mixs/schema/minas-combinations.yml" ## Combinations
+curl -o src/mixs/schema/minas-combinations-v$COMBINATIONS_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/minas-combinations/refs/tags/v$COMBINATIONS_VERSION/src/mixs/schema/minas-combinations.yml" ## Combinations
 
 ## Merge together
 lmtk combine --mode merge --schema src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
@@ -101,7 +101,18 @@ lmtk combine --mode merge --schema src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
 sed -i 's#source: https://github.com/MIxS-MInAS/extension-radiocarbon-dating/raw/main/proposals/0.1.0/extension-radiocarbon-dating-v0_1_0.csv#source: https://github.com/MIxS-MInAS/MInAS/#g' src/mixs/schema/mixs-minas.yaml
 ```
 
-In both cases, we lint and validate the newly extended MIxS schema
+First we can check that all new YAML files (extensions, combinations) are represented.
+
+```bash
+for i in ethics_perm_scope localised_reservoir_offset_sd mims_symbiontassociated_ancient_data; do
+  if [[ $(grep "$i" src/mixs/schema/mixs-minas.yaml | wc -l) -ge 2 ]]; then echo "$i: true"; else echo "$i: false"; fi
+done
+```
+
+> [!WARNING]
+> There should be one string per input YAML file, and be aware these strings may change per release.
+
+In both cases of development and release, we lint and validate the newly extended MIxS schema
 
 ```bash
 linkml lint --validate src/mixs/schema/mixs-minas.yaml
