@@ -71,7 +71,7 @@ And then, for a release, (making sure updating the versions in the variables):
 MIXS_VERSION=6.2.0
 EXTANCIENT_VERSION=0.5.0
 EXTRADIOCARBONDATING_VERSION=0.1.2
-COMBINATIONS_VERSION=0.1.0
+COMBINATIONS_VERSION=0.1.2
 
 ## Core MIxS Schema
 curl -o src/mixs/schema/mixs-v$MIXS_VERSION.yaml "https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/v$MIXS_VERSION/src/mixs/schema/mixs.yaml" ## Base MIxS schema
