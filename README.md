@@ -28,6 +28,8 @@ Deprecated
 
 To generate the combined YAML file, we can use a combination of `yq` and `curl` to download specific tagged releases from the MIxS and various MInAS repositories.
 
+#### Development
+
 For updating during development:
 
 ```bash
@@ -65,14 +67,21 @@ lmtk combine --mode merge --schema src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
 sed -i 's#source: https://github.com/MIxS-MInAS/extension-radiocarbon-dating/raw/main/proposals/0.1.0/extension-radiocarbon-dating-v0_1_0.csv#source: https://github.com/MIxS-MInAS/MInAS/#g' src/mixs/schema/mixs-minas.yaml
 ```
 
+#### Release
+
 And then, for a release, (making sure updating the versions in the variables):
 
 ```bash
+## Set versions
 MIXS_VERSION=6.2.0
 EXTANCIENT_VERSION=0.5.0
 EXTRADIOCARBONDATING_VERSION=0.1.2
-COMBINATIONS_VERSION=0.1.2
+COMBINATIONS_VERSION=0.1.3
+```
 
+Download schemas
+
+```bash
 ## Core MIxS Schema
 curl -o src/mixs/schema/mixs-v$MIXS_VERSION.yaml "https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/v$MIXS_VERSION/src/mixs/schema/mixs.yaml" ## Base MIxS schema
 
@@ -80,7 +89,11 @@ curl -o src/mixs/schema/mixs-v$MIXS_VERSION.yaml "https://raw.githubusercontent.
 curl -o src/mixs/schema/ancient-v$EXTANCIENT_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-ancient/v$EXTANCIENT_VERSION/src/mixs/schema/ancient.yml" ## Ancient DNA extension
 curl -o src/mixs/schema/radiocarbon-dating-v$EXTRADIOCARBONDATING_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-radiocarbon-dating/v$EXTRADIOCARBONDATING_VERSION/src/mixs/schema/radiocarbon-dating.yml" ## Radiocarbon extension
 curl -o src/mixs/schema/minas-combinations-v$COMBINATIONS_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/minas-combinations/refs/tags/v$COMBINATIONS_VERSION/src/mixs/schema/minas-combinations.yml" ## Combinations
+```
 
+Merge together with `linkml-toolkit`
+
+```bash
 ## Merge together
 lmtk combine --mode merge --schema src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
   -a src/mixs/schema/ancient-v$EXTANCIENT_VERSION.yaml \
