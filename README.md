@@ -76,7 +76,7 @@ And then, for a release, (making sure updating the versions in the variables):
 MIXS_VERSION=6.2.0
 EXTANCIENT_VERSION=0.5.0
 EXTRADIOCARBONDATING_VERSION=0.1.2
-COMBINATIONS_VERSION=0.1.3
+COMBINATIONS_VERSION=0.1.7
 ```
 
 Download schemas
