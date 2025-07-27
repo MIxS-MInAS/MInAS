@@ -1,6 +1,8 @@
 # MInAS
 
-This repository holds the combined base MIxS schema, plus the various extensions generated in the scope of the MInAS project.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16499532.svg)](https://doi.org/10.5281/zenodo.16499532)
+
+This repository holds the combined base MIxS schema, plus the various extensions and combinations generated in the scope of the MInAS project.
 
 The source YAML file is generated using the `yq` tool, merging each of the individual YAML files into a single one.
 
