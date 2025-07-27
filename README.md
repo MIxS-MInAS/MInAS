@@ -74,9 +74,9 @@ And then, for a release, (making sure updating the versions in the variables):
 ```bash
 ## Set versions
 MIXS_VERSION=6.2.0
-EXTANCIENT_VERSION=0.5.0
-EXTRADIOCARBONDATING_VERSION=0.1.2
-COMBINATIONS_VERSION=0.1.7
+EXTANCIENT_VERSION=0.7.0
+EXTRADIOCARBONDATING_VERSION=0.1.4
+COMBINATIONS_VERSION=0.2.1
 ```
 
 Download schemas
@@ -117,7 +117,7 @@ sed -i 's#source: https://github.com/MIxS-MInAS/extension-radiocarbon-dating/raw
 First we can check that all new YAML files (extensions, combinations) are represented.
 
 ```bash
-for i in ethics_perm_scope localised_reservoir_offset_sd mims_symbiontassociated_ancient_data; do
+for i in permit_scope localised_reservoir_offset_sd mims_symbiontassociated_ancient_data; do
   if [[ $(grep "$i" src/mixs/schema/mixs-minas.yaml | wc -l) -ge 2 ]]; then echo "$i: true"; else echo "$i: false"; fi
 done
 ```
@@ -147,3 +147,9 @@ python3 ./scripts/linkml2class_tsvs.py --schema-file src/mixs/schema/mixs-minas.
 > This script has been copied and modified very slightly to include the python3 shebang, and is placed under scripts until properly packaged for the MIxS project.
 >
 > To use this script, you only need python3 and no other dependencies (it seems).
+
+Update the `CITATION.cff` file with the new version of the schema and any new major contributors.
+
+Commit and push to GitHub.
+
+Make release on GitHub using previous releases as a template.
