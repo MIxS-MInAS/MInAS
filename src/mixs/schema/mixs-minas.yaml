@@ -1356,11 +1356,7 @@ enums:
       Marine13:
       Marine20:
       CalPal2007_HULU:
-  ConfidenceSigma:
-    permissible_values:
-      1:
-      2:
-  RadiocarbonCalibUnit:
+  RadiocarbonCalibEra:
     permissible_values:
       cal BP:
       cal AD:
@@ -14309,14 +14305,14 @@ slots:
     multivalued: true
     inlined: true
     inlined_as_list: true
-  c14_date:
+  c14_age:
     annotations:
       Expected_value: measurement
       Preferred_unit:
         tag: Preferred_unit
         value: years before present (yr BP)
-    description: The uncalibrated date from the laboratory measurement. Should be a conventional 14C date (i.e., 14C yr BP) NOT in AD/BC format.  This is typically the 'raw' date reported by the radiocarbon lab, in Before Present (BP) notation.
-    title: Radiocarbon date
+    description: The uncalibrated age from the laboratory measurement - i.e. the conventional radiocarbon age (CRA). Should be a conventional 14C age (i.e., 14C yr BP) NOT in AD/BC format. This is typically the 'raw' age reported by the radiocarbon lab, in Before Present (BP) notation.
+    title: Radiocarbon age
     examples:
     - value: '1453'
     - value: '12560'
@@ -14330,14 +14326,14 @@ slots:
     multivalued: false
     required: true
     recommended: true
-  c14_date_sd:
+  c14_age_error:
     annotations:
       Expected_value: measurement
       Preferred_unit:
         tag: Preferred_unit
         value: years before present (yr BP)
-    description: The one standard deviation around the 'raw' C14 Date measurement, normally indicated as a ± after the main date. Must be in the same format (i.e., y BP).
-    title: Radiocarbon date standard deviation
+    description: The 1-sigma uncertainty around the conventional radiocarbon age (C14) measurement, normally indicated as a ± after the main age. Must be in the same format (i.e., y BP). Sometimes referred to as the "error" or "sigma" of the measurement.
+    title: Radiocarbon age uncertainty
     examples:
     - value: '120'
     in_subset:
@@ -14350,11 +14346,11 @@ slots:
     multivalued: false
     required: true
     recommended: true
-  c14_date_lab_code:
+  c14_lab_id:
     annotations:
       Expected_value: unique identifier
-    description: "Unique laboratory identification number which is a combination of a lab identifier prefix, and a number. The prefix should be derived from: https://radiocarbon.webhost.uits.arizona.edu/laboratories."
-    title: Laboratory code for the date determination
+    description: "Unique laboratory identification number for the age measurement which is a combination of a lab identifier prefix, and a number, joined by a hyphen (see examples). The prefix should be derived from: https://radiocarbon.webhost.uits.arizona.edu/laboratories."
+    title: Laboratory code for the age determination
     examples:
     - value: OxA-1539
     - value: KN-1369
@@ -14387,6 +14383,24 @@ slots:
     multivalued: false
     required: false
     recommended: true
+  c14_sample_taxid:
+    annotations:
+      Expected_value: text
+    description: NCBI taxon id of the organism from which the sample used to extract carbon used for radiocarbon measurement originated.
+    title: Radiocarbon dating sample taxon
+    examples:
+    - value: Corylus avellana
+    - value: Hordeum
+    in_subset:
+    - investigation
+    keywords:
+    - dating
+    string_serialization: '{termLabel} [{termID}]|{text}'
+    slot_uri: "MIXS:99999990"
+    range: string
+    multivalued: false
+    required: false
+    recommended: true
   pretreatment_method:
     annotations:
       Expected_value: text
@@ -14397,6 +14411,8 @@ slots:
     - value: Brown et al. 1988 with Vivaspin® filter cleaning method from Bronk Ramsey et al. (2004)
     - value: ultrafiltration
     - value: vivaspin filtration
+    - value: none
+    - value: not provided
     in_subset:
     - investigation
     keywords:
@@ -14474,34 +14490,12 @@ slots:
       Preferred_unit:
         tag: Preferred_unit
         value: calibrated years before present (cal BP)
-    description: "Upper (youngest) date in the range of a calibrated age. Calendar timescale to be specified: AD/BC, CE/BCE, cal BP. The abbreviation BP is to be used for uncalibrated 14C determinations, cal BP must be used here."
+    description: "Lower bound (youngest plausible age) of the credible calibrated age interval of the sample at the specified confidence level. Calendar timescale to be specified: AD/BC, CE/BCE, cal BP. The abbreviation BP is to be used for uncalibrated 14C determinations, cal BP must be used here."
     title: Radiocarbon calibration age upper limit
     examples:
     - value: '1449'
     - value: '12560'
     - value: '1500'
-    in_subset:
-    - investigation
-    keywords:
-    - dating
-    string_serialization: '{integer}'
-    slot_uri: "MIXS:99999979"
-    range: integer
-    multivalued: true
-    required: false
-    recommended: true
-  calib_age_median:
-    annotations:
-      Expected_value: measurement
-      Preferred_unit:
-        tag: Preferred_unit
-        value: calibrated years before present (cal BP)
-    description: "Median date in the range of a calibrated age. Calendar timescale to be specified: AD/BC, CE/BCE, cal BP. The abbreviation BP is to be used for uncalibrated 14C determinations, cal BP must be used here."
-    title: Radiocarbon calibration age upper limit
-    examples:
-    - value: '1450'
-    - value: '15700'
-    - value: '1473'
     in_subset:
     - investigation
     keywords:
@@ -14518,7 +14512,7 @@ slots:
       Preferred_unit:
         tag: Preferred_unit
         value: calibrated years before present (cal BP)
-    description: "Lower (oldest) date in the range of a calibrated age. Calendar timescale to be specified: AD/BC, CE/BCE, cal BP. Note: the abbreviation 'BP' is to be used for uncalibrated 14C determinations, cal BP must be used here."
+    description: "Upper bound (oldest plausible age) of the credible calibrated age interval of the sample at the specified confidence level. Calendar timescale to be specified: AD/BC, CE/BCE, cal BP. Note: the abbreviation 'BP' is to be used for uncalibrated 14C determinations, cal BP must be used here."
     title: Radiocarbon calibration age lower limit
     examples:
     - value: '1451'
@@ -14534,11 +14528,11 @@ slots:
     multivalued: true
     required: false
     recommended: true
-  calib_age_unit:
+  calib_age_era:
     annotations:
       Expected_value: enumeration
-    description: Unit of the calibrated median date and calibrated range, i.e., whether in  cal AD/BC, cal CE/BCE, cal BP. Note the abbreviation BP is to be used for uncalibrated 14C determinations only, therefore cal BP must be used here.
-    title: Unit of radiocarbon date calibration
+    description: Calendar era used for the calibrated interval, i.e., whether in  cal AD/BC, cal CE/BCE, cal BP. Note the abbreviation BP is to be used for uncalibrated 14C determinations only, therefore cal BP must be used here.
+    title: Calendar era of calibrated radiocarbon date
     examples:
     - value: cal BP
     - value: cal AD
@@ -14549,25 +14543,24 @@ slots:
     - dating
     string_serialization: '{text}'
     slot_uri: "MIXS:99999981"
-    range: RadiocarbonCalibUnit
+    range: RadiocarbonCalibEra
     multivalued: true
     required: false
     recommended: true
-  calib_age_sigma:
+  calib_age_confidence:
     annotations:
       Expected_value: enumeration
-    description: Confidence level of the reported calibrated age range, typically in 2 (95.4%) or 1 (68.2%) levels of significance (sigma).
-    title: Radiocarbon calibration age confidence level
+    description: Confidence level of the reported calibrated age range, typically in 2 (95.4%) or 1 (68.2%) 'sigma' values.
+    title: Confidence level of calibrated radiocarbon date
     examples:
-    - value: '1'
-    - value: '2'
+    - value: '0.954'
+    - value: '0.682'
     in_subset:
     - investigation
     keywords:
     - dating
-    string_serialization: '{integer}'
+    string_serialization: '{float}'
     slot_uri: "MIXS:99999982"
-    range: ConfidenceSigma
     multivalued: true
     required: false
     recommended: true
@@ -14593,7 +14586,7 @@ slots:
   calib_software:
     annotations:
       Expected_value: text
-    description: The name of the software used to generated the calibrated version of the laboratory measurement date.
+    description: Details of the software (name, version, settings, citation, etc.) used to calulated the calibrated radiocarbon date.
     title: Radiocarbon calibration software
     examples:
     - value: OxCal
@@ -14605,62 +14598,6 @@ slots:
     string_serialization: '{text}'
     slot_uri: "MIXS:99999984"
     range: string
-    multivalued: true
-    required: false
-    recommended: true
-  calib_version:
-    annotations:
-      Expected_value: version
-    description: Version of the calibration software used for calibration.
-    title: Radiocarbon calibration software version
-    examples:
-    - value: 1.0.3
-    - value: '4.4'
-    in_subset:
-    - investigation
-    keywords:
-    - dating
-    string_serialization: '{text}'
-    slot_uri: "MIXS:99999985"
-    multivalued: true
-    range: string
-    required: false
-    recommended: true
-  calib_settings:
-    annotations:
-      Expected_value: text
-    description: Settings used with the calibration software, including citations to age models used (when applicable).
-    title: Radiocarbon calibration software settings
-    examples:
-    - value: Bayesian model
-    - value: -m 10
-    in_subset:
-    - investigation
-    keywords:
-    - dating
-    string_serialization: '{text}'
-    slot_uri: "MIXS:99999986"
-    range: string
-    multivalued: true
-    required: false
-    recommended: true
-  calib_citation:
-    annotations:
-      Expected_value: text
-    description: The DOI, URL or citation information of the publication where the calibration software was originally described.
-    title: Radiocarbon calibration software citation
-    examples:
-    - value: "doi:10.1017/S0033822200033865"
-    - value: Ramsey 2009, Radiocarbon
-    in_subset:
-    - investigation
-    keywords:
-    - dating
-    slot_uri: "MIXS:99999987"
-    range: string
-    pattern: "^^PMID:\\d+$|^doi:10.\\d{2,9}/.*$|^https?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*)$|([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+)$"
-    structured_pattern:
-      syntax: ^{PMID}|{DOI}|{URL}|{text}$
     multivalued: true
     required: false
     recommended: true
@@ -22103,24 +22040,22 @@ classes:
     title: Radiocarbon dating
     is_a: Extension
     slots:
-    - c14_date
-    - c14_date_sd
-    - c14_date_lab_code
+    - c14_age
+    - c14_age_error
+    - c14_lab_id
     - sample_material
+    - c14_sample_taxid
+    - pretreatment_method
     - delta_13_c
     - delta_13_c_method
     - carbon_perc
     - carb_nitro_ratio
     - calib_age_youngest
-    - calib_age_median
     - calib_age_oldest
-    - calib_age_sigma
-    - calib_age_unit
+    - calib_age_confidence
+    - calib_age_era
     - calib_curve
     - calib_software
-    - calib_version
-    - calib_settings
-    - calib_citation
     - localised_reservoir_offset_value
     - localised_reservoir_offset_sd
     slot_usage:

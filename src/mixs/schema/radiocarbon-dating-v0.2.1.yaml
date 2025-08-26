@@ -1,0 +1,507 @@
+name: mixs
+description: >-
+  This file contains a YAML-formatted specification of the RadiocarbonDating extension of the Minimum Information about any (x) Sequence (MIxS) standard, generated using LinkML (https://linkml.io/linkml/). This file is released by the Genomic Standards Consortium (GSC; https://www.gensc.org/) for use by anyone handling data or information about biological sequences. This file is also used as an authoritative 'source of truth' to generate downstream GSC artifacts, available here: https://github.com/GenomicsStandardsConsortium/mixs/tree/main/project
+comments:
+  - "slot titles that are associated with more than one slot name/SCN: host sex"
+source: https://github.com/MIxS-MInAS/extension-radiocarbon-dating/raw/main/proposals/0.1.0/extension-radiocarbon-dating-v0_1_0.csv
+id: https://w3id.org/mixs
+version: v6.2.0
+imports:
+  - linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  MIXS: https://w3id.org/mixs/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  shex: http://www.w3.org/ns/shex#
+  schema: http://schema.org/
+default_prefix: MIXS
+default_range: string
+subsets:
+  example:
+  combination_classes:
+  sequencing:
+  environment:
+  nucleic acid sequence source:
+  investigation:
+enums:
+  MsMethod:
+    permissible_values:
+      IMRS:
+      AMS:
+  CalibCurve:
+    permissible_values:
+      IntCal98:
+      IntCal04:
+      IntCal09:
+      IntCal13:
+      IntCal20:
+      SHCal04:
+      SHCal13:
+      SHCal20:
+      Bomb04NH1:
+      Bomb04NH2:
+      Bomb04NH3:
+      Bomb04SH:
+      Bomb13NH1:
+      Bomb13NH2:
+      Bomb13NH3:
+      Bomb13SH12:
+      Bomb13SH3:
+      Bomb21NH1:
+      Bomb21NH2:
+      Bomb21NH3:
+      Bomb21SH12:
+      Bomb21SH3:
+      Kueppers04:
+      Marine98:
+      Marine04:
+      Marine09:
+      Marine13:
+      Marine20:
+      CalPal2007_HULU:
+  RadiocarbonCalibEra:
+    permissible_values:
+      "cal BP":
+      "cal AD":
+      "cal BC":
+      "cal CE":
+      "cal BCE":
+slots:
+  radiocarbondating_data:
+    name: radiocarbondating_data
+    description: Data that comply with Extension RadiocarbonDating
+    title: Radiocarbon dating data
+    from_schema: https://w3id.org/mixs
+    domain: MixsCompliantData
+    slot_uri: MIXS:radiocarbondating_data
+    range: RadiocarbonDating
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  c14_age:
+    annotations:
+      Expected_value: measurement
+      Preferred_unit:
+        tag: Preferred_unit
+        value: years before present (yr BP)
+    description: >-
+      The uncalibrated age from the laboratory measurement - i.e. the conventional radiocarbon age (CRA). Should be a conventional 14C age (i.e., 14C yr BP) NOT in AD/BC format. This is typically the 'raw' age reported by the radiocarbon lab, in Before Present (BP) notation.
+    title: Radiocarbon age
+    examples:
+      - value: "1453"
+      - value: "12560"
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{integer}"
+    slot_uri: MIXS:99999971
+    range: integer
+    multivalued: false
+    required: true
+    recommended: true
+  c14_age_error:
+    annotations:
+      Expected_value: measurement
+      Preferred_unit:
+        tag: Preferred_unit
+        value: years before present (yr BP)
+    description: >-
+      The 1-sigma uncertainty around the conventional radiocarbon age (C14) measurement, normally indicated as a ± after the main age. Must be in the same format (i.e., y BP). Sometimes referred to as the "error" or "sigma" of the measurement.
+    title: Radiocarbon age uncertainty
+    examples:
+      - value: "120"
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{integer}"
+    slot_uri: MIXS:99999972
+    range: integer
+    multivalued: false
+    required: true
+    recommended: true
+  c14_lab_id:
+    annotations:
+      Expected_value: unique identifier
+    description: >-
+      Unique laboratory identification number for the age measurement which is a combination of a lab identifier prefix, and a number, joined by a hyphen (see examples). The prefix should be derived from: https://radiocarbon.webhost.uits.arizona.edu/laboratories.
+    title: Laboratory code for the age determination
+    examples:
+      - value: OxA-1539
+      - value: KN-1369
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{text}-{integer}"
+    slot_uri: MIXS:99999973
+    range: string
+    multivalued: false
+    required: true
+    recommended: true
+  sample_material:
+    annotations:
+      Expected_value: text
+    description: >-
+      Material of the sample used to extract carbon used for radiocarbon dating measurements. Use ontology terms where possible, e.g. from UBERON for anatomical parts, or ENVO for other organic samples.
+    title: Radiocarbon dating sample material
+    examples:
+      - value: "charcoal [ENVO_01000560]"
+      - value: "molar tooth [UBERON_0003655]"
+      - value: "wood fragment"
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{termLabel} [{termID}]|{text}"
+    slot_uri: MIXS:99999974
+    range: string
+    multivalued: false
+    required: false
+    recommended: true
+  c14_sample_taxid:
+    annotations:
+      Expected_value: text
+    description: >-
+      NCBI taxon id of the organism from which the sample used to extract carbon used for radiocarbon measurement originated.
+    title: Radiocarbon dating sample taxon
+    examples:
+      - value: "Corylus avellana"
+      - value: "Hordeum"
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{termLabel} [{termID}]|{text}"
+    slot_uri: MIXS:99999990
+    range: string
+    multivalued: false
+    required: false
+    recommended: true
+  pretreatment_method:
+    annotations:
+      Expected_value: text
+    description: >-
+      Pretreatment method used for decontamination applied to sample, ideally a DOI or URL to a publication describing the method otherwise a short text description with critical information.
+    title: Radiocarbon treatment method
+    examples:
+      - value: "doi:10.1017/S0033822200039473"
+      - value: "Brown et al. 1988 with Vivaspin® filter cleaning method from Bronk Ramsey et al. (2004)"
+      - value: "ultrafiltration"
+      - value: "vivaspin filtration"
+      - value: "none"
+      - value: "not provided"
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    slot_uri: MIXS:99999975
+    range: string
+    pattern: ^^PMID:\d+$|^doi:10.\d{2,9}/.*$|^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$|([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+    structured_pattern:
+      syntax: ^{PMID}|{DOI}|{URL}|{text}$
+    multivalued: false
+    required: false
+    recommended: true
+  delta_13_c:
+    annotations:
+      Expected_value: measurement
+      Preferred_unit:
+        tag: Preferred_unit
+        value: per mil (‰)
+    description: >-
+      The delta carbon-13 value of the sample (δ13C), which is the ratio of the stable isotope 13C to 12C, expressed in per mil (‰) notation. Used as a quality control measurement.
+    title: Delta 13C value
+    examples:
+      - value: "-25.3"
+      - value: "-20.1"
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{float}"
+    slot_uri: MIXS:99999976
+    multivalued: false
+    required: true
+    recommended: true
+  delta_13_c_method:
+    annotations:
+      Expected_value: enumeration
+    description: >-
+      Which spectrophotometry method was used to measure the delta carbon-13 value, either with  Isotope Ratio Mass Spectrometer (IRMS) or Accelerated Mass Spectrometer (AMS).
+    title: Delta 13C measurement method
+    examples:
+      - value: ams
+      - value: imrs
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{text}"
+    slot_uri: MIXS:99999977
+    range: MsMethod
+    required: false
+    recommended: true
+  carbon_perc:
+    annotations:
+      Expected_value: measurement
+      Preferred_unit:
+        tag: Preferred_unit
+        value: percent (%)
+    description: >-
+      The percentage of carbon in a non-proteinaceous sample used for dating (such as charcoal), expressed as a percentage (%). Used as a quality control measurement.
+    title: Carbon percentage
+    examples:
+      - value: "50.3"
+      - value: "45.1"
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{float} {unit}"
+    slot_uri: MIXS:99999978
+    range: float
+    multivalued: false
+    required: true
+    recommended: true
+  nitrogen_perc:
+  carb_nitro_ratio:
+    annotations:
+      Expected_value: measurement value
+    description: Ratio of amount or concentrations of carbon to nitrogen. Used for quality control value in proteinaceous samples for radiocarbon dating.
+    title: carbon/nitrogen ratio
+    examples:
+      - value: "0.417361111"
+    keywords:
+      - carbon
+      - nitrogen
+      - ratio
+    string_serialization: "{float}:{float}"
+    slot_uri: MIXS:0000310
+    range: float
+    multivalued: false
+    required: false
+    recommended: true
+  calib_age_youngest:
+    annotations:
+      Expected_value: measurement
+      Preferred_unit:
+        tag: Preferred_unit
+        value: calibrated years before present (cal BP)
+    description: >-
+      Lower bound (youngest plausible age) of the credible calibrated age interval of the sample at the specified confidence level. Calendar timescale to be specified: AD/BC, CE/BCE, cal BP. The abbreviation BP is to be used for uncalibrated 14C determinations, cal BP must be used here.
+    title: Radiocarbon calibration age upper limit
+    examples:
+      - value: "1449"
+      - value: "12560"
+      - value: "1500"
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{integer}"
+    slot_uri: MIXS:99999979
+    range: integer
+    multivalued: true
+    required: false
+    recommended: true
+  calib_age_oldest:
+    annotations:
+      Expected_value: measurement
+      Preferred_unit:
+        tag: Preferred_unit
+        value: calibrated years before present (cal BP)
+    description: >-
+      Upper bound (oldest plausible age) of the credible calibrated age interval of the sample at the specified confidence level. Calendar timescale to be specified: AD/BC, CE/BCE, cal BP. Note: the abbreviation 'BP' is to be used for uncalibrated 14C determinations, cal BP must be used here.
+    title: Radiocarbon calibration age lower limit
+    examples:
+      - value: "1451"
+      - value: "18560"
+      - value: "1453"
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{integer}"
+    slot_uri: MIXS:99999980
+    range: integer
+    multivalued: true
+    required: false
+    recommended: true
+  calib_age_era:
+    annotations:
+      Expected_value: enumeration
+    description: >-
+      Calendar era used for the calibrated interval, i.e., whether in  cal AD/BC, cal CE/BCE, cal BP. Note the abbreviation BP is to be used for uncalibrated 14C determinations only, therefore cal BP must be used here.
+    title: Calendar era of calibrated radiocarbon date
+    examples:
+      - value: cal BP
+      - value: cal AD
+      - value: cal BCE
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{text}"
+    slot_uri: MIXS:99999981
+    range: RadiocarbonCalibEra
+    multivalued: true
+    required: false
+    recommended: true
+  calib_age_confidence:
+    annotations:
+      Expected_value: enumeration
+    description: >-
+      Confidence level of the reported calibrated age range, typically in 2 (95.4%) or 1 (68.2%) 'sigma' values.
+    title: Confidence level of calibrated radiocarbon date
+    examples:
+      - value: "0.954"
+      - value: "0.682"
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{float}"
+    slot_uri: MIXS:99999982
+    multivalued: true
+    required: false
+    recommended: true
+  calib_curve:
+    annotations:
+      Expected_value: enumeration
+    description: >-
+      Name of calibration curve used during radiocarbon date calibration. If a Marine curve is selected, the localised reservoir offset should be specified.
+    title: Radiocarbon calibration curve name
+    examples:
+      - value: IntCal20
+      - value: SHCal20
+      - value: Bomb21NH3
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{text}"
+    slot_uri: MIXS:99999983
+    range: CalibCurve
+    multivalued: true
+    required: false
+    recommended: true
+  calib_software:
+    annotations:
+      Expected_value: text
+    description: >-
+      Details of the software (name, version, settings, citation, etc.) used to calulated the calibrated radiocarbon date.
+    title: Radiocarbon calibration software
+    examples:
+      - value: OxCal
+      - value: CALIB
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{text}"
+    slot_uri: MIXS:99999984
+    range: string
+    multivalued: true
+    required: false
+    recommended: true
+  localised_reservoir_offset_value:
+    annotations:
+      Expected_value: measurement
+      Preferred_unit:
+        tag: Preferred_unit
+        value: years before present (yr BP)
+    description: >-
+      The Delta R (∆R) value used modify the calibration curve to account for regional/localised marine reservoir effect.
+    title: Reservoir offset
+    examples:
+      - value: 49 yr BP
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{integer}"
+    slot_uri: MIXS:99999988
+    range: integer
+    multivalued: true
+    required: false
+    recommended: false
+  localised_reservoir_offset_sd:
+    annotations:
+      Expected_value: measurement
+      Preferred_unit:
+        tag: Preferred_unit
+        value: years before present (yr BP)
+    description: >-
+      The standard deviation of averaged Delta R (∆R) values used modify the calibration curve to account for regional/localised marine reservoir effect.
+    title: Reservoir offset standard deviation
+    examples:
+      - value: 3 yr BP
+    in_subset:
+      - investigation
+    keywords:
+      - dating
+    string_serialization: "{integer}"
+    slot_uri: MIXS:99999989
+    range: integer
+    multivalued: true
+    required: false
+    recommended: false
+classes:
+  MixsCompliantData:
+    description:
+      A collection of data that complies with some combination of a MIxS
+      checklist and environmental extension
+    title: MIxS compliant data
+    slots:
+      - radiocarbondating_data
+    tree_root: true
+  Extension:
+    description:
+      A collection of recommended metadata terms (slots) developed by community
+      experts, describing the specific context under which a sample was collected.
+    aliases:
+      - EnvironmentalPackage
+  RadiocarbonDating:
+    description: >-
+      A collection of terms describing radiocarbon dating measurements and calibration, including the sample material, pretreatment method, and calibration curve used.
+      These date values and metadata are typically associated with a the sample sample material used for nucleic acis extraction
+    comments:
+      - Typically will be used with ancient DNA samples
+    title: Radiocarbon dating
+    is_a: Extension
+    slots:
+      - c14_age
+      - c14_age_error
+      - c14_lab_id
+      - sample_material
+      - c14_sample_taxid
+      - pretreatment_method
+      - delta_13_c
+      - delta_13_c_method
+      - carbon_perc
+      - carb_nitro_ratio
+      - calib_age_youngest
+      - calib_age_oldest
+      - calib_age_confidence
+      - calib_age_era
+      - calib_curve
+      - calib_software
+      - localised_reservoir_offset_value
+      - localised_reservoir_offset_sd
+    slot_usage:
+      # Normally specify the slot usage of required/recommended etc, but seems to break linkml2class_tsvs
+    class_uri: MIXS:9999999
+    annotations:
+      use_cases: RadiocarbonDating
+settings:
+  country: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  parameters: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  region: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  room_name: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  software: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  specific_location: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  storage_condition_type: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  termLabel: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  unit: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
