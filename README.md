@@ -77,73 +77,73 @@ For a release, (making sure updating the versions in the variables):
 
 1. Specify release variables
 
-  ```bash
-  ## Set versions
-  MIXS_VERSION=6.2.0
-  EXTANCIENT_VERSION=0.7.0
-  EXTRADIOCARBONDATING_VERSION=0.2.0
-  COMBINATIONS_VERSION=0.2.1
-  ```
+    ```bash
+    ## Set versions
+    MIXS_VERSION=6.2.0
+    EXTANCIENT_VERSION=0.7.0
+    EXTRADIOCARBONDATING_VERSION=0.2.0
+    COMBINATIONS_VERSION=0.2.1
+    ```
 
 2. Download schemas
 
-  ```bash
-  ## Core MIxS Schema
-  curl -o src/mixs/schema/mixs-v$MIXS_VERSION.yaml "https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/v$MIXS_VERSION/src/mixs/schema/mixs.yaml" ## Base MIxS schema
+    ```bash
+    ## Core MIxS Schema
+    curl -o src/mixs/schema/mixs-v$MIXS_VERSION.yaml "https://raw.githubusercontent.com/GenomicsStandardsConsortium/mixs/v$MIXS_VERSION/src/mixs/schema/mixs.yaml" ## Base MIxS schema
 
-  ## MInAS Extensions
-  curl -o src/mixs/schema/ancient-v$EXTANCIENT_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-ancient/v$EXTANCIENT_VERSION/src/mixs/schema/ancient.yml" ## Ancient DNA extension
-  curl -o src/mixs/schema/radiocarbon-dating-v$EXTRADIOCARBONDATING_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-radiocarbon-dating/v$EXTRADIOCARBONDATING_VERSION/src/mixs/schema/radiocarbon-dating.yml" ## Radiocarbon extension
-  curl -o src/mixs/schema/minas-combinations-v$COMBINATIONS_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/minas-combinations/refs/tags/v$COMBINATIONS_VERSION/src/mixs/schema/minas-combinations.yml" ## Combinations
-  ```
+    ## MInAS Extensions
+    curl -o src/mixs/schema/ancient-v$EXTANCIENT_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-ancient/v$EXTANCIENT_VERSION/src/mixs/schema/ancient.yml" ## Ancient DNA extension
+    curl -o src/mixs/schema/radiocarbon-dating-v$EXTRADIOCARBONDATING_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/extension-radiocarbon-dating/v$EXTRADIOCARBONDATING_VERSION/src/mixs/schema/radiocarbon-dating.yml" ## Radiocarbon extension
+    curl -o src/mixs/schema/minas-combinations-v$COMBINATIONS_VERSION.yaml "https://raw.githubusercontent.com/MIxS-MInAS/minas-combinations/refs/tags/v$COMBINATIONS_VERSION/src/mixs/schema/minas-combinations.yml" ## Combinations
+    ```
 
 3. Merge together with `linkml-toolkit`
 
-  ```bash
-  ## Merge together
-  lmtk combine --mode merge --schema src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
-    -a src/mixs/schema/ancient-v$EXTANCIENT_VERSION.yaml \
-    -a src/mixs/schema/radiocarbon-dating-v$EXTRADIOCARBONDATING_VERSION.yaml \
-    -a src/mixs/schema/minas-combinations-v$COMBINATIONS_VERSION.yaml \
-    --output src/mixs/schema/mixs-minas.yaml
+    ```bash
+    ## Merge together
+    lmtk combine --mode merge --schema src/mixs/schema/mixs-v$MIXS_VERSION.yaml \
+      -a src/mixs/schema/ancient-v$EXTANCIENT_VERSION.yaml \
+      -a src/mixs/schema/radiocarbon-dating-v$EXTRADIOCARBONDATING_VERSION.yaml \
+      -a src/mixs/schema/minas-combinations-v$COMBINATIONS_VERSION.yaml \
+      --output src/mixs/schema/mixs-minas.yaml
 
-  ## Fix some metadata to ensure passes linting
-  sed -i 's#source: https://github.com/MIxS-MInAS/extension-radiocarbon-dating/raw/main/proposals/0.1.0/extension-radiocarbon-dating-v0_1_0.csv#source: https://github.com/MIxS-MInAS/MInAS/#g' src/mixs/schema/mixs-minas.yaml
-  ```
+    ## Fix some metadata to ensure passes linting
+    sed -i 's#source: https://github.com/MIxS-MInAS/extension-radiocarbon-dating/raw/main/proposals/0.1.0/extension-radiocarbon-dating-v0_1_0.csv#source: https://github.com/MIxS-MInAS/MInAS/#g' src/mixs/schema/mixs-minas.yaml
+    ```
 
 4. Validate that all new YAML files (extensions, combinations) are represented in the combine schema
 
-  ```bash
-  for i in permit_scope localised_reservoir_offset_sd mims_symbiontassociated_ancient_data; do
-    if [[ $(grep "$i" src/mixs/schema/mixs-minas.yaml | wc -l) -ge 2 ]]; then echo "$i: true"; else echo "$i: false"; fi
-  done
-  ```
+    ```bash
+    for i in permit_scope localised_reservoir_offset_sd mims_symbiontassociated_ancient_data; do
+      if [[ $(grep "$i" src/mixs/schema/mixs-minas.yaml | wc -l) -ge 2 ]]; then echo "$i: true"; else echo "$i: false"; fi
+    done
+    ```
 
-  > [!WARNING]
-  > There should be one string per input YAML file, and be aware these strings may change per release.
+    > [!WARNING]
+    > There should be one string per input YAML file, and be aware these strings may change per release.
 
 5. Lint and validate the newly extended MIxS schema that it is valid LinkML
 
-```bash
-linkml lint --validate src/mixs/schema/mixs-minas.yaml
-```
+    ```bash
+    linkml lint --validate src/mixs/schema/mixs-minas.yaml
+    ```
 
 6. Generate the JSON schema version using the LinkML package's `gen-json-schema`:
 
-```bash
-gen-json-schema src/mixs/schema/mixs-minas.yaml > src/mixs/schema/mixs-minas.json
-```
+    ```bash
+    gen-json-schema src/mixs/schema/mixs-minas.yaml > src/mixs/schema/mixs-minas.json
+    ```
 
 7. Generate the old-style MIxS TSV files using the python3 script in the `scripts/` directory:
 
-```bash
-python3 ./scripts/linkml2class_tsvs.py --schema-file src/mixs/schema/mixs-minas.yaml --output-dir project/class-model-tsvs/
-```
+    ```bash
+    python3 ./scripts/linkml2class_tsvs.py --schema-file src/mixs/schema/mixs-minas.yaml --output-dir project/class-model-tsvs/
+    ```
 
-> [!NOTE]
-> This script has been copied and modified very slightly to include the python3 shebang, and is placed under scripts until properly packaged for the MIxS project.
->
-> To use this script, you only need python3 and no other dependencies (it seems).
+    > [!NOTE]
+    > This script has been copied and modified very slightly to include the python3 shebang, and is placed under scripts until properly packaged for the MIxS project.
+    >
+    > To use this script, you only need python3 and no other dependencies (it seems).
 
 8. Update the `CITATION.cff` file with the new version of the schema and any new major contributors.
 9. Commit and push to GitHub.
