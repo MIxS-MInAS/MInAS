@@ -81,7 +81,7 @@ For a release, (making sure updating the versions in the variables):
     ## Set versions
     MIXS_VERSION=6.2.0
     EXTANCIENT_VERSION=0.7.0
-    EXTRADIOCARBONDATING_VERSION=0.2.0
+    EXTRADIOCARBONDATING_VERSION=0.2.1
     COMBINATIONS_VERSION=0.2.1
     ```
 
