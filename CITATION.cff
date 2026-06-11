@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: "Minimum Information about any Ancient Sequence (MInAS): MInAS Checklists (draft)"
-version: 0.6.0
+version: 0.7.0
 license: "CC0-1.0"
 type: dataset
 abstract: "(Draft) MInAS checklists of MIxS checklist extended to include MInAS extensions and combinations."

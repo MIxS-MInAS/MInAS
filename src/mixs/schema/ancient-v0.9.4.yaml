@@ -1,0 +1,1386 @@
+name: mixs-minas
+description: >-
+  Specifications of the Ancient DNA extension of the [Minimum Information about any Ancient Sequence](https://www.mixs-minas.org/) (MInAS) standard project, generated using LinkML (https://linkml.io/linkml/). 
+
+  This file is released by the MInAS project for use by anyone handling ancient DNA data or information about biological sequences.
+
+  This file is also used as an authoritative 'source of truth' to generate downstream artifacts of the extension, available here: https://github.com/MIxS-MInAS/extension-ancient/blob/main/src/mixs/schema/ancient.yml.
+comments:
+  - "slot titles that are associated with more than one slot name/SCN: host sex"
+source: https://github.com/MIxS-MInAS/extension-ancient/src/mixs/schema/ancient.yaml
+id: https://w3id.org/mixs
+version: 0.9.4
+imports:
+  - linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  MIXS: https://w3id.org/mixs/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  shex: http://www.w3.org/ns/shex#
+  schema: http://schema.org/
+  chrono: http://rs.tdwg.org/chrono/terms/
+  dc: http://purl.org/dc/elements/1.1/
+default_prefix: MIXS
+default_range: string
+subsets:
+  combination_classes:
+    description: >-
+      MIxS combination classes that group related slots for specific sample types or contexts.
+  sequencing:
+    description: >-
+      MIxS terms related to the sequencing stage of nucleic acid sequencing data generation.
+  environment:
+    description: >-
+      MIxS terms related to the environmental context of the sample or specimen.
+  nucleic acid sequence source:
+    description: >-
+      MIxS terms related to the source of nucleic acids for sequencing, such as extraction or library preparation.
+  investigation:
+    description: >-
+      MIxS terms related to the overall investigation, study, or project associated with the sample or specimen.
+  ethics:
+    description: >-
+      MIxS terms related to ethical considerations, permissions, and approvals associated with a sample or specimen.
+enums:
+  DamageTreatmentEnum:
+    description: >-
+      Options for types of molecular damage removal during library construction of ancient DNA libraries.
+    permissible_values:
+      no-removal:
+        description: Molecular damage-derived misincorporations have not been removed using laboratory techniques.
+      partial-removal:
+        description: Molecular damage-derived misincorporations have been partially removed using laboratory techniques such as with an early stopped uracil-DNA glycosylase (UDG) or USER treatment, leaving a small number of nucleotides with damage at ends of molecules.
+      complete-removal:
+        description: Molecular damage-derived misincorporations have been entirely removed using laboratory techniques such as with complete uracil-DNA glycosylase (UDG) or USER treatment, leaving no nucleotides with damage at ends of molecules.
+      damage-selection:
+        description: Library preparation-derived technique that retain only molecules containing damage, and have discarded those without damage.
+      other:
+        description: Other types of damage treatment that are further described in other method description terms. If damage has been removed, but whether full or partial is unknown - use this option and describe known information in `sop_experimental` and related free text descriptive terms.
+  LibTypeEnum:
+    description: >-
+      Options for types of DNA that have been targeted for DNA library construction.
+    permissible_values:
+      amplicon:
+        description: A library that has been enriched for a single specific region of a genome (e.g. a specific gene) through targeted amplification.
+      enriched:
+        description: A library that has been enriched for DNA from typically large portions to the entirety of a genome, through array or in-solution 'capture' with genome array baits/probes.
+      shotgun:
+        description: An unselected library that has undergone no type of targeted amplification/enrichment for a particular genomic region or genome, i.e., random sequencing of any nucleic acid molecule contained in a genomic library.
+  BioCulturalLabelEnum:
+    description: >-
+      Options defining community expectations about the appropriate use of the sequencing data, as specified by the LocalContexts project (https://localcontexts.org/labels/biocultural-labels/).
+    permissible_values:
+      "Biocultural Provenance Label (BC P):":
+        description: Biocultural Provenance Label (BC P) - This Label is being used to affirm an inherent interest Indigenous people have in the scientific collections and data about communities, peoples, and the biodiversity found within traditional lands, waters and territories (Full text https://localcontexts.org/label/bc-provenance/).
+      "Biocultural Multiple Communities Label (BC MC)":
+        description: Biocultural Multiple Communities Label (BC MC) - This Label is being used to affirm that responsibility and ownership over this information, collection, data, and digital sequence information (DSI) is spread across several distinct communities (Full text https://localcontexts.org/label/bc-multiple-communities/).
+      "Biocultural Clan Label (BC CL)":
+        description: Biocultural Clan Label (BC CL) - This Label is being used to indicate that this material is traditionally and usually not publicly available. The Label lets future users know that this data has specific conditions for use and sharing because of clan membership and/or relationships (Full text https://localcontexts.org/label/bc-clan/).
+      "Biocultural Consent Verified Label (BC CV)":
+        description: Biocultural Consent Verified Label (BC CV) - This Label is being used to verify that an associated community has consent conditions in place for the use of this information, collections, data, and digital sequence information. (Full text https://localcontexts.org/label/bc-consent-verified/).
+      "Biocultural Consent Non-Verified Label (BC CNV)":
+        description: Biocultural Consent Non-Verified Label (BC CNV) - This Label is being used because there are concerns about the accuracy of the consent and/or representations made for this data. This material was not created through informed consent or community protocols for research and engagement. (Full text https://localcontexts.org/label/bc-consent-non-verified/).
+      "Biocultural Research Use Label (BC R)":
+        description: Biocultural Research Use Label (BC R) - This Label is being used by an associated community to allow this information, collection, data, and digital sequence information (DSI) to be used for unspecified research purposes. This Label does not provide permission for commercialization activities. (Full text https://localcontexts.org/label/bc-research-use/).
+      "Biocultural Open to Collaboration Label (BC CB)":
+        description: Biocultural Open to Collaboration Label (BC CB) - This Label is being used to make clear an associated community is open to future engagement, collaboration, and partnership around research and outreach opportunities. (Full text https://localcontexts.org/label/bc-open-to-collaboration/).
+      "Biocultural Open to Commercialisation Label (BC OC)":
+        description: Biocultural Open to Commercialisation Label (BC OC) - This Label is being used to indicate that an associated community is open to commercialization opportunities that might derive from any information, collections, data, and digital sequence information (DSI) to which this Label is connected. (Full text https://localcontexts.org/label/bc-open-to-commercialization/)
+      "Biocultural Outreach Label (BC O)":
+        description: Biocultural Outreach Label (BC O) The Label is letting any users know that this data can be used for educational outreach activities. - (Full text https://localcontexts.org/label/bc-outreach/).
+      "Biocultural Non-Commercial Label (BC NC)":
+        description: Biocultural Non-Commercial Label (BC NC) - This Label is being used to indicate that these biocultural materials and/or data have been designated as being available for non-commercial use. (Full text https://localcontexts.org/label/bc-non-commercial/).
+  LibStrandEnum:
+    description: >-
+      Options for the strandedness of the input 'template' DNA molecules used for DNA library construction.
+    permissible_values:
+      single:
+        description: Library constructed from single-stranded DNA molecules.
+      double:
+        description: Library constructed from double-stranded DNA molecules.
+  ChronoAgeSysEnum:
+    description: >-
+      Options for specifying the chonometric age reference or timescale of a date.
+    permissible_values:
+      BCE:
+        description: Before Common Era (before year 0 in the Christian calendar), equivalent to BC (before Christ).
+      CE:
+        description: Common Era (after year 0 in the Christian calendar), equivalent to AD (anno Domini, after Christ).
+      BP:
+        description: Before Present (~1950), known as 'Standard Year'.
+      cal BP:
+        description: Calibrated Before Present (~1950), known as 'Standard Year'.
+      cal BCE:
+        description: Calibrated Before Common Era (year 0 in the Christian calendar), equivalent to BC (before Christ).
+      cal CE:
+        description: Calibrated Common Era (~1950), equivalent to AD (anno Domini, after Christ).
+      ka:
+        description: kiloannum; thousands of years ago.
+      Ma:
+        description: megaannum; millions of years ago.
+  ChronoAgeProtocolEnum:
+    description: >-
+      Options for methods to determine the age at time of death of an organism or the date of sample deposition.
+    permissible_values:
+      radiocarbon dating:
+      optically stimulated infrared luminescence:
+      amino acid racemisation:
+      electron spin resonance:
+      uranium thorium:
+      age-depth modelling:
+        description: Age-depth models are constructed based on limited numbers of dated depths (typically in sediment cores) to estimate the calendar ages. Different models are used based on assumptions about the sequence of deposit formation at each dated depth.
+      contextual dating:
+        description: A non-absolute date inferred from the specific context of an archaeological or palaeontological sample (e.g. stratigraphic layers, coins).
+      associated absolute dating:
+        description: Dates inferred from the absolute dates of associated materials within the same specific context of the sample (e.g. C14 dating of a animal bone artefact in the same context of a human burial).
+      historical records:
+      other:
+  GeolEpochEnum:
+    description: Chronometric epochs defined by the International Chronostratigraphic Chart (v2024-12) of the International Commission on Stratigraphy (https://stratigraphy.org/chart/).
+    permissible_values:
+      Holocene:
+        description: A time period from 0.0117 million years ago to the present.
+      Pleistocene:
+        description: A time period from 2.58 to 0.0117 million years ago.
+      Pliocene:
+        description: A time period from 5.333 to 2.58 million years ago.
+      Miocene:
+        description: A time period from 23.04 to 5.333 million years ago.
+      Oligocene:
+        description: A time period from 33.9 to 23.04 million years ago.
+      Eocene:
+        description: A time period from 56.00 to 33.9 million years ago.
+      Paleocene:
+        description: A time period from 66.00 to 56.00 million years ago.
+      Late Cretaceous:
+        description: A time period from 100.5 to 66.00 million years ago.
+      Early Cretaceous:
+        description: A time period from 143.1 to 100.5 million years ago.
+      Late Jurassic:
+        description: A time period from 161.5 to 143.1 million years ago.
+      Middle Jurassic:
+        description: A time period from 174.7 to 161.5 million years ago.
+      Early Jurassic:
+        description: A time period from 201.4 to 174.7 million years ago.
+      Late Triassic:
+        description: A time period from 237 to 201.4 million years ago.
+      Middle Triassic:
+        description: A time period from 246.7 to 237 million years ago.
+      Early Triassic:
+        description: A time period from 251.902 to 246.7 million years ago.
+      Lopingian:
+        description: A time period from 259.51 to 251.902 million years ago.
+      Guadalupian:
+        description: A time period from 274.4 to 259.51 million years ago.
+      Cisuralian:
+        description: A time period from 298.9 to 274.4 million years ago.
+      Late Pennsylvanian:
+        description: A time period from 307.0 to 298.9 million years ago.
+      Middle Pennsylvanian:
+        description: A time period from 315.2 to 307.0 million years ago.
+      Early Pennsylvanian:
+        description: A time period from 323.4 to 315.2 million years ago.
+      Late Mississippian:
+        description: A time period from 330.3 to 323.4 million years ago.
+      Middle Mississippian:
+        description: A time period from 346.7 to 330.3 million years ago.
+      Early Mississippian:
+        description: A time period from 358.86 to 346.7 million years ago.
+      Late Devonian:
+        description: A time period from 382.31 to 358.86 million years ago.
+      Middle Devonian:
+        description: A time period from 393.47 to 382.31 million years ago.
+      Early Devonian:
+        description: A time period from 419.62 to 393.47 million years ago.
+      Pridoli:
+        description: A time period from 422.7 to 419.62 million years ago.
+      Ludlow:
+        description: A time period from 426.7 to 422.7 million years ago.
+      Wenlock:
+        description: A time period from 432.9 to 426.7 million years ago.
+      Llandovery:
+        description: A time period from 443.1 to 432.9 million years ago.
+      Late Ordovician:
+        description: A time period from 458.2 to 443.1 million years ago.
+      Middle Ordovician:
+        description: A time period from 471.3 to 458.2 million years ago.
+      Early Ordovician:
+        description: A time period from 486.85 to 471.3 million years ago.
+      Furongian:
+        description: A time period from 497.0 to 486.85 million years ago.
+      Miaolingian:
+        description: A time period from 506.5 to 497.0 million years ago.
+      Cambrian Epoch 2:
+        description: A time period from 521.0 to 506.5 million years ago.
+      Terreneuvian:
+        description: A time period from 538.8 to 521.0 million years ago
+  SampCategoryEnum:
+    description: >-
+      Controlled vocabulary defining the category of a sample based on its experiental role.
+    permissible_values:
+      "sample":
+        description: Biological or environmental sample, including biological and technical replicates.
+      "negative control":
+        description: Negative control used to detect contamination, such as field negatives, extraction negatives, or PCR negatives (No-template control; NTC).
+      "positive control":
+        description: Positive control used to verify successful amplification or detection, such as extraction positives or PCR positives.
+      "PCR standard":
+        description: Standard consisting of known quantities of target nucleic acid used to generate calibration curves and enable quantification of target molecules.
+      "Other":
+        description: Other types of samples not represented in the controlled vocabulary.
+slots:
+  ancient_data:
+    description: Data that comply with Extension Ancient
+    title: ancient data
+    domain: MixsCompliantData
+    slot_uri: MIXS:ancient_data
+    multivalued: true
+    range: Ancient
+    inlined: true
+    inlined_as_list: true
+  orig_site_name:
+    annotations:
+      Expected_value: Name of site or location where sample was originated
+    description: >-
+      Designated name of the archaeological or ecological site, ancient settlement, or location etc. where the sample was originally collected.
+      Can be a non-geographical name, such as a field-specific name or code, the official name of an excavation, or a colloquial name that is used in academic literature.
+      Typically names that would not be found on official maps. If the site name is unclear please use the name of the closest location or region as best as possible.
+      Can also include different transliterations or languages used in the literature.
+    title: name of site or location where sample originated
+    examples:
+      - value: "Valley of the Kings"
+      - value: "Krakow Spadzista B"
+      - value: "Coopers Cave"
+      - value: "Cutler Fossil Site"
+      - value: "Kap København Formation"
+      - value: "Northern Italy, Lombardy, exact location unknown"
+    in_subset:
+      - environment
+    keywords:
+      - environment
+      - sample
+    slot_uri: MIXS:999999901 #Not assigned
+    multivalued: true
+    range: string
+    required: false
+    recommended: true
+  orig_site_loc:
+    annotations:
+      Expected_value: Name of original geographic origin of the sample
+    description: >-
+      The original geographical origin of the sample, when sampled outside its original natural environment (e.g. sampled in a museum collection), as defined by the country or sea name followed by specific region name. 
+      Country or sea names should be chosen from the INSDC country list (http://insdc.org/country.html), or the GAZ ontology (http://purl.bioontology.org/ontology/GAZ).
+    title: original site location
+    examples:
+      - value: "South Africa: Western Cape"
+      - value: "Germany: Baden-Württemberg, Geißenklösterle Cave"
+      - value: "Northern Italy: Lombardy"
+    in_subset:
+      - environment
+    keywords:
+      - location
+      - site
+    slot_uri: MIXS:999999902 #Not assigned
+    multivalued: false
+    range: string
+    required: false
+    recommended: false
+    structured_pattern:
+      syntax: "^{country}: {region}, {specific_location}$"
+  orig_site_lat:
+    description: >-
+      The latitude coordinate of the original geographical origin of the sample, e.g. the original place the sample was buried, deposited, or formed.
+      In cases where the sample was directly sampled in the burial environment for the purposes of scientific investigation, this will be the same as geo_loc_name, and lat_lon. 
+      For samples kept in collections, the geo_loc_name and lat_lon terms are used to refer to the collection where the sample is stored, but this term is used for the original geographic location the sample existed in prior to archiving in a collection (i.e., should correspond to  orig_site_loc, not the collection itself as recorded in site_name).
+      The values should be reported in decimal degrees, limited to 8 decimal points, and in WGS84 system.
+    title: original geographic location (latitude)
+    in_subset:
+      - environment
+    examples:
+      - value: "50.586825"
+      - value: "-0.123"
+    slot_uri: MIXS:999999903 #Not assigned
+    multivalued: false
+    required: false
+    recommended: false
+    structured_pattern:
+      syntax: "^{lat}$"
+      interpolated: true
+      partial_match: true
+  orig_site_lon:
+    description: >-
+      The longitude coordinate of the original geographical origin of the sample, e.g. the original place the sample was buried, deposited, or formed.
+      In cases where the sample was directly sampled in the burial environment for the purposes of scientific investigation, this will be the same as geo_loc_name, and lat_lon. 
+      For samples kept in collections, the geo_loc_name and lat_lon terms are used to refer to the collection where the sample is stored, but this term is used for the original geographic location the sample existed in prior to archiving in a collection (i.e., should correspond to orig_site_loc, not the collection itself, as recorded in site_name).
+      The values should be reported in decimal degrees, limited to 8 decimal points, and in WGS84 system.
+    title: original geographic location (longitude)
+    examples:
+      - value: "6.408977"
+      - value: "-12.12"
+    in_subset:
+      - environment
+    slot_uri: MIXS:999999904 #Not assigned
+    multivalued: false
+    required: false
+    recommended: false
+    structured_pattern:
+      syntax: "^{lon}$"
+      interpolated: true
+      partial_match: true
+  past_env_broad:
+    description: >-
+      Report information about the general ancient broad environmental system that the sample or specimen existed or lived within, as it was at the time of deposition or burial (e.g. in the desert or a forest).
+      This should not describe the environment as it is today (e.g. farmland), but specifically the state as it was in the past (i.e. the palaeo- or (pre)historical ecosystem).
+      Compared to `env_broad_scale` which is taken from direct observation, the information about the past environment will normally be derived from inference from archaeological, palaeontological, geological, or other scientific methods.
+      We recommend using subclasses of EnvO s biome class:  http://purl.obolibrary.org/obo/ENVO_00000428.
+      EnvO documentation about how to use the field for present day equivalents: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS"
+    title: broad-scale past environmental context
+    examples:
+      - value: "dessert biome [ENVO:01000247]"
+    in_subset:
+      - environment
+    keywords:
+      - context
+      - environmental
+      - ancient
+    slot_uri: MIXS:999999905 #Not assigned
+    range: string
+    required: false
+    recommended: true
+    pattern: "^([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+) \\[[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+\\]$"
+    structured_pattern:
+      syntax: ^{termLabel} \[{termID}\]$
+      interpolated: true
+      partial_match: true
+  past_env_local:
+    annotations:
+      Expected_value: Report information about smaller environmental entities having causal influences upon the sample or specimen at/during the time of burial
+    description: >-
+      Report information about the smaller-scale environmental system of the local vicinity of the sample or specimen at the time of deposition or burial (e.g. in hillside, burial mound, or midden).
+      This should not describe the environment as it is today (e.g. carpark), but specifically the entity or entities surrounding the sample that may have significant causal influences as it was in the past.
+      Compared to `env_local_scale` which is taken from direct observation, the information about the past environment will normally be derived from inference from archaeological, palaeontological, geological, or other scientific methods.
+      We recommend using EnvO terms which are of smaller than your entry for past_env_broad.
+      Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field.
+      EnvO documentation about how to use the field for present day equivalents: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS"
+    title: local past environmental context
+    examples:
+      - value: "hillside [ENVO:01000333]"
+    in_subset:
+      - environment
+    keywords:
+      - context
+      - environmental
+      - ancient
+    string_serialization: "{termLabel} [{termID}]"
+    slot_uri: MIXS:999999906 #Not assigned
+    required: false
+    recommended: true
+  stratigraph_context:
+    annotations:
+      Expected_value: Stratigraphic context that the sample was retrieved from
+    description: >-
+      Associated stratigraphic context(s) that the sample was retrieved from, usually from an archaeological or palaeontological excavation. Description(s) or identifier(s) of stratigraphic units or layer names within and/or relative to the site (e.g., stratigraphic unit ID, archaeological feature ID, layer name or a description, grid location).
+    title: stratigraphic context
+    examples:
+      - value: "Layer 5"
+      - value: "Layer UE"
+      - value: "Horizon IIc, Quadrant 77"
+      - value: "HF_23447_77_410_IIc"
+      - value: "KrSp C2/2011/B5"
+      - value: "US10"
+      - value: "YSL"
+      - value: "Subunit 1"
+      - value: "Black Mousterian (BM)"
+    in_subset:
+      - environment
+    keywords:
+      - identifiers
+      - excavation
+    slot_uri: MIXS:999999907 #Not assigned
+    multivalued: true
+    range: string
+    required: false
+    recommended: false
+  context_retrieval_date:
+    annotations:
+      Preferred_unit: year
+    description: >-
+      Date of excavation or retrieval from burial or depositional context, if known. If excavations were done during a 
+      longer period, report its midpoint at a month or year level. In case no exact time is available, the date can be 
+      right truncated i.e. all of these are valid times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 
+      2008-01; 2008; Except: 2008-01; 2008 all are ISO8601 compliant.
+    title: date of retrieval from depositional context
+    examples:
+      - value: "2023"
+      - value: "1972-11"
+      - value: "2001-09-25"
+    in_subset:
+      - environment
+    slot_uri: MIXS:999999909 #Not assigned
+    range: datetime
+    required: false
+    recommended: true
+  permit_id:
+    description: >-
+      A permit ID, code, or any form of identify provided by any authority (ethical, local, legal, academic etc.) associated with the approval of the analysis of this particular sample, if available.
+    title: permit or approval ID
+    examples:
+      - value: "DE-123-JK"
+    in_subset:
+      - nucleic acid sequence source
+    keywords:
+      - ethics
+    slot_uri: MIXS:999999910 #Not assigned
+    multivalued: true
+    range: string
+    required: false
+    recommended: true
+  permit_authority:
+    annotations:
+      Expected_value: Name of authority providing permission or ethical approval.
+    description: >-
+      Name of the authorit(ies) or institution(s) that granted sampling and analysis (e.g. human remains) and/or export permission (e.g. animal remains), as well any form of ethical approval (whether from institutional research ethics boards such as REB or IRBs, or indigenous or native community associations), if available.
+    title: permit authority
+    examples:
+      - value: "University of Copenhagen"
+      - value: "Federal Foreign Office (Germany)"
+    in_subset:
+      - nucleic acid sequence source
+    keywords:
+      - ethics
+      - location
+    slot_uri: MIXS:999999911 #Not assigned
+    close_mappings:
+      - dc:rightsHolder
+    multivalued: true
+    range: string
+    required: false
+    recommended: true
+  permit_date:
+    description: >-
+      Date on which a permit was granted. The date can be right truncated i.e. all of these are valid times: 2008-01-23; 2008-01; 2008; Except: 2008-01; 2008 all are ISO8601 compliant.
+    title: date of permit approval
+    examples:
+      - value: "2023-12-01"
+    in_subset:
+      - nucleic acid sequence source
+    slot_uri: MIXS:999999912 #Not assigned
+    multivalued: true
+    range: datetime
+    required: false
+    recommended: true
+  permit_scope:
+    annotations:
+      Expected_value: Description of the scope of ethical permissions for data use.
+    description: >-
+      Description of the original scope and permissions of the research on the genetic material, as was approved by a legal, ethical, or relevant authority (e.g. bacteria only, DNA only, bacteria and human, no host read analysis allowed). Note this description is only informative, and will not necessarily automatically apply restrictions to associated data to other researchers.
+    title: permit scope
+    examples:
+      - value: "Defined scope only includes the study of bacterial sequences and any human sequence is not covered under the agreement."
+    in_subset:
+      - nucleic acid sequence source
+    keywords:
+      - ethics
+    slot_uri: MIXS:999999913 #Not assigned
+    close_mappings:
+      - dc:accessRights
+      - dc:license
+    multivalued: true
+    range: string
+    string_serialization: "{text}"
+    required: false
+    recommended: true
+  biocultural_label:
+    annotations:
+      Expected_value: Relevant biocultural label from https://localcontexts.org/labels/biocultural-labels/
+    description: >-
+      Relevant biocultural labels defined by the local contexts project (https://localcontexts.org/label/bc-provenance/) that describe in what ways this data can be reused, as permitted by any associated native or indigenous peoples or communities.
+    title: biocultural label
+    examples:
+      - value: "BC R"
+      - value: "BC MC"
+      - value: "BC MC;BC CV"
+    in_subset:
+      - nucleic acid sequence source
+    keywords:
+      - ethics
+    slot_uri: MIXS:999999914 #Not assigned
+    multivalued: true
+    range: BioCulturalLabelEnum #enum value
+    required: false
+    recommended: true
+  samp_alt_lab_ids:
+    description: >-
+      An alternative sample or material ID related to the sample not already covered by terms samp_name and source_mat_id, including from associated other non-genetic analyses of the same sample, that can be used synonymously with the main ID.
+      For example: external database IDs, internal lab sample ID from sampling such as bone drilling, or IDs from other scientific analyses.
+      Can be specified multiple times for different ID contexts.
+    title: alternative sample IDs
+    examples:
+      - value: "ABC_24"
+      - value: "Grave 6"
+      - value: "Museum ID: NHM_AR_123, Drilling ID: DRL_001, Extraction ID: ABC_24"
+    in_subset:
+      - nucleic acid sequence source
+    slot_uri: MIXS:999999915 #Not assigned
+    multivalued: true
+    range: string
+    string_serialization: "{text}"
+    required: false
+    recommended: false
+  prev_pubs:
+    description: >-
+      Any previous publications that report non-nucleic acid data from the same sample or ultimate source of the sample
+    title: previous publications
+    examples:
+      - value: doi:10.1016/j.jas.2015.02.0181
+    in_subset:
+      - nucleic acid sequence source
+    slot_uri: MIXS:999999916 #Not assigned
+    multivalued: true
+    range: string
+    pattern: ^^PMID:\d+$|^doi:10.\d{2,9}/.*$|^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$$
+    structured_pattern:
+      syntax: ^{PMID}|{DOI}|{URL}$
+      interpolated: true
+      partial_match: true
+    required: false
+    recommended: false
+  host_preserv_state:
+    annotations:
+      Expected_value: Description of the preservation of the sampled (ancient) organism/host at time/immediately after death.
+    title: preservation state of sampled host at death
+    description: >-
+      Description of the state of the sampled (ancient) organism/host as originally 
+      preserved in the burial environment at the time of or immediately following death.
+      This can be both natural or artificial, such as mummification or burning for funerary purposes.
+    examples:
+      - value: "complete artificial mummification."
+      - value: "natural partial mummification."
+      - value: "fully skeletonised."
+    in_subset:
+      - nucleic acid sequence source
+    keywords:
+      - ancient
+    slot_uri: MIXS:999999917 #Not assigned
+    multivalued: false
+    range: string
+    string_serialization: "{text}"
+    required: false
+    recommended: false
+  store_cond:
+    description: >-
+      Explain how and for how long the sample was stored before DNA extraction (for example, fresh/frozen/other).
+      Include factors that may influence nucleic acid recovery or library construction.
+      For example, specify temperature, humidity, presence of microbial overgrowth etc..
+    title: storage conditions
+    examples:
+      - value: "climate-controlled"
+      - value: "Mould growth in storage box observed"
+      - value: "Stored at -20oC until 2025-05-15"
+      - value: "Stored in the museum from 1924 to 2021"
+    from_schema: https://w3id.org/mixs
+    in_subset:
+      - nucleic acid sequence source
+    keywords:
+      - condition
+      - storage
+    slot_uri: MIXS:0000327
+    alias: store_cond
+    range: string
+    structured_pattern:
+      syntax: ^{storage_condition_type};{duration}$
+  samp_preserv_treatm:
+    description: >-
+      Description of any treatment applied directly to samples for the specific purpose of 
+      maximising longevity of sample preservation in archives and/or collections by curators 
+      that may influence downstream nucleic acid recovery or library construction, such as storage fluid or 
+      reconstructive glue.
+    title: preservational treatment
+    examples:
+      - value: "stored in formalin"
+      - value: "reconstructive glue applied"
+      - value: "alcohol preserved"
+    in_subset:
+      - nucleic acid sequence source
+    keywords:
+      - ancient
+    slot_uri: MIXS:999999919 #Not assigned
+    multivalued: true
+    range: string
+    string_serialization: "{text}"
+    required: false
+    recommended: false
+  cultural_era:
+    annotations:
+      Expected_value: chronotology or PeriodO term; text
+    description: >-
+      The cultural era approximating to the period in which the archaeological remains existed in. Where possible use terms from ontologies such as Chronontology (https://chronontology.dainst.org/) or PeriodO (https://perio.do/en/).
+    title: cultural era or period
+    examples:
+      - value: "Copper Age [Chronotology: NW6hofAScJSE]"
+      - value: "Upper Middle Palaeolthic"
+      - value: "Not collected"
+    in_subset:
+      - nucleic acid sequence source
+    keywords:
+      - ancient
+      - age
+    range: string
+    string_serialization: "{termLabel} [{termID}]|{text}"
+    slot_uri: MIXS:999999920 #Not assigned
+    multivalued: false
+    required: false
+    recommended: false
+  geological_epoch:
+    annotations:
+      Expected_value: ontology term; text
+    description: >-
+      The geological epoch approximating to the period within which the specimen or sample existed. Where possible use terms from ontologies. NOTE: This term is for geological timescales. For more precise or anthropogenic defined periods, use `Cultural Era`.
+    title: geological epoch
+    examples:
+      - value: "Pleistocene"
+      - value: "Upper Cretaceous"
+      - value: "Pliocene"
+    in_subset:
+      - nucleic acid sequence source
+    keywords:
+      - ancient
+      - age
+    range: GeolEpochEnum
+    slot_uri: MIXS:999999921 #Not assigned
+    multivalued: false
+    required: false
+    recommended: false
+  earliest_chrono_age:
+    annotations:
+      Expected_value: age value corresponding to unit
+    description: >-
+      The maximum/earliest/oldest possible age of a specimen as determined by a dating method.
+      If multiple dating measurements available, use the most earliest/oldest date to provide
+      widest range of age possibilities.
+      The specific age unit should be specified by the term earliest_chrono_sys.
+      More information on specific dates (e.g. radiocarbon lab codes) can be specified in the term chrono_age_remarks.
+    title: earliest chronometric age
+    examples:
+      - value: "120000"
+      - value: "1900"
+    in_subset:
+      - nucleic acid sequence source
+    slot_uri: MIXS:999999922 #Not assigned
+    broad_mappings:
+      - chrono:earliestChronometricAge
+    multivalued: false
+    range: integer
+    required: true
+    recommended: true
+  earliest_chrono_sys:
+    description: >-
+      The reference system associated with the earliest_chrono_age.
+    title: earliest chronometric age reference system
+    examples:
+      - value: "cal BP"
+      - value: "CE"
+      - value: "Ma"
+      - value: "ka"
+    in_subset:
+      - nucleic acid sequence source
+    slot_uri: MIXS:999999923 #Not assigned
+    broad_mappings:
+      - chrono:earliestChronometricAgeReferenceSystem
+    multivalued: false
+    range: ChronoAgeSysEnum
+    required: true
+    recommended: true
+  latest_chrono_age:
+    annotations:
+      Expected_value: age value corresponding to unit
+    description: >-
+      The minimum/latest/youngest possible age of a specimen as determined by a dating method.
+      If multiple dating measurements available, use the most latest/youngest date to provide
+      widest range of age possibilities.
+      The specific age unit should be specified by the term latest_chrono_sys.
+      More information on specific dates (e.g. radiocarbon lab codes) can be specified in the term chrono_age_remarks.
+    title: latest chronometric age
+    examples:
+      - value: "100000"
+      - value: "1700"
+    in_subset:
+      - nucleic acid sequence source
+    slot_uri: MIXS:999999924 #Not assigned
+    broad_mappings:
+      - chrono:latestChronometricAge
+    multivalued: false
+    range: integer
+    required: true
+    recommended: true
+  latest_chrono_sys:
+    description: >-
+      The reference system associated with the latest_chrono_age.
+    title: latest chronometric age reference system
+    examples:
+      - value: "cal BP"
+      - value: "CE"
+      - value: "Ma"
+      - value: "ka"
+    in_subset:
+      - nucleic acid sequence source
+    slot_uri: MIXS:999999925 #Not assigned
+    broad_mappings:
+      - chrono:latestChronometricAgeReferenceSystem
+    multivalued: false
+    range: ChronoAgeSysEnum
+    required: true
+    recommended: true
+  chrono_age_protocol:
+    description: >-
+      A description of or reference to the methods used to determine the earliest_chrono_age and latest_chrono_age.
+    title: chronometric age protocol
+    examples:
+      - value: "radiocarbon dating"
+      - value: "optically stimulated infrared luminescence"
+      - value: "contextual dating"
+      - value: "historical records"
+    in_subset:
+      - nucleic acid sequence source
+    slot_uri: MIXS:999999926 #Not assigned
+    broad_mappings:
+      - chrono:chronometricAgeProtocol
+    multivalued: true
+    range: ChronoAgeProtocolEnum
+    required: false
+    recommended: true
+  chrono_age_remarks:
+    description: >-
+      Notes or comments about the  earliest_chrono_age and latest_chrono_age.
+      For more detail use Chronometric Age Protocol to point to original publication describing method.
+      Useful to specify confidence and/or accuracy of reported date.
+    title: chronometric age remarks
+    examples:
+      - value: "radiocarbon dating, calibrated with OxCal v4.3 with 95% confidence interval"
+      - value: "based on proxy dating from other bone samples of stratigraphic layer"
+      - value: "a coin found in the burial was from the 3rd century was found in the mouth of the skeleton"
+      - value: "age taken from previous publication Doe et al. 2019"
+      - value: "radiocarbon age ID: OxA-12345"
+    in_subset:
+      - nucleic acid sequence source
+    slot_uri: MIXS:999999927 #Not assigned
+    close_mappings:
+      - chrono:chronometricAgeRemarks
+    multivalued: false
+    range: string
+    required: false
+    recommended: true
+  palaeopath_status:
+    annotations:
+      Expected_value: description of health related observation on ancient remains
+    description: >-
+      Describe briefly any relevant palaeopathological or health-related observations of the remains of the individual or subject under study.
+    title: palaeopathology status
+    examples:
+      - value: "Osteoporosis."
+      - value: "Parasites found in pelvic area."
+      - value: "Caries on right upper molar."
+    in_subset:
+      - environment
+    keywords:
+      - palaeopathology
+      - host health
+      - ancient
+    slot_uri: MIXS:999999928 #Not assigned
+    multivalued: false
+    range: string
+    string_serialization: "{text}"
+    required: false
+    recommended: false
+  batch_ids:
+    annotations:
+      Expected_value: list any batch_ids the sample, nucleic acids, or library was associated with during processing and sequencing
+    description: >-
+      Identifiers for any form of batch or 'group' that the samples is associated with, examples including: individual/skeleton ID, sediment core IDs, extract batch, library batch, sequencing run etc.. 
+      These IDs should always act as 'umbrella' IDs that allow association with entries processed together, to allow for downstream analyses of batch effects.
+      Ideally, the information should indicate or specify what type of batch the ID is describing.
+    title: batch identifiers
+    examples:
+      - value: "EXTB1;LIBB2;SeqRun1"
+      - value: "Extraction batch: 1"
+      - value: "20260501-A2 (extraction);20202607-B2 (library)"
+      - value: "ExtrMG;LibMG;SeqMG"
+    in_subset:
+      - nucleic acid sequence source
+    keywords:
+      - identifiers
+    slot_uri: MIXS:999999929 #Not assigned
+    multivalued: true
+    range: string
+    required: false
+    recommended: false
+  samp_category:
+    description: >-
+      The type/category of a sample. "Sample" includes biological and technical replicates.
+    title: sample category
+    examples:
+      - value: "sample"
+      - value: "negative control"
+      - value: "positive control"
+    keywords:
+      - control
+    in_subset:
+      - nucleic acid sequence source
+    slot_uri: MIXS:999999930 #Not assigned
+    range: SampCategoryEnum
+    required: true
+    recommended: true
+  samp_decont_pretreat:
+    description: >-
+      Protocols employed for sample surface decontamination of external 
+      modern nucleic acids; Treatment used on the samples immediately prior to nucleic acid extraction.
+      Dependant on the sample type. 
+      More relevant for bones than environmental samples. E.g. buffers, EDTA, etc.
+    title: sample decontamination pretreatment
+    examples:
+      - value: doi:10.1016/j.jas.2015.02.0181
+    in_subset:
+      - nucleic acid sequence source
+    slot_uri: MIXS:999999931 #Not assigned
+    multivalued: true
+    range: string
+    pattern: ^^PMID:\d+$|^doi:10.\d{2,9}/.*$|^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$$
+    structured_pattern:
+      syntax: ^{PMID}|{DOI}|{URL}$
+      interpolated: true
+      partial_match: true
+  damage_treatment:
+    annotations:
+      Expected_value: enumeration
+    description: >-
+      Indication of whether characteristic ancient DNA damage has been altered or removed from a DNA extract in a laboratory.
+      If damage has been removed, but whether it was fully or partially removed is unknown (e.g. with UDG treatment) - specify 'other', and describe known information in `sop_experimental` and related free text descriptive terms.
+    title: damage treatment type
+    examples:
+      - value: none
+      - value: partial-removal
+    in_subset:
+      - sequencing
+    keywords:
+      - ancient
+    slot_uri: MIXS:999999932 #Not assigned
+    multivalued: false
+    range: DamageTreatmentEnum ## or name of defined enum as above
+    recommended: true
+    required: true
+  nucl_acid_extr_date:
+    description: >-
+      The date when the nucleic acid extraction was started from the sample material.
+      In case no exact time is available, the date can be right truncated i.e. all of these are valid times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10; 2008-01-23; 2008-01; 2008; Except: 2008-01; 2008 all are ISO8601 compliant
+    title: date of extraction of nucleic acids from sample
+    examples:
+      - value: "2023-12-01"
+    in_subset:
+      - nucleic acid sequence source
+    slot_uri: MIXS:999999933 #Not assigned
+    range: datetime ## or name of defined enum as above
+    required: false
+    recommended: false
+  sop_experimental:
+    description: >-
+      Provide a DOI or URL to refer to the paper where the field report, nucleic acid extraction, 
+      library construction, and other procedures are explained in more detail, e.g. the paper reporting the data.
+    title: experimental standard operating procedure
+    examples:
+      - value: doi:10.1093/nar/gkr771
+    in_subset:
+      - nucleic acid sequence source
+    slot_uri: MIXS:999999934 #Not assigned
+    multivalued: true
+    range: string
+    pattern: ^^PMID:\d+$|^doi:10.\d{2,9}/.*$|^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$$
+    structured_pattern:
+      syntax: ^{PMID}|{DOI}|{URL}$
+      interpolated: true
+      partial_match: true
+    required: false
+    recommended: false
+  lib_mid_desc:
+    annotations:
+      Expected_value: Description of the indexing configuration of the library
+    description: >-
+      Index/barcode/primer configuration used during library building for sequencing. This includes information such as the number, type and location of indexes, the index/primer kit/list, or if 'inline' barcodes or UMIs were ligated directly onto the template molecules.
+    title: description of library multiplex identifiers or indexing configuration
+    examples:
+      - value: "dual index with single internal barcode."
+      - value: "UDI index sequences."
+    in_subset:
+      - sequencing
+    keywords:
+      - library
+      - preparation
+    slot_uri: MIXS:999999935 #Not assigned
+    multivalued: true
+    range: string
+    string_serialization: "{text}"
+    required: false
+    recommended: true
+  library_name:
+    annotations:
+      Expected_value: name of sequencing library
+    description: >-
+      Any ID or name used for referring to a nucleic acid sequencing library associated with the sample.
+    title: library name
+    examples:
+      - value: "JK1234"
+      - value: "JFC001.A0101"
+      - value: "A003-1-SG1"
+    in_subset:
+      - sequencing
+    keywords:
+      - sequencing
+    slot_uri: MIXS:999999936 #Not assigned
+    multivalued: true
+    range: string
+    required: false
+    recommended: true
+  lib_polymerase:
+    annotations:
+      Expected_value: name of polymerase used during library construction
+    description: >-
+      The polymerase enzyme used for building nucleic acid libraries. Include formal identifier e.g. SKU or the manufacturers name at minimum.
+    title: library polymerase
+    examples:
+      - value: "Agilent PfuTurbo Cx HotStart"
+      - value: "KAPA HiFi HotStart"
+      - value: "AmpliTaq Gold DNA Polymerase"
+    in_subset:
+      - sequencing
+    keywords:
+      - polymerase
+      - library
+      - preparation
+    string_serialization: "{text}"
+    slot_uri: MIXS:999999937 #Not assigned
+    range: string
+    required: false
+    recommended: true
+  lib_strandedness:
+    annotations:
+      Expected_value: nucleic acid library strandedness
+    description: >-
+      The strandedness of the original template nucleic acid molecules used for constructing the sequencing library
+    title: nucleic acid strandedness in library creation
+    examples:
+      - value: single
+      - value: double
+    in_subset:
+      - sequencing
+    keywords:
+      - library
+      - preparation
+    slot_uri: MIXS:999999938 #Not assigned
+    multivalued: true
+    range: LibStrandEnum #enum value
+    required: true
+    recommended: true
+  lib_gener_technique:
+    description: >-
+      The technique used to generate the library, i.e., amplicon, enriched, or shotgun. An amplicon library is a library that has been amplified to target a single specific region of a genome (e.g. a specific gene). An enriched library is a library that has had a particular genome or multiple genomic regions/positions 'captured' or enriched typically via baits/probes. A shotgun library has undergone no type of targeted amplification/enrichment for a particular genomic region or genome, i.e., random sequencing of any nucleic acid molecule contained in a genomic library.
+    title: library generation technique
+    examples:
+      - value: shotgun
+      - value: amplicon
+      - value: enriched
+    in_subset:
+      - sequencing
+    keywords:
+      - library
+      - preparation
+    slot_uri: MIXS:999999939 #Not assigned
+    range: LibTypeEnum
+    required: false
+    recommended: true
+  sop_lib_preparation:
+    description: >-
+      Citation(s) for the nucleic acid library preparation protocol.
+    title: library preparation protocols
+    examples:
+      - value: doi:10.1093/nar/gkr771
+    in_subset:
+      - sequencing
+    slot_uri: MIXS:999999940 #Not assigned
+    multivalued: true
+    range: string
+    pattern: ^^PMID:\d+$|^doi:10.\d{2,9}/.*$|^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$$
+    structured_pattern:
+      syntax: ^{PMID}|{DOI}|{URL}$
+      interpolated: true
+      partial_match: true
+    required: false
+    recommended: false
+  reamp_pcr_cyc_tot:
+    description: >-
+      Number of amplification cycles after library indexing PCR. If capture data, this refers to amplifications prior to the capture experiments.
+    title: number of reamplification cycles
+    examples:
+      - value: "12"
+    in_subset:
+      - sequencing
+    slot_uri: MIXS:999999941 #Not assigned
+    range: integer
+  capt_pcr_cyc_tot:
+    description: >-
+      Amplification cycles after capture enrichment total. Provide additional information about PCR conditions in pcr_cond
+    title: post capture PCR reamplication cycles total
+    examples:
+      - value: "12"
+    in_subset:
+      - sequencing
+    slot_uri: MIXS:999999942 #Not assigned
+    range: integer
+    multivalued: true
+    required: false
+    recommended: false
+  capt_probe_src_taxid:
+    annotations:
+      Expected_value: Taxonomic IDs corresponding to organism(s) included in target enrichment (a.k.a. capture) probe design
+    description: >-
+      NCBI taxon ID(s) of all organisms included in the baits of a whole organelle or whole genome-level capture panel. There should be an (ideally) species level taxonomic ID entry for each organism that had sequences included in the design. If whole genera were targeted, you can instead use a single genus level taxonomic ID or that of any relevant higher taxonomic unit.
+    title: Genomic capture probe source taxonomy IDs
+    examples:
+      - value: "9606"
+      - value: "632"
+      - value: "9789"
+    in_subset:
+      - sequencing
+    keywords:
+      - sequencing
+      - library
+      - enrichment
+      - capture
+    slot_uri: MIXS:999999943 #Not assigned
+    multivalued: true
+    range: integer
+    string_serialization:
+    required: false
+    recommended: false
+  capt_probe_desc:
+    annotations:
+      Expected_value: Description of probe set used for target enrichment/library selection (a.k.a. capture)
+    description: >-
+      Description of target enrichment probe designs used (e.g., species included, sequences, type, company). This can include custom kits (please provide a general description and DOI if available) or commercially available kit (provide ID and company).
+    title: capture probe design description
+    examples:
+      - value: "Custom probe design (70 bp biotinylated RNA probes) covering 500 full E. Coli genomes; company TE-Science"
+      - value: "Commercial RNA baits kit ABC001-EC from company TE-Science, purchased 2020"
+    in_subset:
+      - sequencing
+    keywords:
+      - library
+      - enrichment
+    slot_uri: MIXS:999999944 #Not assigned
+    multivalued: true
+    range: string
+    string_serialization: "{text}"
+    required: false
+    recommended: false
+  data_preproc_desc:
+    annotations:
+      Expected_value: description of any modifications to data away from original raw files
+    description: >-
+      Description of preprocessing performed on the reads in the sequencing data file.
+      Describe any in silico processing or modification of the sequencing reads away from the original state as received from the sequencer.
+      This should include details such as adapter-, barcode-, and/or quality- trimming, or any filtering such as for read length or of off-target reads.
+    title: description of sequencing reads preprocessing
+    examples:
+      - value: "Adapter trimmed, quality filtered, and host reads removed through mapping for ethical reasons."
+      - value: "Adapters removed by Trimmomatic (v0.39), and off-target reads removed after mapping to the HG19 Human reference with bwa aln (v0.7.19)."
+      - value: "Demultiplexed with bcl2fastq, inline barcodes removed, and reads quality filtered with fastp (v1.0.0)."
+    in_subset:
+      - sequencing
+    keywords:
+      - data analysis
+      - data
+    slot_uri: MIXS:999999945 #Not assigned
+    multivalued: false
+    range: string
+    required: false
+    recommended: true
+  reads_removed_desc:
+    annotations:
+      Expected_value: Whether any sequencing reads were removed from the data files after sequencing
+    description: >-
+      Specify whether associated data was filtered in some form prior to upload, such as host reads removal.
+      Detailed description of the the data filtering that was carried out should be described in term 'preprocessing of sequencing reads description'.
+    title: description of reads removal
+    examples:
+      - value: "no"
+      - value: "yes"
+    in_subset:
+      - sequencing
+    keywords:
+      - data analysis
+    slot_uri: MIXS:999999946 #Not assigned
+    multivalued: false
+    range: boolean
+    required: false
+    recommended: true
+  sop:
+    annotations:
+      Expected_value:
+        tag: Expected_value
+        value: reference to SOP
+    description: Standard operating procedures used to generate genomes,
+      metagenomes or environmental sequences
+    title: relevant standard operating procedures
+    examples:
+      - value: http://press.igsb.anl.gov/earthmicrobiome/protocols-and-standards/its/
+    in_subset:
+      - sequencing
+    from_schema: https://w3id.org/mixs
+    keywords:
+      - procedures
+    slot_uri: MIXS:0000090
+    alias: sop
+    domain_of:
+      - MimsMisip
+      - MigsBa
+      - MigsEu
+      - MigsOrg
+      - MigsPl
+      - MigsVi
+      - Mimag
+      - MimarksC
+      - MimarksS
+      - Mims
+      - Misag
+      - Miuvig
+      - Agriculture
+    range: string
+    multivalued: true
+    structured_pattern:
+      syntax: ^({PMID}|{DOI}|{URL})$
+      interpolated: true
+classes:
+  MixsCompliantData:
+    description:
+      A collection of data that complies with some combination of a MIxS
+      checklist and environmental extension
+    title: MIxS compliant data
+    slots:
+      - ancient_data
+    tree_root: true
+  Extension:
+    description:
+      A collection of recommended metadata terms (slots) developed by community
+      experts, describing the specific context under which a sample was collected.
+    aliases:
+      - EnvironmentalPackage
+  Ancient:
+    description: >-
+      A collection of terms appropriate when collecting samples and sequencing samples 
+      of data containing ancient nucleic acids, i.e., degraded molecules not from living organisms.
+    comments:
+      - This extension that is intended to be used in very specific cases but almost always in conjunction with other MIxS checklists and extensions.
+        It does not therefore (currently) include additional common terms from checklists.
+    title: ancient
+    is_a: Extension
+    slots:
+      - orig_site_name
+      - orig_site_loc
+      - orig_site_lat
+      - orig_site_lon
+      - past_env_broad
+      - past_env_local
+      - stratigraph_context
+      - context_retrieval_date
+      - permit_id
+      - permit_authority
+      - permit_date
+      - permit_scope
+      - biocultural_label
+      - samp_alt_lab_ids
+      - prev_pubs
+      - host_preserv_state
+      - store_cond
+      - samp_preserv_treatm
+      - cultural_era
+      - geological_epoch
+      - earliest_chrono_age
+      - earliest_chrono_sys
+      - latest_chrono_age
+      - latest_chrono_sys
+      - chrono_age_protocol
+      - chrono_age_remarks
+      - palaeopath_status
+      - batch_ids
+      - samp_category
+      - samp_decont_pretreat
+      - damage_treatment
+      - nucl_acid_extr_date
+      - sop_experimental
+      - lib_mid_desc
+      - library_name
+      - lib_polymerase
+      - lib_strandedness
+      - lib_gener_technique
+      - sop_lib_preparation
+      - reamp_pcr_cyc_tot
+      - capt_pcr_cyc_tot
+      - capt_probe_src_taxid
+      - capt_probe_desc
+      - data_preproc_desc
+      - reads_removed_desc
+    slot_usage:
+      orig_site_name:
+        slot_group: Environment
+        rank: 1
+      orig_site_loc:
+        slot_group: Environment
+        rank: 2
+      orig_site_lat:
+        slot_group: Environment
+        rank: 3
+      orig_site_lon:
+        slot_group: Environment
+        rank: 4
+      past_env_broad:
+        slot_group: Environment
+        rank: 5
+      past_env_local:
+        slot_group: Environment
+        rank: 6
+      context_retrieval_date:
+        slot_group: Environment
+        rank: 7
+      stratigraph_context:
+        slot_group: Environment
+        rank: 8
+      permit_id:
+        slot_group: Sample body
+        rank: 9
+      permit_authority:
+        slot_group: Sample body
+        rank: 10
+      permit_date:
+        slot_group: Sample body
+        rank: 11
+      permit_scope:
+        slot_group: Sample body
+        rank: 12
+      biocultural_label:
+        slot_group: Sample body
+        rank: 13
+      samp_alt_lab_ids:
+        slot_group: Sample body
+        rank: 14
+      prev_pubs:
+        slot_group: Sample body
+        rank: 15
+      host_preserv_state:
+        slot_group: Sample body
+        rank: 16
+      store_cond:
+        slot_group: Sample body
+        rank: 17
+      samp_preserv_treatm:
+        slot_group: Sample body
+        rank: 18
+      cultural_era:
+        slot_group: Sample body
+        rank: 19
+      geological_epoch:
+        slot_group: Sample body
+        rank: 20
+      earliest_chrono_age:
+        slot_group: Sample body
+        rank: 21
+      earliest_chrono_sys:
+        slot_group: Sample body
+        rank: 22
+      latest_chrono_age:
+        slot_group: Sample body
+        rank: 23
+      latest_chrono_sys:
+        slot_group: Sample body
+        rank: 24
+      chrono_age_protocol:
+        slot_group: Sample body
+        rank: 25
+      chrono_age_remarks:
+        slot_group: Sample body
+        rank: 26
+      palaeopath_status:
+        slot_group: Sample body
+        rank: 27
+      batch_ids:
+        slot_group: Nucleic acid source
+        rank: 28
+      samp_category:
+        slot_group: Nucleic acid source
+        rank: 29
+      samp_decont_pretreat:
+        slot_group: Nucleic acid source
+        rank: 30
+      nucl_acid_extr_date:
+        slot_group: Nucleic acid source
+        rank: 31
+      sop_experimental:
+        slot_group: Nucleic acid source
+        rank: 32
+      damage_treatment:
+        slot_group: Sequencing
+        rank: 33
+      lib_mid_desc:
+        slot_group: Sequencing
+        rank: 34
+      library_name:
+        slot_group: Sequencing
+        rank: 35
+      lib_polymerase:
+        slot_group: Sequencing
+        rank: 36
+      lib_strandedness:
+        slot_group: Sequencing
+        rank: 37
+      sop_lib_preparation:
+        slot_group: Sequencing
+        rank: 38
+      lib_gener_technique:
+        slot_group: Sequencing
+        rank: 39
+      reamp_pcr_cyc_tot:
+        slot_group: Sequencing
+        rank: 40
+      capt_pcr_cyc_tot:
+        slot_group: Sequencing
+        rank: 41
+      capt_probe_src_taxid:
+        slot_group: Sequencing
+        rank: 42
+      capt_probe_desc:
+        slot_group: Sequencing
+        rank: 43
+      data_preproc_desc:
+        slot_group: Data analysis
+        rank: 44
+      reads_removed_desc:
+        slot_group: Data analysis
+        rank: 45
+    class_uri: MIXS:9999903
+    annotations:
+      use_cases: ancient dna samples
+settings:
+  country: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  DOI: 'doi:10.\d{2,9}/.*'
+  lat: (-?((?:[0-8]?[0-9](?:\.\d{0,8})?)|90))
+  lon: -?[0-9]+(?:\.[0-9]{0,8})?$|^-?(1[0-7]{1,2})
+  parameters: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  PMID: 'PMID:\d+'
+  region: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  room_name: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  scientific_float: '[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?'
+  software: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  specific_location: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  storage_condition_type: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  termLabel: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  termID: "[a-zA-Z][a-zA-Z0-9._]*:[a-zA-Z0-9]+"
+  unit: ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)
+  URL: 'https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)'
+  text: ".*"
