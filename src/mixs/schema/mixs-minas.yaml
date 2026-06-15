@@ -22089,406 +22089,406 @@ classes:
     slot_usage:
       project_name:
         rank: 1
-        slot_group: investigation
+        slot_group: Investigation
       associated_resource:
         rank: 2
-        slot_group: sequencing
+        slot_group: Investigation
       orig_site_name:
         rank: 3
-        slot_group: environment
+        slot_group: Environment
       orig_site_loc:
         rank: 4
-        slot_group: environment
+        slot_group: Environment
       orig_site_lat:
         rank: 5
-        slot_group: environment
+        slot_group: Environment
       orig_site_lon:
         rank: 6
-        slot_group: environment
+        slot_group: Environment
       past_env_broad:
         rank: 7
-        slot_group: environment
+        slot_group: Environment
       past_env_local:
         rank: 8
-        slot_group: environment
+        slot_group: Environment
       context_retrieval_date:
         rank: 9
-        slot_group: environment
+        slot_group: Environment
       stratigraph_context:
         rank: 10
-        slot_group: environment
+        slot_group: Environment
       geo_loc_name:
         rank: 11
-        slot_group: environment
+        slot_group: Environment
       lat_lon:
         rank: 12
-        slot_group: environment
+        slot_group: Environment
       env_broad_scale:
         rank: 13
-        slot_group: environment
+        slot_group: Environment
       env_local_scale:
         rank: 14
-        slot_group: environment
+        slot_group: Environment
       alt:
         rank: 15
-        slot_group: environment
+        slot_group: Environment
       depth:
         rank: 16
-        slot_group: environment
+        slot_group: Environment
       elev:
         rank: 17
-        slot_group: environment
+        slot_group: Environment
       temp:
         rank: 18
-        slot_group: environment
+        slot_group: Environment
       perturbation:
         rank: 19
-        slot_group: environment
+        slot_group: Environment
       salinity:
         rank: 20
-        slot_group: environment
+        slot_group: Environment
       experimental_factor:
         rank: 21
-        slot_group: investigation
+        slot_group: Environment
       source_mat_id:
         rank: 22
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_name:
         rank: 23
-        slot_group: investigation
+        slot_group: Environment
       samp_alt_lab_ids:
         rank: 24
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_authority:
         rank: 25
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_id:
         rank: 26
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_date:
         rank: 27
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_scope:
         rank: 28
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       biocultural_label:
         rank: 29
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_age:
         rank: 30
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_sys:
         rank: 31
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_age:
         rank: 32
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_sys:
         rank: 33
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_protocol:
         rank: 34
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_remarks:
         rank: 35
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       geological_epoch:
         rank: 36
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       cultural_era:
         rank: 37
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_taxon_id:
         rank: 38
-        slot_group: investigation
+        slot_group: Environment
       collection_date:
         rank: 39
-        slot_group: environment
+        slot_group: Environment
       host_common_name:
         rank: 40
-        slot_group: environment
+        slot_group: Environment
       host_taxid:
         rank: 41
-        slot_group: environment
+        slot_group: Environment
       store_cond:
         rank: 42
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_preserv_treatm:
         rank: 43
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       host_body_habitat:
         rank: 44
-        slot_group: environment
+        slot_group: Environment
       host_subject_id:
         rank: 45
-        slot_group: environment
+        slot_group: Environment
       host_age:
         rank: 46
-        slot_group: environment
+        slot_group: Environment
       host_life_stage:
         rank: 47
-        slot_group: environment
+        slot_group: Environment
       host_sex:
         rank: 48
-        slot_group: environment
+        slot_group: Environment
       host_height:
         rank: 49
-        slot_group: environment
+        slot_group: Environment
       host_length:
         rank: 50
-        slot_group: environment
+        slot_group: Environment
       host_substrate:
         rank: 51
-        slot_group: environment
+        slot_group: Environment
       host_phenotype:
         rank: 52
-        slot_group: environment
+        slot_group: Environment
       host_shape:
         rank: 53
-        slot_group: environment
+        slot_group: Environment
       host_color:
         rank: 54
-        slot_group: environment
+        slot_group: Environment
       host_growth_cond:
         rank: 55
-        slot_group: environment
+        slot_group: Environment
       host_tot_mass:
         rank: 56
-        slot_group: environment
+        slot_group: Environment
       host_dry_mass:
         rank: 57
-        slot_group: environment
+        slot_group: Environment
       host_body_temp:
         rank: 58
-        slot_group: environment
+        slot_group: Environment
       blood_press_diast:
         rank: 59
-        slot_group: environment
+        slot_group: Environment
       blood_press_syst:
         rank: 60
-        slot_group: environment
+        slot_group: Environment
       gravidity:
         rank: 61
-        slot_group: environment
+        slot_group: Environment
       host_diet:
         rank: 62
-        slot_group: environment
+        slot_group: Environment
       host_last_meal:
         rank: 63
-        slot_group: environment
+        slot_group: Environment
       host_body_product:
         rank: 64
-        slot_group: environment
+        slot_group: Environment
       host_body_site:
         rank: 65
-        slot_group: environment
+        slot_group: Environment
       ances_data:
         rank: 66
-        slot_group: environment
+        slot_group: Environment
       host_fam_rel:
         rank: 67
-        slot_group: environment
+        slot_group: Environment
       biol_stat:
         rank: 68
-        slot_group: environment
+        slot_group: Environment
       host_genotype:
         rank: 69
-        slot_group: environment
+        slot_group: Environment
       host_subspecf_genlin:
         rank: 70
-        slot_group: environment
+        slot_group: Environment
       genetic_mod:
         rank: 71
-        slot_group: environment
+        slot_group: Environment
       host_disease_stat:
         rank: 72
-        slot_group: environment
+        slot_group: Environment
       samp_dis_stage:
         rank: 73
-        slot_group: environment
+        slot_group: Environment
       palaeopath_status:
         rank: 74
-        slot_group: environment
+        slot_group: Environment
       host_symbiont:
         rank: 75
-        slot_group: environment
+        slot_group: Environment
       chem_administration:
         rank: 76
-        slot_group: environment
+        slot_group: Environment
       prev_pubs:
         rank: 77
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       ref_biomaterial:
         rank: 78
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       organism_count:
         rank: 79
-        slot_group: environment
+        slot_group: Environment
       rel_to_oxygen:
         rank: 80
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       oxy_stat_samp:
         rank: 81
-        slot_group: environment
+        slot_group: Environment
       host_preserv_state:
         rank: 82
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_capt_status:
         rank: 83
-        slot_group: environment
+        slot_group: Environment
       misc_param:
         rank: 84
-        slot_group: environment
+        slot_group: Environment
       batch_ids:
         rank: 85
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_category:
         rank: 86
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       neg_cont_type:
         rank: 87
-        slot_group: investigation
+        slot_group: Nucleic acid source
       pos_cont_type:
         rank: 88
-        slot_group: investigation
+        slot_group: Nucleic acid source
       env_medium:
         rank: 89
-        slot_group: environment
+        slot_group: Nucleic acid source
       samp_collect_method:
         rank: 90
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_collect_device:
         rank: 91
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_mat_process:
         rank: 92
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_size:
         rank: 93
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_loc:
         rank: 94
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_dur:
         rank: 95
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_temp:
         rank: 96
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_decont_pretreat:
         rank: 97
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       size_frac:
         rank: 98
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_vol_we_dna_ext:
         rank: 99
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_extr_date:
         rank: 100
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_ext:
         rank: 101
-        slot_group: sequencing
+        slot_group: Nucleic acid source
       sop_experimental:
         rank: 102
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       library_name:
         rank: 103
-        slot_group: sequencing
+        slot_group: Sequencing
       damage_treatment:
         rank: 104
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_strandedness:
         rank: 105
-        slot_group: sequencing
+        slot_group: Sequencing
       adapters:
         rank: 106
-        slot_group: sequencing
+        slot_group: Sequencing
       mid:
         rank: 107
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_mid_desc:
         rank: 108
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_gener_technique:
         rank: 109
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_screen:
         rank: 110
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_vector:
         rank: 111
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_size:
         rank: 112
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_polymerase:
         rank: 113
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_src_taxid:
         rank: 114
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_desc:
         rank: 115
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_pcr_cyc_tot:
         rank: 116
-        slot_group: sequencing
+        slot_group: Sequencing
       reamp_pcr_cyc_tot:
         rank: 117
-        slot_group: sequencing
+        slot_group: Sequencing
       nucl_acid_amp:
         rank: 118
-        slot_group: sequencing
+        slot_group: Sequencing
       seq_meth:
         rank: 119
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_layout:
         rank: 120
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_reads_seqd:
         rank: 121
-        slot_group: sequencing
+        slot_group: Sequencing
       sop_lib_preparation:
         rank: 122
-        slot_group: sequencing
+        slot_group: Sequencing
       data_preproc_desc:
         rank: 123
-        slot_group: sequencing
+        slot_group: Data analysis
       reads_removed_desc:
         rank: 124
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_name:
         rank: 125
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_software:
         rank: 126
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_qual:
         rank: 127
-        slot_group: sequencing
+        slot_group: Data analysis
       number_contig:
         rank: 128
-        slot_group: sequencing
+        slot_group: Data analysis
       tax_class:
         rank: 129
-        slot_group: sequencing
+        slot_group: Data analysis
       annot:
         rank: 130
-        slot_group: sequencing
+        slot_group: Data analysis
       feat_pred:
         rank: 131
-        slot_group: sequencing
+        slot_group: Data analysis
       sim_search_meth:
         rank: 132
-        slot_group: sequencing
+        slot_group: Data analysis
       ref_db:
         rank: 133
-        slot_group: sequencing
+        slot_group: Data analysis
       sop:
         rank: 134
-        slot_group: sequencing
+        slot_group: Data analysis
   MimsHumanAssociatedAncient:
     description: MIxS Data that comply with the Mims checklist, and HumanAssociated and Ancient extensions.
     title: MimsHumanAssociated combined with Ancient
@@ -22642,424 +22642,424 @@ classes:
     slot_usage:
       project_name:
         rank: 1
-        slot_group: investigation
+        slot_group: Investigation
       associated_resource:
         rank: 2
-        slot_group: sequencing
+        slot_group: Investigation
       orig_site_name:
         rank: 3
-        slot_group: environment
+        slot_group: Environment
       orig_site_loc:
         rank: 4
-        slot_group: environment
+        slot_group: Environment
       orig_site_lat:
         rank: 5
-        slot_group: environment
+        slot_group: Environment
       orig_site_lon:
         rank: 6
-        slot_group: environment
+        slot_group: Environment
       past_env_broad:
         rank: 7
-        slot_group: environment
+        slot_group: Environment
       past_env_local:
         rank: 8
-        slot_group: environment
+        slot_group: Environment
       context_retrieval_date:
         rank: 9
-        slot_group: environment
+        slot_group: Environment
       stratigraph_context:
         rank: 10
-        slot_group: environment
+        slot_group: Environment
       geo_loc_name:
         rank: 11
-        slot_group: environment
+        slot_group: Environment
       lat_lon:
         rank: 12
-        slot_group: environment
+        slot_group: Environment
       env_broad_scale:
         rank: 13
-        slot_group: environment
+        slot_group: Environment
       env_local_scale:
         rank: 14
-        slot_group: environment
+        slot_group: Environment
       alt:
         rank: 15
-        slot_group: environment
+        slot_group: Environment
       depth:
         rank: 16
-        slot_group: environment
+        slot_group: Environment
       elev:
         rank: 17
-        slot_group: environment
+        slot_group: Environment
       temp:
         rank: 18
-        slot_group: environment
+        slot_group: Environment
       salinity:
         rank: 19
-        slot_group: environment
+        slot_group: Environment
       perturbation:
         rank: 20
-        slot_group: environment
+        slot_group: Environment
       experimental_factor:
         rank: 21
-        slot_group: investigation
+        slot_group: Environment
       source_mat_id:
         rank: 22
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_name:
         rank: 23
-        slot_group: investigation
+        slot_group: Environment
       samp_alt_lab_ids:
         rank: 24
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_authority:
         rank: 25
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_id:
         rank: 26
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_date:
         rank: 27
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_scope:
         rank: 28
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       biocultural_label:
         rank: 29
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_age:
         rank: 30
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_sys:
         rank: 31
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_age:
         rank: 32
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_sys:
         rank: 33
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_protocol:
         rank: 34
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_remarks:
         rank: 35
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       geological_epoch:
         rank: 36
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       cultural_era:
         rank: 37
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_taxon_id:
         rank: 38
-        slot_group: investigation
+        slot_group: Environment
       collection_date:
         rank: 39
-        slot_group: environment
+        slot_group: Environment
       store_cond:
         rank: 40
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_preserv_treatm:
         rank: 41
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       host_subject_id:
         rank: 42
-        slot_group: environment
+        slot_group: Environment
       ethnicity:
         rank: 43
-        slot_group: environment
+        slot_group: Environment
       host_age:
         rank: 44
-        slot_group: environment
+        slot_group: Environment
       host_body_mass_index:
         rank: 45
-        slot_group: environment
+        slot_group: Environment
       host_sex:
         rank: 46
-        slot_group: environment
+        slot_group: Environment
       host_height:
         rank: 47
-        slot_group: environment
+        slot_group: Environment
       host_phenotype:
         rank: 48
-        slot_group: environment
+        slot_group: Environment
       host_pulse:
         rank: 49
-        slot_group: environment
+        slot_group: Environment
       host_tot_mass:
         rank: 50
-        slot_group: environment
+        slot_group: Environment
       host_body_temp:
         rank: 51
-        slot_group: environment
+        slot_group: Environment
       host_diet:
         rank: 52
-        slot_group: environment
+        slot_group: Environment
       host_last_meal:
         rank: 53
-        slot_group: environment
+        slot_group: Environment
       host_body_site:
         rank: 54
-        slot_group: environment
+        slot_group: Environment
       host_body_product:
         rank: 55
-        slot_group: environment
+        slot_group: Environment
       host_fam_rel:
         rank: 56
-        slot_group: environment
+        slot_group: Environment
       twin_sibling:
         rank: 57
-        slot_group: environment
+        slot_group: Environment
       host_occupation:
         rank: 58
-        slot_group: environment
+        slot_group: Environment
       host_genotype:
         rank: 59
-        slot_group: environment
+        slot_group: Environment
       host_symbiont:
         rank: 60
-        slot_group: environment
+        slot_group: Environment
       host_disease_stat:
         rank: 61
-        slot_group: environment
+        slot_group: Environment
       palaeopath_status:
         rank: 62
-        slot_group: environment
+        slot_group: Environment
       blood_blood_disord:
         rank: 63
-        slot_group: environment
+        slot_group: Environment
       kidney_disord:
         rank: 64
-        slot_group: environment
+        slot_group: Environment
       pulmonary_disord:
         rank: 65
-        slot_group: environment
+        slot_group: Environment
       urogenit_tract_disor:
         rank: 66
-        slot_group: environment
+        slot_group: Environment
       nose_throat_disord:
         rank: 67
-        slot_group: environment
+        slot_group: Environment
       host_hiv_stat:
         rank: 68
-        slot_group: environment
+        slot_group: Environment
       medic_hist_perform:
         rank: 69
-        slot_group: environment
+        slot_group: Environment
       study_complt_stat:
         rank: 70
-        slot_group: environment
+        slot_group: Environment
       ihmc_medication_code:
         rank: 71
-        slot_group: environment
+        slot_group: Environment
       chem_administration:
         rank: 72
-        slot_group: environment
+        slot_group: Environment
       urine_collect_meth:
         rank: 73
-        slot_group: environment
+        slot_group: Environment
       drug_usage:
         rank: 74
-        slot_group: environment
+        slot_group: Environment
       smoker:
         rank: 75
-        slot_group: environment
+        slot_group: Environment
       weight_loss_3_month:
         rank: 76
-        slot_group: environment
+        slot_group: Environment
       diet_last_six_month:
         rank: 77
-        slot_group: environment
+        slot_group: Environment
       travel_out_six_month:
         rank: 78
-        slot_group: environment
+        slot_group: Environment
       pet_farm_animal:
         rank: 79
-        slot_group: environment
+        slot_group: Environment
       maternal_health_stat:
         rank: 80
-        slot_group: environment
+        slot_group: Environment
       gestation_state:
         rank: 81
-        slot_group: environment
+        slot_group: Environment
       foetal_health_stat:
         rank: 82
-        slot_group: environment
+        slot_group: Environment
       amniotic_fluid_color:
         rank: 83
-        slot_group: environment
+        slot_group: Environment
       prev_pubs:
         rank: 84
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       ref_biomaterial:
         rank: 85
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       organism_count:
         rank: 86
-        slot_group: environment
+        slot_group: Environment
       rel_to_oxygen:
         rank: 87
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       host_preserv_state:
         rank: 88
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       oxy_stat_samp:
         rank: 89
-        slot_group: environment
+        slot_group: Environment
       misc_param:
         rank: 90
-        slot_group: environment
+        slot_group: Environment
       batch_ids:
         rank: 91
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_category:
         rank: 92
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       neg_cont_type:
         rank: 93
-        slot_group: investigation
+        slot_group: Nucleic acid source
       pos_cont_type:
         rank: 94
-        slot_group: investigation
+        slot_group: Nucleic acid source
       env_medium:
         rank: 95
-        slot_group: environment
+        slot_group: Nucleic acid source
       samp_collect_method:
         rank: 96
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_collect_device:
         rank: 97
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_mat_process:
         rank: 98
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_size:
         rank: 99
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_loc:
         rank: 100
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_dur:
         rank: 101
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_temp:
         rank: 102
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_decont_pretreat:
         rank: 103
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       size_frac:
         rank: 104
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_vol_we_dna_ext:
         rank: 105
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_extr_date:
         rank: 106
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_ext:
         rank: 107
-        slot_group: sequencing
+        slot_group: Nucleic acid source
       sop_experimental:
         rank: 108
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       library_name:
         rank: 109
-        slot_group: sequencing
+        slot_group: Sequencing
       damage_treatment:
         rank: 110
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_strandedness:
         rank: 111
-        slot_group: sequencing
+        slot_group: Sequencing
       adapters:
         rank: 112
-        slot_group: sequencing
+        slot_group: Sequencing
       mid:
         rank: 113
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_mid_desc:
         rank: 114
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_gener_technique:
         rank: 115
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_screen:
         rank: 116
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_vector:
         rank: 117
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_size:
         rank: 118
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_polymerase:
         rank: 119
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_src_taxid:
         rank: 120
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_desc:
         rank: 121
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_pcr_cyc_tot:
         rank: 122
-        slot_group: sequencing
+        slot_group: Sequencing
       reamp_pcr_cyc_tot:
         rank: 123
-        slot_group: sequencing
+        slot_group: Sequencing
       nucl_acid_amp:
         rank: 124
-        slot_group: sequencing
+        slot_group: Sequencing
       seq_meth:
         rank: 125
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_layout:
         rank: 126
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_reads_seqd:
         rank: 127
-        slot_group: sequencing
+        slot_group: Sequencing
       sop_lib_preparation:
         rank: 128
-        slot_group: sequencing
+        slot_group: Sequencing
       data_preproc_desc:
         rank: 129
-        slot_group: sequencing
+        slot_group: Data analysis
       reads_removed_desc:
         rank: 130
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_name:
         rank: 131
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_software:
         rank: 132
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_qual:
         rank: 133
-        slot_group: sequencing
+        slot_group: Data analysis
       number_contig:
         rank: 134
-        slot_group: sequencing
+        slot_group: Data analysis
       tax_class:
         rank: 135
-        slot_group: sequencing
+        slot_group: Data analysis
       annot:
         rank: 136
-        slot_group: sequencing
+        slot_group: Data analysis
       feat_pred:
         rank: 137
-        slot_group: sequencing
+        slot_group: Data analysis
       sim_search_meth:
         rank: 138
-        slot_group: sequencing
+        slot_group: Data analysis
       ref_db:
         rank: 139
-        slot_group: sequencing
+        slot_group: Data analysis
       sop:
         rank: 140
-        slot_group: sequencing
+        slot_group: Data analysis
   MimsHumanOralAncient:
     description: MIxS Data that comply with the Mims checklist, and HumanOral and Ancient extensions.
     title: MimsHumanOral combined with Ancient
@@ -23196,373 +23196,373 @@ classes:
     slot_usage:
       project_name:
         rank: 1
-        slot_group: investigation
+        slot_group: Investigation
       associated_resource:
         rank: 2
-        slot_group: sequencing
+        slot_group: Investigation
       orig_site_name:
         rank: 3
-        slot_group: environment
+        slot_group: Environment
       orig_site_loc:
         rank: 4
-        slot_group: environment
+        slot_group: Environment
       orig_site_lat:
         rank: 5
-        slot_group: environment
+        slot_group: Environment
       orig_site_lon:
         rank: 6
-        slot_group: environment
+        slot_group: Environment
       past_env_broad:
         rank: 7
-        slot_group: environment
+        slot_group: Environment
       past_env_local:
         rank: 8
-        slot_group: environment
+        slot_group: Environment
       context_retrieval_date:
         rank: 9
-        slot_group: environment
+        slot_group: Environment
       stratigraph_context:
         rank: 10
-        slot_group: environment
+        slot_group: Environment
       geo_loc_name:
         rank: 11
-        slot_group: environment
+        slot_group: Environment
       lat_lon:
         rank: 12
-        slot_group: environment
+        slot_group: Environment
       env_broad_scale:
         rank: 13
-        slot_group: environment
+        slot_group: Environment
       env_local_scale:
         rank: 14
-        slot_group: environment
+        slot_group: Environment
       alt:
         rank: 15
-        slot_group: environment
+        slot_group: Environment
       depth:
         rank: 16
-        slot_group: environment
+        slot_group: Environment
       elev:
         rank: 17
-        slot_group: environment
+        slot_group: Environment
       temp:
         rank: 18
-        slot_group: environment
+        slot_group: Environment
       salinity:
         rank: 19
-        slot_group: environment
+        slot_group: Environment
       perturbation:
         rank: 20
-        slot_group: environment
+        slot_group: Environment
       experimental_factor:
         rank: 21
-        slot_group: investigation
+        slot_group: Environment
       source_mat_id:
         rank: 22
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_name:
         rank: 23
-        slot_group: investigation
+        slot_group: Environment
       samp_alt_lab_ids:
         rank: 24
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_authority:
         rank: 25
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_id:
         rank: 26
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_date:
         rank: 27
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_scope:
         rank: 28
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       biocultural_label:
         rank: 29
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_age:
         rank: 30
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_sys:
         rank: 31
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_age:
         rank: 32
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_sys:
         rank: 33
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_protocol:
         rank: 34
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_remarks:
         rank: 35
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       geological_epoch:
         rank: 36
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       cultural_era:
         rank: 37
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_taxon_id:
         rank: 38
-        slot_group: investigation
+        slot_group: Environment
       collection_date:
         rank: 39
-        slot_group: environment
+        slot_group: Environment
       store_cond:
         rank: 40
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_preserv_treatm:
         rank: 41
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       host_subject_id:
         rank: 42
-        slot_group: environment
+        slot_group: Environment
       ethnicity:
         rank: 43
-        slot_group: environment
+        slot_group: Environment
       host_age:
         rank: 44
-        slot_group: environment
+        slot_group: Environment
       host_body_mass_index:
         rank: 45
-        slot_group: environment
+        slot_group: Environment
       host_sex:
         rank: 46
-        slot_group: environment
+        slot_group: Environment
       host_height:
         rank: 47
-        slot_group: environment
+        slot_group: Environment
       host_phenotype:
         rank: 48
-        slot_group: environment
+        slot_group: Environment
       host_pulse:
         rank: 49
-        slot_group: environment
+        slot_group: Environment
       host_tot_mass:
         rank: 50
-        slot_group: environment
+        slot_group: Environment
       host_body_temp:
         rank: 51
-        slot_group: environment
+        slot_group: Environment
       host_diet:
         rank: 52
-        slot_group: environment
+        slot_group: Environment
       host_last_meal:
         rank: 53
-        slot_group: environment
+        slot_group: Environment
       host_body_site:
         rank: 54
-        slot_group: environment
+        slot_group: Environment
       host_body_product:
         rank: 55
-        slot_group: environment
+        slot_group: Environment
       host_fam_rel:
         rank: 56
-        slot_group: environment
+        slot_group: Environment
       host_occupation:
         rank: 57
-        slot_group: environment
+        slot_group: Environment
       time_last_toothbrush:
         rank: 58
-        slot_group: environment
+        slot_group: Environment
       host_genotype:
         rank: 59
-        slot_group: environment
+        slot_group: Environment
       host_symbiont:
         rank: 60
-        slot_group: environment
+        slot_group: Environment
       host_disease_stat:
         rank: 61
-        slot_group: environment
+        slot_group: Environment
       palaeopath_status:
         rank: 62
-        slot_group: environment
+        slot_group: Environment
       nose_mouth_teeth_throat_disord:
         rank: 63
-        slot_group: environment
+        slot_group: Environment
       medic_hist_perform:
         rank: 64
-        slot_group: environment
+        slot_group: Environment
       ihmc_medication_code:
         rank: 65
-        slot_group: environment
+        slot_group: Environment
       chem_administration:
         rank: 66
-        slot_group: environment
+        slot_group: Environment
       prev_pubs:
         rank: 67
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       ref_biomaterial:
         rank: 68
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       organism_count:
         rank: 69
-        slot_group: environment
+        slot_group: Environment
       rel_to_oxygen:
         rank: 70
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       host_preserv_state:
         rank: 71
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       oxy_stat_samp:
         rank: 72
-        slot_group: environment
+        slot_group: Environment
       misc_param:
         rank: 73
-        slot_group: environment
+        slot_group: Environment
       batch_ids:
         rank: 74
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_category:
         rank: 75
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       neg_cont_type:
         rank: 76
-        slot_group: investigation
+        slot_group: Nucleic acid source
       pos_cont_type:
         rank: 77
-        slot_group: investigation
+        slot_group: Nucleic acid source
       env_medium:
         rank: 78
-        slot_group: environment
+        slot_group: Nucleic acid source
       samp_collect_method:
         rank: 79
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_collect_device:
         rank: 80
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_mat_process:
         rank: 81
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_size:
         rank: 82
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_loc:
         rank: 83
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_dur:
         rank: 84
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_temp:
         rank: 85
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_decont_pretreat:
         rank: 86
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       size_frac:
         rank: 87
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_vol_we_dna_ext:
         rank: 88
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_extr_date:
         rank: 89
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_ext:
         rank: 90
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       sop_experimental:
         rank: 91
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       library_name:
         rank: 92
-        slot_group: sequencing
+        slot_group: Sequencing
       damage_treatment:
         rank: 93
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_strandedness:
         rank: 94
-        slot_group: sequencing
+        slot_group: Sequencing
       adapters:
         rank: 95
-        slot_group: sequencing
+        slot_group: Sequencing
       mid:
         rank: 96
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_mid_desc:
         rank: 97
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_gener_technique:
         rank: 98
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_screen:
         rank: 99
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_vector:
         rank: 100
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_size:
         rank: 101
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_polymerase:
         rank: 102
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_src_taxid:
         rank: 103
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_desc:
         rank: 104
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_pcr_cyc_tot:
         rank: 105
-        slot_group: sequencing
+        slot_group: Sequencing
       reamp_pcr_cyc_tot:
         rank: 106
-        slot_group: sequencing
+        slot_group: Sequencing
       nucl_acid_amp:
         rank: 107
-        slot_group: sequencing
+        slot_group: Sequencing
       seq_meth:
         rank: 108
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_layout:
         rank: 109
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_reads_seqd:
         rank: 110
-        slot_group: sequencing
+        slot_group: Sequencing
       sop_lib_preparation:
         rank: 111
-        slot_group: sequencing
+        slot_group: Sequencing
       data_preproc_desc:
         rank: 112
-        slot_group: sequencing
+        slot_group: Data analysis
       reads_removed_desc:
         rank: 113
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_name:
         rank: 114
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_software:
         rank: 115
-        slot_group: sequencing
+        slot_group: Data analysis
       number_contig:
         rank: 116
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_qual:
         rank: 117
-        slot_group: sequencing
+        slot_group: Data analysis
       tax_class:
         rank: 118
-        slot_group: sequencing
+        slot_group: Data analysis
       annot:
         rank: 119
-        slot_group: sequencing
+        slot_group: Data analysis
       feat_pred:
         rank: 120
-        slot_group: sequencing
+        slot_group: Data analysis
       sim_search_meth:
         rank: 121
-        slot_group: sequencing
+        slot_group: Data analysis
       ref_db:
         rank: 122
-        slot_group: sequencing
+        slot_group: Data analysis
       sop:
         rank: 123
-        slot_group: sequencing
+        slot_group: Data analysis
   MimsHumanGutAncient:
     description: MIxS Data that comply with the Mims checklist, and HumanGut and Ancient extensions.
     title: MimsHumanGut combined with Ancient
@@ -23700,376 +23700,376 @@ classes:
     slot_usage:
       project_name:
         rank: 1
-        slot_group: investigation
+        slot_group: Investigation
       associated_resource:
         rank: 2
-        slot_group: sequencing
+        slot_group: Investigation
       orig_site_name:
         rank: 3
-        slot_group: environment
+        slot_group: Environment
       orig_site_loc:
         rank: 4
-        slot_group: environment
+        slot_group: Environment
       orig_site_lat:
         rank: 5
-        slot_group: environment
+        slot_group: Environment
       orig_site_lon:
         rank: 6
-        slot_group: environment
+        slot_group: Environment
       past_env_broad:
         rank: 7
-        slot_group: environment
+        slot_group: Environment
       past_env_local:
         rank: 8
-        slot_group: environment
+        slot_group: Environment
       context_retrieval_date:
         rank: 9
-        slot_group: environment
+        slot_group: Environment
       stratigraph_context:
         rank: 10
-        slot_group: environment
+        slot_group: Environment
       geo_loc_name:
         rank: 11
-        slot_group: environment
+        slot_group: Environment
       lat_lon:
         rank: 12
-        slot_group: environment
+        slot_group: Environment
       env_broad_scale:
         rank: 13
-        slot_group: environment
+        slot_group: Environment
       env_local_scale:
         rank: 14
-        slot_group: environment
+        slot_group: Environment
       alt:
         rank: 15
-        slot_group: environment
+        slot_group: Environment
       depth:
         rank: 16
-        slot_group: environment
+        slot_group: Environment
       elev:
         rank: 17
-        slot_group: environment
+        slot_group: Environment
       temp:
         rank: 18
-        slot_group: environment
+        slot_group: Environment
       salinity:
         rank: 19
-        slot_group: environment
+        slot_group: Environment
       perturbation:
         rank: 20
-        slot_group: environment
+        slot_group: Environment
       experimental_factor:
         rank: 21
-        slot_group: investigation
+        slot_group: Environment
       source_mat_id:
         rank: 22
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_name:
         rank: 23
-        slot_group: investigation
+        slot_group: Environment
       samp_alt_lab_ids:
         rank: 24
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_authority:
         rank: 25
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_id:
         rank: 26
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_date:
         rank: 27
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_scope:
         rank: 28
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       biocultural_label:
         rank: 29
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_age:
         rank: 30
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_sys:
         rank: 31
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_age:
         rank: 32
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_sys:
         rank: 33
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_protocol:
         rank: 34
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_remarks:
         rank: 35
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       geological_epoch:
         rank: 36
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       cultural_era:
         rank: 37
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_taxon_id:
         rank: 38
-        slot_group: investigation
+        slot_group: Environment
       collection_date:
         rank: 39
-        slot_group: environment
+        slot_group: Environment
       store_cond:
         rank: 40
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_preserv_treatm:
         rank: 41
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       host_subject_id:
         rank: 42
-        slot_group: environment
+        slot_group: Environment
       ethnicity:
         rank: 43
-        slot_group: environment
+        slot_group: Environment
       host_age:
         rank: 44
-        slot_group: environment
+        slot_group: Environment
       host_body_mass_index:
         rank: 45
-        slot_group: environment
+        slot_group: Environment
       host_sex:
         rank: 46
-        slot_group: environment
+        slot_group: Environment
       host_height:
         rank: 47
-        slot_group: environment
+        slot_group: Environment
       host_phenotype:
         rank: 48
-        slot_group: environment
+        slot_group: Environment
       host_pulse:
         rank: 49
-        slot_group: environment
+        slot_group: Environment
       host_tot_mass:
         rank: 50
-        slot_group: environment
+        slot_group: Environment
       host_body_temp:
         rank: 51
-        slot_group: environment
+        slot_group: Environment
       host_diet:
         rank: 52
-        slot_group: environment
+        slot_group: Environment
       host_last_meal:
         rank: 53
-        slot_group: environment
+        slot_group: Environment
       special_diet:
         rank: 54
-        slot_group: environment
+        slot_group: Environment
       host_body_site:
         rank: 55
-        slot_group: environment
+        slot_group: Environment
       host_body_product:
         rank: 56
-        slot_group: environment
+        slot_group: Environment
       host_fam_rel:
         rank: 57
-        slot_group: environment
+        slot_group: Environment
       host_occupation:
         rank: 58
-        slot_group: environment
+        slot_group: Environment
       host_genotype:
         rank: 59
-        slot_group: environment
+        slot_group: Environment
       host_symbiont:
         rank: 60
-        slot_group: environment
+        slot_group: Environment
       host_disease_stat:
         rank: 61
-        slot_group: environment
+        slot_group: Environment
       palaeopath_status:
         rank: 62
-        slot_group: environment
+        slot_group: Environment
       liver_disord:
         rank: 63
-        slot_group: environment
+        slot_group: Environment
       gastrointest_disord:
         rank: 64
-        slot_group: environment
+        slot_group: Environment
       medic_hist_perform:
         rank: 65
-        slot_group: environment
+        slot_group: Environment
       ihmc_medication_code:
         rank: 66
-        slot_group: environment
+        slot_group: Environment
       chem_administration:
         rank: 67
-        slot_group: environment
+        slot_group: Environment
       prev_pubs:
         rank: 68
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       ref_biomaterial:
         rank: 69
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       organism_count:
         rank: 70
-        slot_group: environment
+        slot_group: Environment
       rel_to_oxygen:
         rank: 71
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       host_preserv_state:
         rank: 72
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       oxy_stat_samp:
         rank: 73
-        slot_group: environment
+        slot_group: Environment
       misc_param:
         rank: 74
-        slot_group: environment
+        slot_group: Environment
       batch_ids:
         rank: 75
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_category:
         rank: 76
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       neg_cont_type:
         rank: 77
-        slot_group: investigation
+        slot_group: Nucleic acid source
       pos_cont_type:
         rank: 78
-        slot_group: investigation
+        slot_group: Nucleic acid source
       env_medium:
         rank: 79
-        slot_group: environment
+        slot_group: Nucleic acid source
       samp_collect_method:
         rank: 80
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_collect_device:
         rank: 81
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_mat_process:
         rank: 82
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_size:
         rank: 83
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_loc:
         rank: 84
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_dur:
         rank: 85
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_temp:
         rank: 86
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_decont_pretreat:
         rank: 87
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       size_frac:
         rank: 88
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_vol_we_dna_ext:
         rank: 89
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_extr_date:
         rank: 90
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_ext:
         rank: 91
-        slot_group: sequencing
+        slot_group: Nucleic acid source
       sop_experimental:
         rank: 92
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       library_name:
         rank: 93
-        slot_group: sequencing
+        slot_group: Sequencing
       damage_treatment:
         rank: 94
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_strandedness:
         rank: 95
-        slot_group: sequencing
+        slot_group: Sequencing
       adapters:
         rank: 96
-        slot_group: sequencing
+        slot_group: Sequencing
       mid:
         rank: 97
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_mid_desc:
         rank: 98
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_gener_technique:
         rank: 99
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_screen:
         rank: 100
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_vector:
         rank: 101
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_size:
         rank: 102
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_polymerase:
         rank: 103
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_src_taxid:
         rank: 104
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_desc:
         rank: 105
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_pcr_cyc_tot:
         rank: 106
-        slot_group: sequencing
+        slot_group: Sequencing
       reamp_pcr_cyc_tot:
         rank: 107
-        slot_group: sequencing
+        slot_group: Sequencing
       nucl_acid_amp:
         rank: 108
-        slot_group: sequencing
+        slot_group: Sequencing
       seq_meth:
         rank: 109
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_layout:
         rank: 110
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_reads_seqd:
         rank: 111
-        slot_group: sequencing
+        slot_group: Sequencing
       sop_lib_preparation:
         rank: 112
-        slot_group: sequencing
+        slot_group: Sequencing
       data_preproc_desc:
         rank: 113
-        slot_group: sequencing
+        slot_group: Data analysis
       reads_removed_desc:
         rank: 114
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_name:
         rank: 115
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_software:
         rank: 116
-        slot_group: sequencing
+        slot_group: Data analysis
       number_contig:
         rank: 117
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_qual:
         rank: 118
-        slot_group: sequencing
+        slot_group: Data analysis
       tax_class:
         rank: 119
-        slot_group: sequencing
+        slot_group: Data analysis
       annot:
         rank: 120
-        slot_group: sequencing
+        slot_group: Data analysis
       feat_pred:
         rank: 121
-        slot_group: sequencing
+        slot_group: Data analysis
       sim_search_meth:
         rank: 122
-        slot_group: sequencing
+        slot_group: Data analysis
       ref_db:
         rank: 123
-        slot_group: sequencing
+        slot_group: Data analysis
       sop:
         rank: 124
-        slot_group: sequencing
+        slot_group: Data analysis
   MimsHumanSkinAncient:
     description: MIxS Data that comply with the Mims checklist, and HumanSkin and Ancient extensions.
     title: MimsHumanSkin combined with Ancient
@@ -24207,376 +24207,376 @@ classes:
     slot_usage:
       project_name:
         rank: 1
-        slot_group: investigation
+        slot_group: Investigation
       associated_resource:
         rank: 2
-        slot_group: sequencing
+        slot_group: Investigation
       orig_site_name:
         rank: 3
-        slot_group: environment
+        slot_group: Environment
       orig_site_loc:
         rank: 4
-        slot_group: environment
+        slot_group: Environment
       orig_site_lat:
         rank: 5
-        slot_group: environment
+        slot_group: Environment
       orig_site_lon:
         rank: 6
-        slot_group: environment
+        slot_group: Environment
       past_env_broad:
         rank: 7
-        slot_group: environment
+        slot_group: Environment
       past_env_local:
         rank: 8
-        slot_group: environment
+        slot_group: Environment
       context_retrieval_date:
         rank: 9
-        slot_group: environment
+        slot_group: Environment
       stratigraph_context:
         rank: 10
-        slot_group: environment
+        slot_group: Environment
       geo_loc_name:
         rank: 11
-        slot_group: environment
+        slot_group: Environment
       lat_lon:
         rank: 12
-        slot_group: environment
+        slot_group: Environment
       env_broad_scale:
         rank: 13
-        slot_group: environment
+        slot_group: Environment
       env_local_scale:
         rank: 14
-        slot_group: environment
+        slot_group: Environment
       alt:
         rank: 15
-        slot_group: environment
+        slot_group: Environment
       depth:
         rank: 16
-        slot_group: environment
+        slot_group: Environment
       elev:
         rank: 17
-        slot_group: environment
+        slot_group: Environment
       temp:
         rank: 18
-        slot_group: environment
+        slot_group: Environment
       salinity:
         rank: 19
-        slot_group: environment
+        slot_group: Environment
       perturbation:
         rank: 20
-        slot_group: environment
+        slot_group: Environment
       experimental_factor:
         rank: 21
-        slot_group: investigation
+        slot_group: Environment
       source_mat_id:
         rank: 22
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_name:
         rank: 23
-        slot_group: investigation
+        slot_group: Environment
       samp_alt_lab_ids:
         rank: 24
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_authority:
         rank: 25
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_id:
         rank: 26
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_date:
         rank: 27
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_scope:
         rank: 28
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       biocultural_label:
         rank: 29
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_age:
         rank: 30
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_sys:
         rank: 31
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_age:
         rank: 32
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_sys:
         rank: 33
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_protocol:
         rank: 34
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_remarks:
         rank: 35
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       geological_epoch:
         rank: 36
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       cultural_era:
         rank: 37
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_taxon_id:
         rank: 38
-        slot_group: investigation
+        slot_group: Environment
       collection_date:
         rank: 39
-        slot_group: environment
+        slot_group: Environment
       store_cond:
         rank: 40
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_preserv_treatm:
         rank: 41
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       host_subject_id:
         rank: 42
-        slot_group: environment
+        slot_group: Environment
       ethnicity:
         rank: 43
-        slot_group: environment
+        slot_group: Environment
       host_age:
         rank: 44
-        slot_group: environment
+        slot_group: Environment
       host_body_mass_index:
         rank: 45
-        slot_group: environment
+        slot_group: Environment
       host_sex:
         rank: 46
-        slot_group: environment
+        slot_group: Environment
       host_height:
         rank: 47
-        slot_group: environment
+        slot_group: Environment
       host_phenotype:
         rank: 48
-        slot_group: environment
+        slot_group: Environment
       dominant_hand:
         rank: 49
-        slot_group: environment
+        slot_group: Environment
       host_pulse:
         rank: 50
-        slot_group: environment
+        slot_group: Environment
       host_tot_mass:
         rank: 51
-        slot_group: environment
+        slot_group: Environment
       host_body_temp:
         rank: 52
-        slot_group: environment
+        slot_group: Environment
       host_diet:
         rank: 53
-        slot_group: environment
+        slot_group: Environment
       host_last_meal:
         rank: 54
-        slot_group: environment
+        slot_group: Environment
       host_body_site:
         rank: 55
-        slot_group: environment
+        slot_group: Environment
       host_body_product:
         rank: 56
-        slot_group: environment
+        slot_group: Environment
       host_fam_rel:
         rank: 57
-        slot_group: environment
+        slot_group: Environment
       host_occupation:
         rank: 58
-        slot_group: environment
+        slot_group: Environment
       host_genotype:
         rank: 59
-        slot_group: environment
+        slot_group: Environment
       host_symbiont:
         rank: 60
-        slot_group: environment
+        slot_group: Environment
       host_disease_stat:
         rank: 61
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       palaeopath_status:
         rank: 62
-        slot_group: environment
+        slot_group: Environment
       dermatology_disord:
         rank: 63
-        slot_group: environment
+        slot_group: Environment
       time_since_last_wash:
         rank: 64
-        slot_group: environment
+        slot_group: Environment
       medic_hist_perform:
         rank: 65
-        slot_group: environment
+        slot_group: Environment
       ihmc_medication_code:
         rank: 66
-        slot_group: environment
+        slot_group: Environment
       chem_administration:
         rank: 67
-        slot_group: environment
+        slot_group: Environment
       prev_pubs:
         rank: 68
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       ref_biomaterial:
         rank: 69
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       organism_count:
         rank: 70
-        slot_group: environment
+        slot_group: Environment
       rel_to_oxygen:
         rank: 71
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       host_preserv_state:
         rank: 72
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       oxy_stat_samp:
         rank: 73
-        slot_group: environment
+        slot_group: Environment
       misc_param:
         rank: 74
-        slot_group: environment
+        slot_group: Environment
       batch_ids:
         rank: 75
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_category:
         rank: 76
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       neg_cont_type:
         rank: 77
-        slot_group: investigation
+        slot_group: Nucleic acid source
       pos_cont_type:
         rank: 78
-        slot_group: investigation
+        slot_group: Nucleic acid source
       env_medium:
         rank: 79
-        slot_group: environment
+        slot_group: Nucleic acid source
       samp_collect_method:
         rank: 80
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_collect_device:
         rank: 81
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_mat_process:
         rank: 82
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_size:
         rank: 83
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_loc:
         rank: 84
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_dur:
         rank: 85
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_temp:
         rank: 86
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_decont_pretreat:
         rank: 87
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       size_frac:
         rank: 88
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_vol_we_dna_ext:
         rank: 89
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_extr_date:
         rank: 90
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_ext:
         rank: 91
-        slot_group: sequencing
+        slot_group: Nucleic acid source
       sop_experimental:
         rank: 92
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       library_name:
         rank: 93
-        slot_group: sequencing
+        slot_group: Sequencing
       damage_treatment:
         rank: 94
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_strandedness:
         rank: 95
-        slot_group: sequencing
+        slot_group: Sequencing
       adapters:
         rank: 96
-        slot_group: sequencing
+        slot_group: Sequencing
       mid:
         rank: 97
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_mid_desc:
         rank: 98
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_gener_technique:
         rank: 99
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_screen:
         rank: 100
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_vector:
         rank: 101
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_size:
         rank: 102
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_polymerase:
         rank: 103
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_src_taxid:
         rank: 104
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_desc:
         rank: 105
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_pcr_cyc_tot:
         rank: 106
-        slot_group: sequencing
+        slot_group: Sequencing
       reamp_pcr_cyc_tot:
         rank: 107
-        slot_group: sequencing
+        slot_group: Sequencing
       nucl_acid_amp:
         rank: 108
-        slot_group: sequencing
+        slot_group: Sequencing
       seq_meth:
         rank: 109
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_layout:
         rank: 110
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_reads_seqd:
         rank: 111
-        slot_group: sequencing
+        slot_group: Sequencing
       sop_lib_preparation:
         rank: 112
-        slot_group: sequencing
+        slot_group: Sequencing
       data_preproc_desc:
         rank: 113
-        slot_group: sequencing
+        slot_group: Data analysis
       reads_removed_desc:
         rank: 114
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_name:
         rank: 115
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_software:
         rank: 116
-        slot_group: sequencing
+        slot_group: Data analysis
       number_contig:
         rank: 117
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_qual:
         rank: 118
-        slot_group: sequencing
+        slot_group: Data analysis
       tax_class:
         rank: 119
-        slot_group: sequencing
+        slot_group: Data analysis
       annot:
         rank: 120
-        slot_group: sequencing
+        slot_group: Data analysis
       feat_pred:
         rank: 121
-        slot_group: sequencing
+        slot_group: Data analysis
       sim_search_meth:
         rank: 122
-        slot_group: sequencing
+        slot_group: Data analysis
       ref_db:
         rank: 123
-        slot_group: sequencing
+        slot_group: Data analysis
       sop:
         rank: 124
-        slot_group: sequencing
+        slot_group: Data analysis
   MimsSedimentAncient:
     description: MIxS Data that comply with the Mims checklist, and Sediment and Ancient extensions.
     title: MimsSediment combined with Ancient
@@ -24745,469 +24745,469 @@ classes:
     slot_usage:
       project_name:
         rank: 1
-        slot_group: investigation
+        slot_group: Investigation
       associated_resource:
         rank: 2
-        slot_group: sequencing
+        slot_group: Investigation
       orig_site_name:
         rank: 3
-        slot_group: environment
+        slot_group: Environment
       orig_site_loc:
         rank: 4
-        slot_group: environment
+        slot_group: Environment
       orig_site_lat:
         rank: 5
-        slot_group: environment
+        slot_group: Environment
       orig_site_lon:
         rank: 6
-        slot_group: environment
+        slot_group: Environment
       past_env_broad:
         rank: 7
-        slot_group: environment
+        slot_group: Environment
       past_env_local:
         rank: 8
-        slot_group: environment
+        slot_group: Environment
       context_retrieval_date:
         rank: 9
-        slot_group: environment
+        slot_group: Environment
       stratigraph_context:
         rank: 10
-        slot_group: environment
+        slot_group: Environment
       geo_loc_name:
         rank: 11
-        slot_group: environment
+        slot_group: Environment
       lat_lon:
         rank: 12
-        slot_group: environment
+        slot_group: Environment
       env_broad_scale:
         rank: 13
-        slot_group: environment
+        slot_group: Environment
       env_local_scale:
         rank: 14
-        slot_group: environment
+        slot_group: Environment
       alt:
         rank: 15
-        slot_group: environment
+        slot_group: Environment
       depth:
         rank: 16
-        slot_group: environment
+        slot_group: Environment
       elev:
         rank: 17
-        slot_group: environment
+        slot_group: Environment
       temp:
         rank: 18
-        slot_group: environment
+        slot_group: Environment
       salinity:
         rank: 19
-        slot_group: environment
+        slot_group: Environment
       perturbation:
         rank: 20
-        slot_group: environment
+        slot_group: Environment
       experimental_factor:
         rank: 21
-        slot_group: investigation
+        slot_group: Environment
       tidal_stage:
         rank: 22
-        slot_group: environment
+        slot_group: Environment
       tot_depth_water_col:
         rank: 23
-        slot_group: environment
+        slot_group: Environment
       source_mat_id:
         rank: 24
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_name:
         rank: 25
-        slot_group: investigation
+        slot_group: Environment
       samp_alt_lab_ids:
         rank: 26
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_authority:
         rank: 27
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_id:
         rank: 28
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_date:
         rank: 29
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_scope:
         rank: 30
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       biocultural_label:
         rank: 31
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_age:
         rank: 32
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_sys:
         rank: 33
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_age:
         rank: 34
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_sys:
         rank: 35
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_protocol:
         rank: 36
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_remarks:
         rank: 37
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       geological_epoch:
         rank: 38
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       cultural_era:
         rank: 39
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_taxon_id:
         rank: 40
-        slot_group: investigation
+        slot_group: Environment
       collection_date:
         rank: 41
-        slot_group: environment
+        slot_group: Environment
       store_cond:
         rank: 42
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_preserv_treatm:
         rank: 43
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       host_preserv_state:
         rank: 44
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       palaeopath_status:
         rank: 45
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chem_administration:
         rank: 46
-        slot_group: environment
+        slot_group: Environment
       prev_pubs:
         rank: 47
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       ref_biomaterial:
         rank: 48
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       sediment_type:
         rank: 49
-        slot_group: environment
+        slot_group: Environment
       particle_class:
         rank: 50
-        slot_group: environment
+        slot_group: Environment
       porosity:
         rank: 51
-        slot_group: environment
+        slot_group: Environment
       pressure:
         rank: 52
-        slot_group: environment
+        slot_group: Environment
       density:
         rank: 53
-        slot_group: environment
+        slot_group: Environment
       water_content:
         rank: 54
-        slot_group: environment
+        slot_group: Environment
       turbidity:
         rank: 55
-        slot_group: environment
+        slot_group: Environment
       mean_frict_vel:
         rank: 56
-        slot_group: environment
+        slot_group: Environment
       mean_peak_frict_vel:
         rank: 57
-        slot_group: environment
+        slot_group: Environment
       ph:
         rank: 58
-        slot_group: environment
+        slot_group: Environment
       alkalinity:
         rank: 59
-        slot_group: environment
+        slot_group: Environment
       redox_potential:
         rank: 60
-        slot_group: environment
+        slot_group: Environment
       org_matter:
         rank: 61
-        slot_group: environment
+        slot_group: Environment
       chlorophyll:
         rank: 62
-        slot_group: environment
+        slot_group: Environment
       tot_carb:
         rank: 63
-        slot_group: environment
+        slot_group: Environment
       tot_org_carb:
         rank: 64
-        slot_group: environment
+        slot_group: Environment
       org_carb:
         rank: 65
-        slot_group: environment
+        slot_group: Environment
       diss_org_carb:
         rank: 66
-        slot_group: environment
+        slot_group: Environment
       part_org_carb:
         rank: 67
-        slot_group: environment
+        slot_group: Environment
       diss_inorg_carb:
         rank: 68
-        slot_group: environment
+        slot_group: Environment
       tot_nitro_content:
         rank: 69
-        slot_group: environment
+        slot_group: Environment
       nitro:
         rank: 70
-        slot_group: environment
+        slot_group: Environment
       org_nitro:
         rank: 71
-        slot_group: environment
+        slot_group: Environment
       diss_org_nitro:
         rank: 72
-        slot_group: environment
+        slot_group: Environment
       carb_nitro_ratio:
         rank: 73
-        slot_group: environment
+        slot_group: Environment
       diss_carb_dioxide:
         rank: 74
-        slot_group: environment
+        slot_group: Environment
       diss_hydrogen:
         rank: 75
-        slot_group: environment
+        slot_group: Environment
       diss_oxygen:
         rank: 76
-        slot_group: environment
+        slot_group: Environment
       methane:
         rank: 77
-        slot_group: environment
+        slot_group: Environment
       nitrate:
         rank: 78
-        slot_group: environment
+        slot_group: Environment
       nitrite:
         rank: 79
-        slot_group: environment
+        slot_group: Environment
       phosphate:
         rank: 80
-        slot_group: environment
+        slot_group: Environment
       sulfate:
         rank: 81
-        slot_group: environment
+        slot_group: Environment
       sulfide:
         rank: 82
-        slot_group: environment
+        slot_group: Environment
       ammonium:
         rank: 83
-        slot_group: environment
+        slot_group: Environment
       sodium:
         rank: 84
-        slot_group: environment
+        slot_group: Environment
       chloride:
         rank: 85
-        slot_group: environment
+        slot_group: Environment
       potassium:
         rank: 86
-        slot_group: environment
+        slot_group: Environment
       magnesium:
         rank: 87
-        slot_group: environment
+        slot_group: Environment
       bromide:
         rank: 88
-        slot_group: environment
+        slot_group: Environment
       calcium:
         rank: 89
-        slot_group: environment
+        slot_group: Environment
       silicate:
         rank: 90
-        slot_group: environment
+        slot_group: Environment
       alkyl_diethers:
         rank: 91
-        slot_group: environment
+        slot_group: Environment
       diether_lipids:
         rank: 92
-        slot_group: environment
+        slot_group: Environment
       n_alkanes:
         rank: 93
-        slot_group: environment
+        slot_group: Environment
       phosplipid_fatt_acid:
         rank: 94
-        slot_group: environment
+        slot_group: Environment
       bishomohopanol:
         rank: 95
-        slot_group: environment
+        slot_group: Environment
       petroleum_hydrocarb:
         rank: 96
-        slot_group: environment
+        slot_group: Environment
       phaeopigments:
         rank: 97
-        slot_group: environment
+        slot_group: Environment
       bacteria_carb_prod:
         rank: 98
-        slot_group: environment
+        slot_group: Environment
       aminopept_act:
         rank: 99
-        slot_group: environment
+        slot_group: Environment
       glucosidase_act:
         rank: 100
-        slot_group: environment
+        slot_group: Environment
       biomass:
         rank: 101
-        slot_group: environment
+        slot_group: Environment
       organism_count:
         rank: 102
-        slot_group: environment
+        slot_group: Environment
       rel_to_oxygen:
         rank: 103
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       oxy_stat_samp:
         rank: 104
-        slot_group: environment
+        slot_group: Environment
       misc_param:
         rank: 105
-        slot_group: environment
+        slot_group: Environment
       batch_ids:
         rank: 106
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_category:
         rank: 107
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       neg_cont_type:
         rank: 108
-        slot_group: investigation
+        slot_group: Nucleic acid source
       pos_cont_type:
         rank: 109
-        slot_group: investigation
+        slot_group: Nucleic acid source
       env_medium:
         rank: 110
-        slot_group: environment
+        slot_group: Nucleic acid source
       samp_collect_method:
         rank: 111
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_collect_device:
         rank: 112
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_mat_process:
         rank: 113
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_size:
         rank: 114
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_loc:
         rank: 115
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_dur:
         rank: 116
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_temp:
         rank: 117
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_decont_pretreat:
         rank: 118
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       size_frac:
         rank: 119
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_vol_we_dna_ext:
         rank: 120
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_extr_date:
         rank: 121
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_ext:
         rank: 122
-        slot_group: sequencing
+        slot_group: Nucleic acid source
       sop_experimental:
         rank: 123
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       library_name:
         rank: 124
-        slot_group: sequencing
+        slot_group: Sequencing
       damage_treatment:
         rank: 125
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_strandedness:
         rank: 126
-        slot_group: sequencing
+        slot_group: Sequencing
       adapters:
         rank: 127
-        slot_group: sequencing
+        slot_group: Sequencing
       mid:
         rank: 128
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_mid_desc:
         rank: 129
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_gener_technique:
         rank: 130
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_screen:
         rank: 131
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_vector:
         rank: 132
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_size:
         rank: 133
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_polymerase:
         rank: 134
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_src_taxid:
         rank: 135
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_desc:
         rank: 136
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_pcr_cyc_tot:
         rank: 137
-        slot_group: nucleic acid sequence source
+        slot_group: Sequencing
       reamp_pcr_cyc_tot:
         rank: 138
-        slot_group: sequencing
+        slot_group: Sequencing
       nucl_acid_amp:
         rank: 139
-        slot_group: sequencing
+        slot_group: Sequencing
       seq_meth:
         rank: 140
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_layout:
         rank: 141
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_reads_seqd:
         rank: 142
-        slot_group: sequencing
+        slot_group: Sequencing
       sop_lib_preparation:
         rank: 143
-        slot_group: sequencing
+        slot_group: Sequencing
       data_preproc_desc:
         rank: 144
-        slot_group: sequencing
+        slot_group: Data analysis
       reads_removed_desc:
         rank: 145
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_name:
         rank: 146
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_software:
         rank: 147
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_qual:
         rank: 148
-        slot_group: sequencing
+        slot_group: Data analysis
       number_contig:
         rank: 149
-        slot_group: sequencing
+        slot_group: Data analysis
       tax_class:
         rank: 150
-        slot_group: sequencing
+        slot_group: Data analysis
       annot:
         rank: 151
-        slot_group: sequencing
+        slot_group: Data analysis
       feat_pred:
         rank: 152
-        slot_group: sequencing
+        slot_group: Data analysis
       sim_search_meth:
         rank: 153
-        slot_group: sequencing
+        slot_group: Data analysis
       ref_db:
         rank: 154
-        slot_group: sequencing
+        slot_group: Data analysis
       sop:
         rank: 155
-        slot_group: sequencing
+        slot_group: Data analysis
   MimsSoilAncient:
     description: MIxS Data that comply with the Mims checklist, and Soil and Ancient extensions.
     title: MimsSoil combined with Ancient
@@ -25362,427 +25362,427 @@ classes:
     slot_usage:
       project_name:
         rank: 1
-        slot_group: investigation
+        slot_group: Investigation
       associated_resource:
         rank: 2
-        slot_group: sequencing
+        slot_group: Investigation
       orig_site_name:
         rank: 3
-        slot_group: environment
+        slot_group: Environment
       orig_site_loc:
         rank: 4
-        slot_group: environment
+        slot_group: Environment
       orig_site_lat:
         rank: 5
-        slot_group: environment
+        slot_group: Environment
       orig_site_lon:
         rank: 6
-        slot_group: environment
+        slot_group: Environment
       past_env_broad:
         rank: 7
-        slot_group: environment
+        slot_group: Environment
       past_env_local:
         rank: 8
-        slot_group: environment
+        slot_group: Environment
       context_retrieval_date:
         rank: 9
-        slot_group: environment
+        slot_group: Environment
       stratigraph_context:
         rank: 10
-        slot_group: environment
+        slot_group: Environment
       soil_horizon:
         rank: 11
-        slot_group: environment
+        slot_group: Environment
       horizon_meth:
         rank: 12
-        slot_group: environment
+        slot_group: Environment
       tillage:
         rank: 13
-        slot_group: environment
+        slot_group: Environment
       profile_position:
         rank: 14
-        slot_group: environment
+        slot_group: Environment
       slope_aspect:
         rank: 15
-        slot_group: environment
+        slot_group: Environment
       slope_gradient:
         rank: 16
-        slot_group: environment
+        slot_group: Environment
       geo_loc_name:
         rank: 17
-        slot_group: environment
+        slot_group: Environment
       lat_lon:
         rank: 18
-        slot_group: environment
+        slot_group: Environment
       env_broad_scale:
         rank: 19
-        slot_group: environment
+        slot_group: Environment
       env_local_scale:
         rank: 20
-        slot_group: environment
+        slot_group: Environment
       local_class:
         rank: 21
-        slot_group: environment
+        slot_group: Environment
       local_class_meth:
         rank: 22
-        slot_group: environment
+        slot_group: Environment
       link_class_info:
         rank: 23
-        slot_group: environment
+        slot_group: Environment
       link_climate_info:
         rank: 24
-        slot_group: environment
+        slot_group: Environment
       fao_class:
         rank: 25
-        slot_group: environment
+        slot_group: Environment
       drainage_class:
         rank: 26
-        slot_group: environment
+        slot_group: Environment
       alt:
         rank: 27
-        slot_group: environment
+        slot_group: Environment
       depth:
         rank: 28
-        slot_group: environment
+        slot_group: Environment
       elev:
         rank: 29
-        slot_group: environment
+        slot_group: Environment
       temp:
         rank: 30
-        slot_group: environment
+        slot_group: Environment
       annual_temp:
         rank: 31
-        slot_group: environment
+        slot_group: Environment
       season_temp:
         rank: 32
-        slot_group: environment
+        slot_group: Environment
       annual_precpt:
         rank: 33
-        slot_group: environment
+        slot_group: Environment
       season_precpt:
         rank: 34
-        slot_group: environment
+        slot_group: Environment
       extreme_event:
         rank: 35
-        slot_group: environment
+        slot_group: Environment
       fire:
         rank: 36
-        slot_group: environment
+        slot_group: Environment
       flooding:
         rank: 37
-        slot_group: environment
+        slot_group: Environment
       cur_land_use:
         rank: 38
-        slot_group: environment
+        slot_group: Environment
       cur_vegetation:
         rank: 39
-        slot_group: environment
+        slot_group: Environment
       cur_vegetation_meth:
         rank: 40
-        slot_group: environment
+        slot_group: Environment
       crop_rotation:
         rank: 41
-        slot_group: environment
+        slot_group: Environment
       agrochem_addition:
         rank: 42
-        slot_group: environment
+        slot_group: Environment
       prev_land_use_meth:
         rank: 43
-        slot_group: environment
+        slot_group: Environment
       previous_land_use:
         rank: 44
-        slot_group: environment
+        slot_group: Environment
       experimental_factor:
         rank: 45
-        slot_group: investigation
+        slot_group: Environment
       source_mat_id:
         rank: 46
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_name:
         rank: 47
-        slot_group: investigation
+        slot_group: Environment
       samp_alt_lab_ids:
         rank: 48
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_authority:
         rank: 49
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_id:
         rank: 50
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_date:
         rank: 51
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_scope:
         rank: 52
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       biocultural_label:
         rank: 53
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_age:
         rank: 54
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_sys:
         rank: 55
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_age:
         rank: 56
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_sys:
         rank: 57
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_protocol:
         rank: 58
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_remarks:
         rank: 59
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       geological_epoch:
         rank: 60
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       cultural_era:
         rank: 61
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_taxon_id:
         rank: 62
-        slot_group: investigation
+        slot_group: Environment
       collection_date:
         rank: 63
-        slot_group: environment
+        slot_group: Environment
       store_cond:
         rank: 64
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_preserv_treatm:
         rank: 65
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       host_preserv_state:
         rank: 66
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       palaeopath_status:
         rank: 67
-        slot_group: environment
+        slot_group: Environment
       prev_pubs:
         rank: 68
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       ref_biomaterial:
         rank: 69
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       soil_type:
         rank: 70
-        slot_group: environment
+        slot_group: Environment
       soil_type_meth:
         rank: 71
-        slot_group: environment
+        slot_group: Environment
       soil_texture:
         rank: 72
-        slot_group: environment
+        slot_group: Environment
       soil_texture_meth:
         rank: 73
-        slot_group: environment
+        slot_group: Environment
       sieving:
         rank: 74
-        slot_group: environment
+        slot_group: Environment
       water_content:
         rank: 75
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       water_cont_soil_meth:
         rank: 76
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       ph:
         rank: 77
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       ph_meth:
         rank: 78
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       org_matter:
         rank: 79
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       tot_org_carb:
         rank: 80
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       tot_org_c_meth:
         rank: 81
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       tot_nitro_content:
         rank: 82
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       tot_nitro_cont_meth:
         rank: 83
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       org_nitro:
         rank: 84
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       rel_to_oxygen:
         rank: 85
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       heavy_metals:
         rank: 86
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       heavy_metals_meth:
         rank: 87
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       al_sat:
         rank: 88
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       al_sat_meth:
         rank: 89
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       microbial_biomass:
         rank: 90
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       micro_biomass_meth:
         rank: 91
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       link_addit_analys:
         rank: 92
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       misc_param:
         rank: 93
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       batch_ids:
         rank: 94
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_category:
         rank: 95
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       neg_cont_type:
         rank: 96
-        slot_group: investigation
+        slot_group: Nucleic acid source
       pos_cont_type:
         rank: 97
-        slot_group: investigation
+        slot_group: Nucleic acid source
       env_medium:
         rank: 98
-        slot_group: environment
+        slot_group: Nucleic acid source
       samp_collect_method:
         rank: 99
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_collect_device:
         rank: 100
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_mat_process:
         rank: 101
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_size:
         rank: 102
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_decont_pretreat:
         rank: 103
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       size_frac:
         rank: 104
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_vol_we_dna_ext:
         rank: 105
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       pool_dna_extracts:
         rank: 106
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_extr_date:
         rank: 107
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_ext:
         rank: 108
-        slot_group: sequencing
+        slot_group: Nucleic acid source
       sop_experimental:
         rank: 109
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       library_name:
         rank: 110
-        slot_group: sequencing
+        slot_group: Sequencing
       damage_treatment:
         rank: 111
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_strandedness:
         rank: 112
-        slot_group: sequencing
+        slot_group: Sequencing
       adapters:
         rank: 113
-        slot_group: sequencing
+        slot_group: Sequencing
       mid:
         rank: 114
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_mid_desc:
         rank: 115
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_gener_technique:
         rank: 116
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_screen:
         rank: 117
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_vector:
         rank: 118
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_size:
         rank: 119
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_polymerase:
         rank: 120
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_src_taxid:
         rank: 121
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_desc:
         rank: 122
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_pcr_cyc_tot:
         rank: 123
-        slot_group: sequencing
+        slot_group: Sequencing
       reamp_pcr_cyc_tot:
         rank: 124
-        slot_group: sequencing
+        slot_group: Sequencing
       nucl_acid_amp:
         rank: 125
-        slot_group: sequencing
+        slot_group: Sequencing
       seq_meth:
         rank: 126
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_layout:
         rank: 127
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_reads_seqd:
         rank: 128
-        slot_group: sequencing
+        slot_group: Sequencing
       sop_lib_preparation:
         rank: 129
-        slot_group: sequencing
+        slot_group: Sequencing
       data_preproc_desc:
         rank: 130
-        slot_group: sequencing
+        slot_group: Data analysis
       reads_removed_desc:
         rank: 131
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_name:
         rank: 132
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_software:
         rank: 133
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_qual:
         rank: 134
-        slot_group: sequencing
+        slot_group: Data analysis
       number_contig:
         rank: 135
-        slot_group: sequencing
+        slot_group: Data analysis
       tax_class:
         rank: 136
-        slot_group: sequencing
+        slot_group: Data analysis
       annot:
         rank: 137
-        slot_group: sequencing
+        slot_group: Data analysis
       feat_pred:
         rank: 138
-        slot_group: sequencing
+        slot_group: Data analysis
       sim_search_meth:
         rank: 139
-        slot_group: sequencing
+        slot_group: Data analysis
       ref_db:
         rank: 140
-        slot_group: sequencing
+        slot_group: Data analysis
       sop:
         rank: 141
-        slot_group: sequencing
+        slot_group: Data analysis
   MimsPlantAssociatedAncient:
     description: MIxS Data that comply with the Mims checklist, and PlantAssociated and Ancient extensions.
     title: MimsPlantAssociated combined with Ancient
@@ -25956,484 +25956,484 @@ classes:
     slot_usage:
       project_name:
         rank: 1
-        slot_group: investigation
+        slot_group: Investigation
       associated_resource:
         rank: 2
-        slot_group: sequencing
+        slot_group: Investigation
       orig_site_name:
         rank: 3
-        slot_group: environment
+        slot_group: Environment
       orig_site_loc:
         rank: 4
-        slot_group: environment
+        slot_group: Environment
       orig_site_lat:
         rank: 5
-        slot_group: environment
+        slot_group: Environment
       orig_site_lon:
         rank: 6
-        slot_group: environment
+        slot_group: Environment
       past_env_broad:
         rank: 7
-        slot_group: environment
+        slot_group: Environment
       past_env_local:
         rank: 8
-        slot_group: environment
+        slot_group: Environment
       context_retrieval_date:
         rank: 9
-        slot_group: environment
+        slot_group: Environment
       stratigraph_context:
         rank: 10
-        slot_group: environment
+        slot_group: Environment
       geo_loc_name:
         rank: 11
-        slot_group: environment
+        slot_group: Environment
       lat_lon:
         rank: 12
-        slot_group: environment
+        slot_group: Environment
       env_broad_scale:
         rank: 13
-        slot_group: environment
+        slot_group: Environment
       env_local_scale:
         rank: 14
-        slot_group: environment
+        slot_group: Environment
       alt:
         rank: 15
-        slot_group: environment
+        slot_group: Environment
       depth:
         rank: 16
-        slot_group: environment
+        slot_group: Environment
       elev:
         rank: 17
-        slot_group: environment
+        slot_group: Environment
       temp:
         rank: 18
-        slot_group: environment
+        slot_group: Environment
       perturbation:
         rank: 19
-        slot_group: environment
+        slot_group: Environment
       salinity:
         rank: 20
-        slot_group: environment
+        slot_group: Environment
       experimental_factor:
         rank: 21
-        slot_group: investigation
+        slot_group: Environment
       source_mat_id:
         rank: 22
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_name:
         rank: 23
-        slot_group: investigation
+        slot_group: Environment
       samp_alt_lab_ids:
         rank: 24
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_authority:
         rank: 25
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_id:
         rank: 26
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_date:
         rank: 27
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       permit_scope:
         rank: 28
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       biocultural_label:
         rank: 29
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_age:
         rank: 30
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       earliest_chrono_sys:
         rank: 31
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_age:
         rank: 32
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       latest_chrono_sys:
         rank: 33
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_protocol:
         rank: 34
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       chrono_age_remarks:
         rank: 35
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       geological_epoch:
         rank: 36
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       cultural_era:
         rank: 37
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_taxon_id:
         rank: 38
-        slot_group: investigation
+        slot_group: Environment
       collection_date:
         rank: 39
-        slot_group: environment
+        slot_group: Environment
       host_common_name:
         rank: 40
-        slot_group: environment
+        slot_group: Environment
       host_taxid:
         rank: 41
-        slot_group: environment
+        slot_group: Environment
       store_cond:
         rank: 42
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_preserv_treatm:
         rank: 43
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       host_age:
         rank: 44
-        slot_group: environment
+        slot_group: Environment
       host_life_stage:
         rank: 45
-        slot_group: environment
+        slot_group: Environment
       plant_sex:
         rank: 46
-        slot_group: environment
+        slot_group: Environment
       host_height:
         rank: 47
-        slot_group: environment
+        slot_group: Environment
       host_length:
         rank: 48
-        slot_group: environment
+        slot_group: Environment
       host_phenotype:
         rank: 49
-        slot_group: environment
+        slot_group: Environment
       host_tot_mass:
         rank: 50
-        slot_group: environment
+        slot_group: Environment
       host_wet_mass:
         rank: 51
-        slot_group: environment
+        slot_group: Environment
       host_dry_mass:
         rank: 52
-        slot_group: environment
+        slot_group: Environment
       plant_product:
         rank: 53
-        slot_group: environment
+        slot_group: Environment
       ances_data:
         rank: 54
-        slot_group: environment
+        slot_group: Environment
       biol_stat:
         rank: 55
-        slot_group: environment
+        slot_group: Environment
       host_genotype:
         rank: 56
-        slot_group: environment
+        slot_group: Environment
       host_subspecf_genlin:
         rank: 57
-        slot_group: environment
+        slot_group: Environment
       genetic_mod:
         rank: 58
-        slot_group: environment
+        slot_group: Environment
       host_disease_stat:
         rank: 59
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_dis_stage:
         rank: 60
-        slot_group: environment
+        slot_group: Environment
       palaeopath_status:
         rank: 61
-        slot_group: environment
+        slot_group: Environment
       host_symbiont:
         rank: 62
-        slot_group: environment
+        slot_group: Environment
       chem_administration:
         rank: 63
-        slot_group: environment
+        slot_group: Environment
       prev_pubs:
         rank: 64
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       ref_biomaterial:
         rank: 65
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       organism_count:
         rank: 66
-        slot_group: environment
+        slot_group: Environment
       rel_to_oxygen:
         rank: 67
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       oxy_stat_samp:
         rank: 68
-        slot_group: environment
+        slot_group: Environment
       host_preserv_state:
         rank: 69
-        slot_group: nucleic acid sequence source
+        slot_group: Environment
       samp_capt_status:
         rank: 70
-        slot_group: environment
+        slot_group: Environment
       misc_param:
         rank: 71
-        slot_group: environment
+        slot_group: Environment
       air_temp_regm:
         rank: 72
-        slot_group: environment
+        slot_group: Environment
       antibiotic_regm:
         rank: 73
-        slot_group: environment
+        slot_group: Environment
       biotic_regm:
         rank: 74
-        slot_group: environment
+        slot_group: Environment
       fertilizer_regm:
         rank: 75
-        slot_group: environment
+        slot_group: Environment
       fungicide_regm:
         rank: 76
-        slot_group: environment
+        slot_group: Environment
       herbicide_regm:
         rank: 77
-        slot_group: environment
+        slot_group: Environment
       humidity_regm:
         rank: 78
-        slot_group: environment
+        slot_group: Environment
       mineral_nutr_regm:
         rank: 79
-        slot_group: environment
+        slot_group: Environment
       non_min_nutr_regm:
         rank: 80
-        slot_group: environment
+        slot_group: Environment
       pesticide_regm:
         rank: 81
-        slot_group: environment
+        slot_group: Environment
       ph_regm:
         rank: 82
-        slot_group: environment
+        slot_group: Environment
       salt_regm:
         rank: 83
-        slot_group: environment
+        slot_group: Environment
       standing_water_regm:
         rank: 84
-        slot_group: environment
+        slot_group: Environment
       water_temp_regm:
         rank: 85
-        slot_group: environment
+        slot_group: Environment
       watering_regm:
         rank: 86
-        slot_group: environment
+        slot_group: Environment
       growth_hormone_regm:
         rank: 87
-        slot_group: environment
+        slot_group: Environment
       light_regm:
         rank: 88
-        slot_group: environment
+        slot_group: Environment
       radiation_regm:
         rank: 89
-        slot_group: environment
+        slot_group: Environment
       rainfall_regm:
         rank: 90
-        slot_group: environment
+        slot_group: Environment
       climate_environment:
         rank: 91
-        slot_group: environment
+        slot_group: Environment
       gaseous_environment:
         rank: 92
-        slot_group: environment
+        slot_group: Environment
       season_environment:
         rank: 93
-        slot_group: environment
+        slot_group: Environment
       chem_mutagen:
         rank: 94
-        slot_group: environment
+        slot_group: Environment
       cult_root_med:
         rank: 95
-        slot_group: environment
+        slot_group: Environment
       plant_growth_med:
         rank: 96
-        slot_group: environment
+        slot_group: Environment
       root_med_carbon:
         rank: 97
-        slot_group: environment
+        slot_group: Environment
       root_med_macronutr:
         rank: 98
-        slot_group: environment
+        slot_group: Environment
       root_med_micronutr:
         rank: 99
-        slot_group: environment
+        slot_group: Environment
       root_med_ph:
         rank: 100
-        slot_group: environment
+        slot_group: Environment
       root_med_regl:
         rank: 101
-        slot_group: environment
+        slot_group: Environment
       root_med_solid:
         rank: 102
-        slot_group: environment
+        slot_group: Environment
       root_med_suppl:
         rank: 103
-        slot_group: environment
+        slot_group: Environment
       tiss_cult_growth_med:
         rank: 104
-        slot_group: environment
+        slot_group: Environment
       gravity:
         rank: 105
-        slot_group: environment
+        slot_group: Environment
       growth_facil:
         rank: 106
-        slot_group: environment
+        slot_group: Environment
       growth_habit:
         rank: 107
-        slot_group: environment
+        slot_group: Environment
       mechanical_damage:
         rank: 108
-        slot_group: environment
+        slot_group: Environment
       plant_struc:
         rank: 109
-        slot_group: environment
+        slot_group: Environment
       root_cond:
         rank: 110
-        slot_group: environment
+        slot_group: Environment
       batch_ids:
         rank: 111
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_category:
         rank: 112
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       neg_cont_type:
         rank: 113
-        slot_group: investigation
+        slot_group: Nucleic acid source
       pos_cont_type:
         rank: 114
-        slot_group: investigation
+        slot_group: Nucleic acid source
       env_medium:
         rank: 115
-        slot_group: environment
+        slot_group: Nucleic acid source
       samp_collect_method:
         rank: 116
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_collect_device:
         rank: 117
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_mat_process:
         rank: 118
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_size:
         rank: 119
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_loc:
         rank: 120
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_dur:
         rank: 121
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_store_temp:
         rank: 122
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_decont_pretreat:
         rank: 123
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       size_frac:
         rank: 124
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       samp_vol_we_dna_ext:
         rank: 125
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_extr_date:
         rank: 126
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       nucl_acid_ext:
         rank: 127
-        slot_group: sequencing
+        slot_group: Nucleic acid source
       sop_experimental:
         rank: 128
-        slot_group: nucleic acid sequence source
+        slot_group: Nucleic acid source
       library_name:
         rank: 129
-        slot_group: sequencing
+        slot_group: Sequencing
       damage_treatment:
         rank: 130
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_strandedness:
         rank: 131
-        slot_group: sequencing
+        slot_group: Sequencing
       adapters:
         rank: 132
-        slot_group: sequencing
+        slot_group: Sequencing
       mid:
         rank: 133
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_mid_desc:
         rank: 134
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_gener_technique:
         rank: 135
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_screen:
         rank: 136
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_vector:
         rank: 137
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_size:
         rank: 138
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_polymerase:
         rank: 139
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_src_taxid:
         rank: 140
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_probe_desc:
         rank: 141
-        slot_group: sequencing
+        slot_group: Sequencing
       capt_pcr_cyc_tot:
         rank: 142
-        slot_group: sequencing
+        slot_group: Sequencing
       reamp_pcr_cyc_tot:
         rank: 143
-        slot_group: sequencing
+        slot_group: Sequencing
       nucl_acid_amp:
         rank: 144
-        slot_group: sequencing
+        slot_group: Sequencing
       seq_meth:
         rank: 145
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_layout:
         rank: 146
-        slot_group: sequencing
+        slot_group: Sequencing
       lib_reads_seqd:
         rank: 147
-        slot_group: sequencing
+        slot_group: Sequencing
       sop_lib_preparation:
         rank: 148
-        slot_group: sequencing
+        slot_group: Sequencing
       data_preproc_desc:
         rank: 149
-        slot_group: sequencing
+        slot_group: Data analysis
       reads_removed_desc:
         rank: 150
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_name:
         rank: 151
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_software:
         rank: 152
-        slot_group: sequencing
+        slot_group: Data analysis
       assembly_qual:
         rank: 153
-        slot_group: sequencing
+        slot_group: Data analysis
       number_contig:
         rank: 154
-        slot_group: sequencing
+        slot_group: Data analysis
       tax_class:
         rank: 155
-        slot_group: sequencing
+        slot_group: Data analysis
       annot:
         rank: 156
-        slot_group: sequencing
+        slot_group: Data analysis
       feat_pred:
         rank: 157
-        slot_group: sequencing
+        slot_group: Data analysis
       sim_search_meth:
         rank: 158
-        slot_group: sequencing
+        slot_group: Data analysis
       ref_db:
         rank: 159
-        slot_group: sequencing
+        slot_group: Data analysis
       sop:
         rank: 160
-        slot_group: sequencing
+        slot_group: Data analysis
 settings:
   add_recov_methods: Water Injection|Dump Flood|Gas Injection|Wag Immiscible Injection|Polymer Addition|Surfactant Addition|Not Applicable|other
   agrochemical_name: .*

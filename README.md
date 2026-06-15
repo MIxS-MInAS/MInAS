@@ -81,7 +81,7 @@ For a release, (making sure updating the versions in the variables):
    ## Set versions
    MIXS_VERSION=6.3.0
    EXTANCIENT_VERSION=0.9.4
-   COMBINATIONS_VERSION=0.3.2
+   COMBINATIONS_VERSION=0.3.3
    ```
 
 2. Download schemas
