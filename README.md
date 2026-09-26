@@ -79,9 +79,9 @@ For a release, (making sure updating the versions in the variables):
 
    ```bash
    ## Set versions
-   MIXS_VERSION=6.3.0
-   EXTANCIENT_VERSION=0.9.4
-   COMBINATIONS_VERSION=0.3.3
+   MIXS_VERSION=7.0.1
+   EXTANCIENT_VERSION=1.0.0
+   COMBINATIONS_VERSION=1.0.0
    ```
 
 2. Download schemas
@@ -119,7 +119,7 @@ For a release, (making sure updating the versions in the variables):
 5. Lint and validate the newly extended MIxS schema that it is valid LinkML
 
    ```bash
-   linkml lint --validate src/mixs/schema/mixs-minas.yaml
+   linkml lint src/mixs/schema/mixs-minas.yaml
    ```
 
 6. Generate the JSON schema version using the LinkML package's `gen-json-schema`:
@@ -139,6 +139,8 @@ For a release, (making sure updating the versions in the variables):
    >
    > To use this script, you only need python3 and no other dependencies (it seems).
 
-8. Update the `CITATION.cff` file with the new version of the schema and any new major contributors.
+8. Update versions
+   - Update version in `mixs-minas.yaml` to the new release version, and correct name and description to refer to MIxS-MInAS
+   - Update the `CITATION.cff` file with the new version of the full MInAS schema, and any new major contributors.
 9. Commit and push to GitHub.
 10. Make release on GitHub using previous releases as a template.
