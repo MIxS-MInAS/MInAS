@@ -1737,7 +1737,7 @@
                     ]
                 },
                 "reads_removed": {
-                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the the data filtering that was carried out should be described in term 'preprocessing of sequencing reads description'.",
+                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the data filtering that was carried out should be described in term 'description of sequencing reads preprocessing'.",
                     "type": [
                         "boolean",
                         "null"
@@ -212911,7 +212911,7 @@
                     "type": "string"
                 },
                 "reads_removed": {
-                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the the data filtering that was carried out should be described in term 'preprocessing of sequencing reads description'.",
+                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the data filtering that was carried out should be described in term 'description of sequencing reads preprocessing'.",
                     "type": [
                         "boolean",
                         "null"
@@ -214720,7 +214720,7 @@
                     ]
                 },
                 "reads_removed": {
-                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the the data filtering that was carried out should be described in term 'preprocessing of sequencing reads description'.",
+                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the data filtering that was carried out should be described in term 'description of sequencing reads preprocessing'.",
                     "type": [
                         "boolean",
                         "null"
@@ -216367,7 +216367,7 @@
                     "type": "string"
                 },
                 "reads_removed": {
-                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the the data filtering that was carried out should be described in term 'preprocessing of sequencing reads description'.",
+                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the data filtering that was carried out should be described in term 'description of sequencing reads preprocessing'.",
                     "type": [
                         "boolean",
                         "null"
@@ -217949,7 +217949,7 @@
                     "type": "string"
                 },
                 "reads_removed": {
-                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the the data filtering that was carried out should be described in term 'preprocessing of sequencing reads description'.",
+                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the data filtering that was carried out should be described in term 'description of sequencing reads preprocessing'.",
                     "type": [
                         "boolean",
                         "null"
@@ -219537,7 +219537,7 @@
                     "type": "string"
                 },
                 "reads_removed": {
-                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the the data filtering that was carried out should be described in term 'preprocessing of sequencing reads description'.",
+                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the data filtering that was carried out should be described in term 'description of sequencing reads preprocessing'.",
                     "type": [
                         "boolean",
                         "null"
@@ -248771,7 +248771,7 @@
                     ]
                 },
                 "reads_removed": {
-                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the the data filtering that was carried out should be described in term 'preprocessing of sequencing reads description'.",
+                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the data filtering that was carried out should be described in term 'description of sequencing reads preprocessing'.",
                     "type": [
                         "boolean",
                         "null"
@@ -250877,7 +250877,7 @@
                     "type": "string"
                 },
                 "reads_removed": {
-                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the the data filtering that was carried out should be described in term 'preprocessing of sequencing reads description'.",
+                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the data filtering that was carried out should be described in term 'description of sequencing reads preprocessing'.",
                     "type": [
                         "boolean",
                         "null"
@@ -252693,7 +252693,7 @@
                     "type": "string"
                 },
                 "reads_removed": {
-                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the the data filtering that was carried out should be described in term 'preprocessing of sequencing reads description'.",
+                    "description": "Specify whether associated data was filtered in some form prior to upload, such as host reads removal. Detailed description of the data filtering that was carried out should be described in term 'description of sequencing reads preprocessing'.",
                     "type": [
                         "boolean",
                         "null"
